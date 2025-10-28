@@ -1,0 +1,127 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="190" fill="#E8EBE7" opacity="0.3"/>
+
+  <!-- Central Earth/Globe -->
+  <circle cx="200" cy="200" r="80" fill="#0B3D2E" opacity="0.1"/>
+  <circle cx="200" cy="200" r="70" fill="#7fb069"/>
+
+  <!-- Earth Details -->
+  <path d="M 170 180 Q 180 160 200 170 T 230 180" stroke="#5f7d5c" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 180 210 Q 200 200 220 210" stroke="#5f7d5c" stroke-width="3" fill="none" opacity="0.7"/>
+  <ellipse cx="200" cy="200" rx="70" ry="30" stroke="#5f7d5c" stroke-width="2" fill="none" opacity="0.5"/>
+  <line x1="200" y1="130" x2="200" y2="270" stroke="#5f7d5c" stroke-width="2" opacity="0.5"/>
+
+  <!-- Signal Waves emanating from center -->
+  <circle cx="200" cy="200" r="90" stroke="#FFB800" stroke-width="2" fill="none" opacity="0.4">
+    <animate attributeName="r" from="70" to="120" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="200" r="100" stroke="#FFB800" stroke-width="2" fill="none" opacity="0.3">
+    <animate attributeName="r" from="70" to="120" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Social Media Icons / Platforms (simplified) -->
+  <!-- Top (YouTube) -->
+  <g transform="translate(200, 50)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <path d="M -8 -5 L -8 5 L 8 0 Z" fill="#FF0000"/>
+    <!-- Connecting Line -->
+    <line x1="0" y1="25" x2="0" y2="50" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Top Right (Twitter/X) -->
+  <g transform="translate(300, 100)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <text x="0" y="8" text-anchor="middle" font-size="24" font-weight="bold" fill="#000000">𝕏</text>
+    <!-- Connecting Line -->
+    <line x1="-15" y1="15" x2="-60" y2="60" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Right (Instagram) -->
+  <g transform="translate(340, 200)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <rect x="-10" y="-10" width="20" height="20" rx="5" stroke="#E1306C" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="0" r="5" stroke="#E1306C" stroke-width="2" fill="none"/>
+    <!-- Connecting Line -->
+    <line x1="-25" y1="0" x2="-70" y2="0" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Bottom Right (TikTok) -->
+  <g transform="translate(300, 300)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <text x="0" y="8" text-anchor="middle" font-size="28" font-weight="bold" fill="#000000">♪</text>
+    <!-- Connecting Line -->
+    <line x1="-15" y1="-15" x2="-60" y2="-60" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Bottom (Facebook) -->
+  <g transform="translate(200, 350)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <text x="0" y="10" text-anchor="middle" font-size="30" font-weight="bold" fill="#1877F2">f</text>
+    <!-- Connecting Line -->
+    <line x1="0" y1="-25" x2="0" y2="-80" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Bottom Left -->
+  <g transform="translate(100, 300)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <circle r="15" fill="#7fb069"/>
+    <path d="M -5 0 L 0 -8 L 5 0 Z" fill="white"/>
+    <!-- Connecting Line -->
+    <line x1="15" y1="-15" x2="60" y2="-60" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Left (Generic Share) -->
+  <g transform="translate(60, 200)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <circle cx="-8" cy="-8" r="4" fill="#7fb069"/>
+    <circle cx="8" cy="-8" r="4" fill="#7fb069"/>
+    <circle cx="0" cy="8" r="4" fill="#7fb069"/>
+    <line x1="-8" y1="-8" x2="0" y2="8" stroke="#7fb069" stroke-width="2"/>
+    <line x1="8" y1="-8" x2="0" y2="8" stroke="#7fb069" stroke-width="2"/>
+    <!-- Connecting Line -->
+    <line x1="25" y1="0" x2="70" y2="0" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Top Left -->
+  <g transform="translate(100, 100)">
+    <circle r="25" fill="white" filter="url(#shadow)"/>
+    <circle r="15" fill="#FFB800"/>
+    <text x="0" y="6" text-anchor="middle" font-size="18" font-weight="bold" fill="white">W</text>
+    <!-- Connecting Line -->
+    <line x1="15" y1="15" x2="60" y2="60" stroke="#7fb069" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Hashtags in center -->
+  <text x="200" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="white">
+    #KUKU
+  </text>
+  <text x="200" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="white">
+    #FOMUS
+  </text>
+
+  <!-- Drop Shadow Filter -->
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+</svg>

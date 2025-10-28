@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>Commercial License Application | KUKU - Open IP Co-Created with 8 Billion People</title>
+    <meta name="title" content="Commercial License Application | KUKU">
+    <meta name="description" content="For those considering commercial use of KUKU materials. Information about license application procedures, conditions, and pricing.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <style>
+        /* License Page Styles */
+        .license-hero {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(242, 237, 228, 1) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .license-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .license-hero p {
+            font-size: 1.1rem;
+            color: rgba(17, 17, 17, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .license-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .license-section {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+
+        .license-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .license-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0B3D2E;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .license-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .license-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .license-section ul li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: rgba(242, 237, 228, 0.3);
+            border-radius: 10px;
+            border-left: 3px solid #0B3D2E;
+            line-height: 1.7;
+            color: rgba(17, 17, 17, 0.8);
+        }
+
+        .license-section ul li strong {
+            color: #0B3D2E;
+            font-weight: 700;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .price-table thead {
+            background: #0B3D2E;
+            color: white;
+        }
+
+        .price-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+        }
+
+        .price-table tbody tr:hover {
+            background: rgba(242, 237, 228, 0.3);
+        }
+
+        .info-box {
+            background: rgba(127, 176, 105, 0.1);
+            border-left: 4px solid #7fb069;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .warning-box {
+            background: rgba(220, 38, 38, 0.1);
+            border-left: 4px solid #DC2626;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .application-form {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(242, 237, 228, 0.3) 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .application-form h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid rgba(11, 61, 46, 0.2);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0B3D2E;
+            box-shadow: 0 0 0 3px rgba(11, 61, 46, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: #0B3D2E;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(11, 61, 46, 0.3);
+        }
+
+        .submit-btn:hover {
+            background: #5f7d5c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 61, 46, 0.4);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #0B3D2E 0%, #5f7d5c 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .license-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .license-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .price-table {
+                font-size: 0.85rem;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="character.html" class="nav__link">Characters</a></li>
+                    <li><a href="world.html" class="nav__link">World</a></li>
+                    <li><a href="guidelines.html" class="nav__link">Guidelines</a></li>
+                    <li><a href="license.html" class="nav__link">License</a></li>
+                    <li><a href="contest.html" class="nav__link">Contest</a></li>
+                    <li><a href="salon.html" class="nav__link">Community</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 Sponsors</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 Language</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="../license.html">日本語</a></li>
+                            <li><a href="license.html">English</a></li>
+                            <li><a href="../fr/license.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="../index.html" class="mobile-menu__link">Home</a>
+            <a href="../character.html" class="mobile-menu__link">Characters</a>
+            <a href="../world.html" class="mobile-menu__link">World</a>
+            <a href="../guidelines.html" class="mobile-menu__link">Guidelines</a>
+            <a href="license.html" class="mobile-menu__link">License</a>
+            <a href="../contest.html" class="mobile-menu__link">Contest</a>
+            <a href="../salon.html" class="mobile-menu__link">Community</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 Language</span>
+                <a href="../license.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="license.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="../fr/license.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="license-hero">
+        <h1>Commercial License Application</h1>
+        <p>
+            For those planning to use KUKU materials commercially, please apply through this page.<br>
+            Small-scale commercial use with annual revenue under $140,000 generally requires no permission.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="license-container">
+        <!-- Overview Section -->
+        <div class="license-section">
+            <h2>📋 License Overview</h2>
+            <p>
+                KUKU is an open IP that allows creators worldwide to create freely.
+                Non-commercial use is free, but commercial use requires application depending on the scale.
+            </p>
+
+            <h3>Usage Categories</h3>
+            <ul>
+                <li>
+                    <strong>Non-Commercial Use:</strong>
+                    Portfolio, educational purposes, personal social media and videos (non-monetized) require no permission (credit required)
+                </li>
+                <li>
+                    <strong>Small-Scale Commercial Use (Annual Revenue under $140,000):</strong>
+                    Doujin sales, small-scale merchandise, one-off monetized videos, etc. Generally permitted (credit required)
+                </li>
+                <li>
+                    <strong>Medium to Large-Scale Commercial Use (Annual Revenue over $140,000):</strong>
+                    Mass-produced merchandise, corporate projects, ongoing series, broadcasting/streaming, in-game purchases, etc. Requires permission (prior application required)
+                </li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>📌 Important:</strong> "Annual revenue of $140,000" refers to the annual sales of the business using KUKU. Feel free to consult even at the planning stage.</p>
+            </div>
+        </div>
+
+        <!-- Fee Structure Section -->
+        <div class="license-section">
+            <h2>💰 Fee Structure (Reference)</h2>
+            <p>
+                We offer flexible pricing based on the scale and purpose of commercial use.
+                Details will be provided individually after application.
+            </p>
+
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Usage Category</th>
+                        <th>Annual Revenue</th>
+                        <th>License Fee (Estimate)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Non-Commercial</strong></td>
+                        <td>$0</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Small-Scale Commercial</strong></td>
+                        <td>Up to $140,000</td>
+                        <td>Free (Credit Required)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium-Scale Commercial</strong></td>
+                        <td>$140,000 - $700,000</td>
+                        <td>Negotiable (approx. 1-3% of revenue)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Large-Scale Commercial</strong></td>
+                        <td>$700,000 and above</td>
+                        <td>Negotiable (Individual Contract)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Note:</strong> The above is a reference only. Actual fees vary depending on business content, purpose, duration, etc. Official pricing will be provided after application.</p>
+            </div>
+        </div>
+
+        <!-- Application Requirements Section -->
+        <div class="license-section">
+            <h2>📝 Required Information for Application</h2>
+            <p>The following information is required for commercial use application.</p>
+            <ul>
+                <li><strong>Business Content and Purpose:</strong> Media, region, duration, etc.</li>
+                <li><strong>Scale:</strong> Sales price, quantity, estimated annual revenue, KPIs, etc.</li>
+                <li><strong>Creative Overview:</strong> Sample images, videos, etc. (optional)</li>
+                <li><strong>Credit Plan:</strong> Credit notation, logo usage locations, etc.</li>
+                <li><strong>Planned Start Date:</strong> Business start date</li>
+                <li><strong>Contact Information:</strong> Company name/full name, email address, phone number</li>
+            </ul>
+        </div>
+
+        <!-- WhatsApp Contact -->
+        <div class="application-form">
+            <h3>📞 Contact Us</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                For commercial use inquiries, please feel free to contact us via WhatsApp.<br>
+                It will be smooth if you prepare the necessary information mentioned above before contacting us.
+            </p>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="https://wa.me/971524109747" target="_blank" style="display: inline-flex; align-items: center; gap: 1rem; padding: 1.5rem 3rem; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.2rem; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(37, 211, 102, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(37, 211, 102, 0.3)';">
+                    <svg style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Contact via WhatsApp
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                    <strong>+971 52 410 9747</strong>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">Open IP Co-Created with 8 Billion People - 世界80億人と創るオープンIP</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="../index.html">Home</a>
+                        <a href="../character.html">Characters</a>
+                        <a href="../world.html">World</a>
+                        <a href="../guidelines.html">Guidelines</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="../contest.html">Contest</a>
+                        <a href="../index.html#resources">Download Materials</a>
+                        <a href="license.html">License Application</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" download>Starter Pack</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">Online Shop</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc">KUKU is an open IP project freely available to 8 billion people worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

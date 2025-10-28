@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>Concours de Courts Métrages d'Animation | KUKU</title>
+    <meta name="title" content="KUKU Concours de Courts Métrages d'Animation">
+    <meta name="description" content="Utilisation d'IA Bienvenue. Grand Prix $400. Concours de création utilisant l'univers de KUKU (30 à 180 secondes).">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <style>
+        /* Contest Page Styles - Creative & Modern */
+        .contest-hero {
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 50%, #2d7a5f 100%);
+            padding: 8rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contest-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .contest-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .contest-hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            animation: fadeInDown 0.8s ease-out;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .contest-hero p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .prize-badges {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .prize-badge {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 1.25rem 2.5rem;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            animation: scaleIn 0.8s ease-out;
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .prize-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.6);
+        }
+
+        .prize-badge.second {
+            background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%);
+            color: #000;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 30px rgba(192, 192, 192, 0.4);
+        }
+
+        .prize-badge.second:hover {
+            box-shadow: 0 12px 40px rgba(192, 192, 192, 0.6);
+        }
+
+        .contest-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #ffffff 0%, #f8faf9 100%);
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 40px rgba(11, 61, 46, 0.08);
+            animation: slideUp 0.6s ease-out;
+            border: 1px solid rgba(152, 216, 163, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #7fb069 0%, #0B3D2E 100%);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(11, 61, 46, 0.12);
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0B3D2E;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid rgba(127, 176, 105, 0.2);
+        }
+
+        .card ul, .card ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li, .card ol li {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.6;
+        }
+
+        .card ul li span:first-child {
+            color: #0B3D2E;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .criteria-item {
+            background: linear-gradient(135deg, rgba(127, 176, 105, 0.08) 0%, rgba(152, 216, 163, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 5px solid #7fb069;
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(11, 61, 46, 0.05);
+        }
+
+        .criteria-item:hover {
+            background: linear-gradient(135deg, rgba(127, 176, 105, 0.12) 0%, rgba(152, 216, 163, 0.08) 100%);
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(11, 61, 46, 0.08);
+        }
+
+        .criteria-item p {
+            color: rgba(17, 17, 17, 0.8);
+            font-weight: 500;
+        }
+
+        .schedule-step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .schedule-number {
+            font-weight: 900;
+            color: #0B3D2E;
+            font-size: 1.5rem;
+            background: rgba(11, 61, 46, 0.1);
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .submit-center {
+            text-align: center;
+            margin: 3rem 0;
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .warning-card {
+            border: 2px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .warning-card h2 {
+            color: #DC2626;
+        }
+
+        .warning-card ul li span:first-child {
+            color: #DC2626;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tip-card {
+            border-left: 4px solid #0B3D2E;
+            padding-left: 1.25rem;
+            padding: 1.25rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .tip-card:hover {
+            background: rgba(11, 61, 46, 0.05);
+        }
+
+        .tip-card h3 {
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            font-size: 0.9rem;
+            color: rgba(17, 17, 17, 0.7);
+            line-height: 1.6;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .process-step {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(152, 216, 163, 0.1) 0%, rgba(127, 176, 105, 0.05) 100%);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 2px solid rgba(127, 176, 105, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(127, 176, 105, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .process-step:hover::before {
+            opacity: 1;
+        }
+
+        .process-step:hover {
+            background: linear-gradient(135deg, rgba(152, 216, 163, 0.15) 0%, rgba(127, 176, 105, 0.08) 100%);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(11, 61, 46, 0.15);
+            border-color: rgba(127, 176, 105, 0.3);
+        }
+
+        .process-step .number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #7fb069 0%, #0B3D2E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .process-step h3 {
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .process-step p {
+            font-size: 0.8rem;
+            color: rgba(17, 17, 17, 0.7);
+            line-height: 1.6;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(242, 237, 228, 0.4) 0%, rgba(248, 250, 249, 0.6) 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid rgba(127, 176, 105, 0.15);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(11, 61, 46, 0.05);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(127, 176, 105, 0.4);
+            transform: translateX(5px);
+            box-shadow: 0 6px 25px rgba(11, 61, 46, 0.1);
+            background: linear-gradient(135deg, rgba(242, 237, 228, 0.5) 0%, rgba(248, 250, 249, 0.7) 100%);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .faq-question span {
+            color: #0B3D2E;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.6;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer strong {
+            color: #16A34A;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 50%, #2d7a5f 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 30px;
+            margin-top: 3rem;
+            animation: slideUp 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(11, 61, 46, 0.3);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contest-hero h1 {
+                font-size: 2rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Accueil</a></li>
+                    <li><a href="character.html" class="nav__link">Personnages</a></li>
+                    <li><a href="world.html" class="nav__link">Univers</a></li>
+                    <li><a href="guidelines.html" class="nav__link">Directives</a></li>
+                    <li><a href="license.html" class="nav__link">Licence</a></li>
+                    <li><a href="contest.html" class="nav__link">Concours</a></li>
+                    <li><a href="salon.html" class="nav__link">Communauté</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 Sponsors</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 Langue</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="../contest.html">日本語</a></li>
+                            <li><a href="../en/contest.html">English</a></li>
+                            <li><a href="contest.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Accueil</a>
+            <a href="character.html" class="mobile-menu__link">Personnages</a>
+            <a href="world.html" class="mobile-menu__link">Univers</a>
+            <a href="guidelines.html" class="mobile-menu__link">Directives</a>
+            <a href="license.html" class="mobile-menu__link">Licence</a>
+            <a href="contest.html" class="mobile-menu__link">Concours</a>
+            <a href="salon.html" class="mobile-menu__link">Communauté</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 Langue</span>
+                <a href="../contest.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="../en/contest.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="contest.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="contest-hero">
+        <h1>KUKU Creative Award 2025–26</h1>
+        <p class="hero-period">Période de soumission : 1er novembre 2025 00:00 JST - 11 janvier 2026 23:59 JST</p>
+        <div class="prize-badges">
+            <div class="prize-badge">Grand Prix $400</div>
+            <div class="prize-badge second">Prix d'Excellence $100</div>
+        </div>
+        <div class="hero-cta" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" class="btn btn--whatsapp" target="_blank">Rejoindre WhatsApp (Gratuit)</a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section style="max-width: 1200px; margin: 3rem auto; padding: 0 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <video controls style="width: 100%; height: auto; display: block;">
+                    <source src="../樹木の里IV.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+            <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <video controls style="width: 100%; height: auto; display: block;">
+                    <source src="../KUKU 素材/KUKU イメージ/KUKU IV.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contest Content -->
+    <div class="contest-content">
+        <!-- Requirements -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">📋</span>
+                Détails de la Soumission
+            </h2>
+            <ul>
+                <li>
+                    <span>•</span>
+                    <span><strong>Format :</strong> Court métrage d'animation/vidéo de 30 à 180 secondes (vertical ou horizontal)</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Méthode de Production :</strong> IA, dessin à la main ou prise de vue réelle, tous acceptés</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Publication sur les Réseaux Sociaux :</strong> Recommandé de publier votre œuvre sur X ou Instagram avec #KUKUART (les reposts et likes seront pris en compte dans le jugement)</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Utilisation des Ressources :</strong> Les personnages KUKU sont librement utilisables (suivre les directives)</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Awards -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">🏆</span>
+                Prix
+            </h2>
+            <div style="display: grid; gap: 1.5rem;">
+                <div style="padding: 1.5rem; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border-radius: 12px; color: #000;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">🥇 Grand Prix : $400 (1 gagnant)</h3>
+                </div>
+                <div style="padding: 1.5rem; background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); border-radius: 12px; color: #000;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">🥈 Prix d'Excellence : $100 (1 gagnant)</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">📅</span>
+                Calendrier (Cette Édition Uniquement)
+            </h2>
+            <div style="background: rgba(11, 61, 46, 0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="font-weight: 700; color: #0B3D2E; margin: 0;"><strong>Ouverture des soumissions :</strong> 1er novembre 2025 (Sam) 00:00 (JST)</p>
+                <p style="font-weight: 700; color: #0B3D2E; margin: 0.5rem 0 0 0;"><strong>Date limite de soumission :</strong> 11 janvier 2026 (Dim) 23:59 (JST)</p>
+            </div>
+            <div class="schedule-step">
+                <div class="schedule-number">1</div>
+                <div style="padding-top: 0.5rem;">
+                    <strong>Annonce des gagnants :</strong> 25 janvier (Site Web/WhatsApp/Réseaux Sociaux)
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">*La date d'annonce peut varier. La date confirmée sera notifiée.</p>
+        </div>
+
+        <!-- Submission Requirements -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">📝</span>
+                Spécifications de Soumission (Obligatoires)
+            </h2>
+            <ul>
+                <li>
+                    <span>•</span>
+                    <span><strong>Durée :</strong> 30-180 secondes</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Vidéo :</strong> MP4</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Audio :</strong> Optionnel (BGM/SE autorisés, autorisation des droits requise)</span>
+                </li>
+                <li>
+                    <span>•</span>
+                    <span><strong>Informations Requises :</strong> Titre / Nom du créateur (nom public)</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Rules & License -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">🌸</span>
+                Règles & Licence (Points Clés - Version Révisée 2025)
+            </h2>
+
+            <div style="margin-top: 2rem;">
+                <h3 style="color: #0B3D2E; font-size: 1.2rem; margin-bottom: 1rem;">📜 Droits d'auteur</h3>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">Les droits d'auteur des œuvres soumises appartiennent au créateur.</p>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">Cependant, KUKU (FOMUS) détient des droits d'utilisation non exclusifs sans frais pour la promotion, l'exposition, la projection et la distribution (avec le consentement du créateur).</p>
+
+                <h3 style="color: #0B3D2E; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem;">🌏 Licence d'utilisation</h3>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">KUKU a le droit de présenter les œuvres soumises</p>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">sur les réseaux sociaux, lors d'expositions, de projections vidéo, d'événements internationaux, etc.</p>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">Les crédits seront indiqués si nécessaire lors de la présentation.</p>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">Toute modification ou utilisation commerciale de l'œuvre nécessite le consentement à la fois du créateur et de KUKU.</p>
+
+                <h3 style="color: #0B3D2E; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem;">🚫 Interdictions</h3>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">L'utilisation non autorisée d'autres œuvres protégées par le droit d'auteur/propriété intellectuelle, la violation des droits liés aux contenus générés par IA, ainsi que les expressions discriminatoires, violentes ou contraires à l'ordre public sont interdites.</p>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">En cas de violation, le prix ou la publication peuvent être annulés.</p>
+
+                <h3 style="color: #0B3D2E; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem;">💼 Utilisation commerciale</h3>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">Le créateur peut utiliser ses œuvres à des fins commerciales (vente, exposition, publicité, etc.).</p>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">Cependant, lors de l'utilisation des personnages officiels et des ressources de KUKU,<br>veuillez respecter les directives officielles de KUKU.</p>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">Pour les collaborations avec des entreprises ou les ventes à grande échelle,<br>un contrat de licence séparé sera conclu.</p>
+
+                <h3 style="color: #0B3D2E; font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem;">💬 Autres</h3>
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;">KUKU n'est pas CC0.<br>Bien que les personnages et l'univers de KUKU soient une propriété intellectuelle ouverte librement utilisable,<br>l'enregistrement non autorisé, la revente de NFT et la commercialisation trompeuse sont interdits.</p>
+                <p style="line-height: 1.8; margin-bottom: 0;">En soumettant au concours, vous acceptez les règles ci-dessus.</p>
+            </div>
+        </div>
+
+        <!-- Application Flow -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">🚀</span>
+                Processus de Candidature (3 Étapes)
+            </h2>
+            <div style="display: grid; gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: start; padding: 1.5rem; background: rgba(11, 61, 46, 0.05); border-radius: 12px;">
+                    <div style="min-width: 3rem; height: 3rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">1</div>
+                    <div>
+                        <h3 style="color: #0B3D2E; margin-bottom: 0.5rem;">Obtenir le Pack de Démarrage</h3>
+                        <p style="color: #333; margin: 0;">Télécharger les ressources, logos et directives KUKU</p>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" class="btn btn--outline" download style="margin-top: 1rem; display: inline-block;">Télécharger</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: start; padding: 1.5rem; background: rgba(11, 61, 46, 0.05); border-radius: 12px;">
+                    <div style="min-width: 3rem; height: 3rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">2</div>
+                    <div>
+                        <h3 style="color: #0B3D2E; margin-bottom: 0.5rem;">Publier sur X ou Instagram avec #KUKUART</h3>
+                        <p style="color: #333; margin: 0;"><strong style="color: #DC2626;">*Le hashtag #KUKUART est obligatoire</strong><br>Date limite : 11 janvier 2026 23:59 JST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="card">
+            <h2>
+                <span style="font-size: 1.5rem;">❓</span>
+                Questions Fréquemment Posées
+            </h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q.</span>
+                    <span>Puis-je soumettre une œuvre entièrement générée par IA ?</span>
+                </div>
+                <div class="faq-answer">
+                    <strong>R.</strong> Oui. La conception de prompts et l'édition sont également des activités créatives légitimes. Le taux d'utilisation de l'IA n'est pas un problème.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q.</span>
+                    <span>Puis-je soumettre plusieurs œuvres ?</span>
+                </div>
+                <div class="faq-answer">
+                    <strong>R.</strong> Oui. Vous pouvez soumettre autant d'œuvres que vous le souhaitez. Cependant, les prix sont limités à une œuvre par personne.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q.</span>
+                    <span>Les équipes peuvent-elles soumettre des candidatures ?</span>
+                </div>
+                <div class="faq-answer">
+                    <strong>R.</strong> Oui. Veuillez désigner un représentant pour la soumission. Le prix en argent sera versé au représentant.
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="card warning-card">
+            <h2>
+                <span style="font-size: 1.5rem;">⚠️</span>
+                Notes Importantes
+            </h2>
+            <ul>
+                <li>
+                    <span>⚠</span>
+                    <span>Consentement à l'utilisation promotionnelle des œuvres soumises</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Participez au Concours</h2>
+            <p>Soumissions acceptées du 1er novembre 2025 au 11 janvier 2026. Partagez votre créativité avec le monde</p>
+            <a href="https://tally.so/r/placeholder" class="btn btn--secondary" style="background: white; color: #0B3D2E; font-size: 1.1rem; padding: 1.25rem 3rem;">
+                Soumettre Maintenant
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">Propriété Intellectuelle Ouverte Co-créée avec 8 Milliards de Personnes</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="../index.html">Accueil</a>
+                        <a href="../character.html">Personnages</a>
+                        <a href="../world.html">Univers</a>
+                        <a href="../guidelines.html">Directives</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="contest.html">Concours</a>
+                        <a href="../index.html#resources">Télécharger les Ressources</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" download>Pack de Démarrage</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">Boutique en Ligne</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. Tous droits réservés.</p>
+                <p class="footer__desc">KUKU est un projet de propriété intellectuelle ouverte librement utilisable par 8 milliards de personnes dans le monde.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

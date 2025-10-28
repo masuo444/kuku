@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 KUKU SPONSORS - スポンサー募集 | KUKU</title>
+    <meta name="description" content="文化を支える企業が、未来を動かす。日本発、世界80億人で育てるキャラクターIP「KUKU」のスポンサー募集ページ。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-optimized.css">
+    <style>
+        .sponsors-hero {
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 50%, #0B3D2E 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sponsors-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .sponsors-hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .sponsors-hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .sponsors-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .sponsors-section {
+            margin-bottom: 4rem;
+        }
+
+        .sponsors-section h2 {
+            font-size: 1.8rem;
+            color: #0B3D2E;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid #98D8A3;
+            font-weight: 700;
+        }
+
+        .sponsors-section h3 {
+            font-size: 1.3rem;
+            color: #1a5c47;
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .sponsors-section p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .sponsor-tiers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .sponsor-tiers {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .tier-card {
+            background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
+            border: 2px solid #98D8A3;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(11, 61, 46, 0.15);
+        }
+
+        .tier-card.premier {
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%);
+            border: 3px solid #FFD700;
+            color: white;
+        }
+
+        .tier-card.premier::before {
+            content: '💎';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+
+        .tier-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tier-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0B3D2E;
+        }
+
+        .tier-card.premier .tier-name {
+            color: #FFD700;
+        }
+
+        .tier-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a5c47;
+        }
+
+        .tier-card.premier .tier-price {
+            color: white;
+        }
+
+        .tier-benefits {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .tier-card.premier .tier-benefits {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .usage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .usage-table th,
+        .usage-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .usage-table th {
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .usage-table td:first-child {
+            font-weight: 700;
+            color: #0B3D2E;
+            width: 30%;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .benefits-list .benefit-item {
+            background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
+            border-left: 4px solid #98D8A3;
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .benefits-list .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            font-size: 1.1rem;
+            color: #0B3D2E;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .benefit-content p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+
+        .premier-section {
+            background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premier-section::before {
+            content: '💎';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 12rem;
+            opacity: 0.05;
+        }
+
+        .premier-section h3 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .premier-section p,
+        .premier-section ul {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .premier-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .premier-section li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .premier-section li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #98D8A3 0%, #7FB069 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .contact-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .contact-box p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: white;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid white;
+            transition: opacity 0.3s;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+
+        .legal-notice {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .legal-notice strong {
+            color: #333;
+        }
+
+        .note-box {
+            background: #fff9e6;
+            border-left: 4px solid #FFA500;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* iPhone 16対応 - モバイル最適化 */
+        @media (max-width: 768px) {
+            /* ヒーローセクション */
+            .sponsors-hero {
+                padding: 5rem 1.25rem 3rem;
+                min-height: auto;
+            }
+
+            .sponsors-hero h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+
+            .sponsors-hero .subtitle {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            /* コンテナ */
+            .sponsors-container {
+                padding: 2rem 1.25rem;
+            }
+
+            /* セクション */
+            .sponsors-section {
+                margin-bottom: 2.5rem;
+                padding: 0;
+            }
+
+            .sponsors-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.25rem;
+                padding-bottom: 0.6rem;
+            }
+
+            .sponsors-section h3 {
+                font-size: 1.2rem;
+                margin: 1.5rem 0 1rem 0;
+            }
+
+            .sponsors-section p {
+                font-size: 0.95rem;
+                line-height: 1.8;
+                margin-bottom: 1rem;
+            }
+
+            /* ティアカード */
+            .sponsor-tiers {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            /* テーブル */
+            .usage-table {
+                font-size: 0.85rem;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .usage-table th,
+            .usage-table td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            /* プレミアムセクション */
+            .premier-section,
+            .contact-box {
+                padding: 1.5rem 1.25rem;
+                margin: 1.5rem 0;
+            }
+
+            /* ベネフィットリスト */
+            .benefits-list {
+                gap: 1rem;
+            }
+
+            .benefit-item {
+                padding: 1.25rem;
+            }
+
+            .benefit-icon {
+                font-size: 2rem;
+                min-width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .benefit-content h4 {
+                font-size: 1rem;
+            }
+
+            .benefit-content p {
+                font-size: 0.9rem;
+            }
+
+            /* ノートボックス */
+            .note-box {
+                padding: 1.25rem;
+                font-size: 0.85rem;
+                margin: 1.5rem 0;
+            }
+
+            /* 法的注記 */
+            .legal-notice {
+                padding: 1.5rem;
+                font-size: 0.85rem;
+                margin: 2rem 0;
+            }
+        }
+
+        /* iPhone 16特化最適化 (393px / 430px) */
+        @media (max-width: 430px) {
+            /* タイポグラフィ最適化 */
+            body {
+                font-size: 16px; /* iOS zoom防止 */
+            }
+
+            /* ヒーロー */
+            .sponsors-hero {
+                padding: 4rem 1rem 2.5rem;
+            }
+
+            .sponsors-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .sponsors-hero .subtitle {
+                font-size: 0.95rem;
+            }
+
+            /* コンテナ */
+            .sponsors-container {
+                padding: 1.5rem 1rem;
+            }
+
+            /* セクションタイトル */
+            .sponsors-section h2 {
+                font-size: 1.35rem;
+            }
+
+            /* インラインスタイルのグリッド上書き */
+            [style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            /* カードパディング */
+            [style*="padding: 1.5rem"] {
+                padding: 1.25rem !important;
+            }
+
+            [style*="padding: 2rem"] {
+                padding: 1.5rem !important;
+            }
+
+            /* フォントサイズ調整 */
+            [style*="font-size: 1.1rem"] {
+                font-size: 1rem !important;
+            }
+
+            [style*="font-size: 1.3rem"] {
+                font-size: 1.15rem !important;
+            }
+
+            [style*="font-size: 1.8rem"] {
+                font-size: 1.5rem !important;
+            }
+
+            /* ボタン・タッチターゲット */
+            a[style*="padding"][style*="border-radius"] {
+                min-height: 48px;
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 0.875rem 1.5rem !important;
+                font-size: 1rem !important;
+            }
+
+            /* お問い合わせセクション */
+            [style*="background: linear-gradient(135deg, #7fb069"] {
+                padding: 2.5rem 1rem !important;
+                border-radius: 16px !important;
+            }
+
+            /* コンタクトグリッド */
+            [style*="grid-template-columns: repeat(auto-fit, minmax(280px"] {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+
+            /* WhatsApp・メール情報 */
+            [style*="font-size: 1.1rem"] a {
+                word-break: break-all;
+            }
+        }
+
+        /* セーフエリア対応 */
+        @supports (padding: max(0px)) {
+            @media (max-width: 430px) {
+                .sponsors-hero,
+                .sponsors-container {
+                    padding-left: max(1rem, env(safe-area-inset-left));
+                    padding-right: max(1rem, env(safe-area-inset-right));
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li><a href="character.html" class="nav__link">キャラクター</a></li>
+                    <li><a href="world.html" class="nav__link">世界観</a></li>
+                    <li><a href="guidelines.html" class="nav__link">ガイドライン</a></li>
+                    <li><a href="license.html" class="nav__link">ライセンス</a></li>
+                    <li><a href="contest.html" class="nav__link">コンテスト</a></li>
+                    <li><a href="salon.html" class="nav__link">コミュニティ</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 スポンサー</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 言語</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="sponsors.html">日本語</a></li>
+                            <li><a href="en/sponsors.html">English</a></li>
+                            <li><a href="fr/sponsors.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">ホーム</a>
+            <a href="character.html" class="mobile-menu__link">キャラクター</a>
+            <a href="world.html" class="mobile-menu__link">世界観</a>
+            <a href="guidelines.html" class="mobile-menu__link">ガイドライン</a>
+            <a href="license.html" class="mobile-menu__link">ライセンス</a>
+            <a href="contest.html" class="mobile-menu__link">コンテスト</a>
+            <a href="salon.html" class="mobile-menu__link">コミュニティ</a>
+            <a href="sponsors.html" class="mobile-menu__link" style="color: #000000;">💼 スポンサー</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 言語</span>
+                <a href="sponsors.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="en/sponsors.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="fr/sponsors.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="sponsors-hero">
+        <h1>🌸 KUKU Sponsorship</h1>
+        <p class="subtitle">未来の文化を、一緒に育てる。</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="sponsors-container">
+
+        <!-- セクション1: 世界80億人でつくる、新しいエンターテインメント -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🌏 世界80億人でつくる、新しいエンターテインメント</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 1.5rem;">
+                KUKUは、日本から始まった"共創型キャラクターIP"です。<br>
+                誰もが自由に創作できるオープンな世界をつくり、<br>
+                <strong>「観る人」も「創る人」も「支える人」も、すべてが主役になる</strong>。
+            </p>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 1.5rem;">
+                それが、KUKUが目指す新しいエンターテインメントの形です。
+            </p>
+
+            <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.15) 0%, rgba(127, 176, 105, 0.1) 100%); padding: 2.5rem; border-radius: 16px; border-left: 5px solid #98D8A3; margin: 2rem 0;">
+                <p style="font-size: 1.15rem; line-height: 2; margin: 0; color: #0B3D2E;">
+                    AIとデジタルツールの発展により、<br>
+                    世界は"観る時代"から"創る時代"へと変わりました。<br>
+                    KUKUはその最前線で、<br>
+                    <strong>創作を通じて世界中の人をつなぐ文化プロジェクト</strong>として動き出しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション2: KUKUは、まだ始まったばかり。だからこそ、参加できる。 -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">💫 KUKUは、まだ始まったばかり。だからこそ、参加できる。</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 1.5rem;">
+                KUKUは、いままさに立ち上がりの段階にある新しい文化プロジェクトです。<br>
+                完成されたIPではなく、<strong>世界の人々と共に育てていく"種"の段階。</strong>
+            </p>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 2rem;">
+                だからこそ、今このタイミングで関わってくださる方は、<br>
+                KUKUの"未来を共に創る初期メンバー（Founding Partner）"になります。
+            </p>
+
+            <div style="background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 2.5rem; border-radius: 16px; border-left: 5px solid #FFD700; margin: 2rem 0; text-align: center;">
+                <p style="font-size: 1.3rem; line-height: 2; margin: 0; font-weight: 600; color: #0B3D2E;">
+                    🌱 文化を支援するのではなく、文化を"共に創る"スポンサー。
+                </p>
+            </div>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-top: 2rem; text-align: center; font-weight: 600; color: #1a5c47;">
+                あなたの支援が、この世界の"最初の一歩"を形づくります。
+            </p>
+        </section>
+
+        <!-- セクション3: なぜKUKUはオープンIPなのか -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🌿 なぜKUKUはオープンIPなのか</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 1.5rem;">
+                従来のエンターテインメントは「企業が作り、世界が観る」ものでした。<br>
+                しかし、KUKUはその構造を逆転させます。
+            </p>
+
+            <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.15) 0%, rgba(127, 176, 105, 0.1) 100%); padding: 2.5rem; border-radius: 16px; border-left: 5px solid #98D8A3; margin: 2rem 0; text-align: center;">
+                <p style="font-size: 1.3rem; line-height: 2; margin: 0; font-weight: 600; color: #0B3D2E;">
+                    🎨 「80億人でつくる」 — 誰もがKUKUの関係者になる。
+                </p>
+            </div>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-top: 2rem;">
+                KUKUはキャラクターと世界観をすべての人に開放し、<br>
+                二次創作・ファンアート・商用利用を自由に許可。<br>
+                これにより、全世界のクリエイターが同じ物語を共有しながら、<br>
+                自分の表現を発信できる"共創の森"が生まれます。
+            </p>
+        </section>
+
+        <!-- セクション4: KUKUは社会を変える文化になる -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🌸 KUKUは社会を変える文化になる</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 2rem;">
+                KUKUはエンタメを超えた「社会的プロジェクト」でもあります。<br>
+                創作を通じて、人・地域・社会をつなぐことを目指しています。
+            </p>
+
+            <table class="usage-table" style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); color: white;">
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">分野</th>
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">KUKUができること</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🌏 教育</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">子どもたちに創作を通じた表現の自由を届ける</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🌿 地域創生</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">地域工芸や文化とコラボし、地方を世界に発信</td>
+                    </tr>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🌸 メンタルヘルス</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">アート・音楽・映像で心を癒すプログラムを展開</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>💫 国際交流</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">世界中の若者やクリエイターをつなぐ共創イベント開催</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 2rem; border-radius: 16px; border-left: 5px solid #FFD700; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.2rem; line-height: 2; margin: 0; font-weight: 600; color: #0B3D2E;">
+                    🎬 KUKUは、創作が人を癒し、社会を動かすことを証明するプロジェクトです。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション5: KUKUスポンサーになるメリット -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">💎 KUKUスポンサーになるメリット</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 2rem;">
+                KUKUスポンサーは、単なる広告協賛ではなく、<br>
+                <strong>"世界文化の立ち上げに名を刻むパートナー"</strong>です。
+            </p>
+
+            <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%); padding: 2.5rem; border-radius: 16px; border: 2px solid #FFD700; margin: 2rem 0;">
+                <h3 style="color: #0B3D2E; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">🎖️ Founding Sponsor 特典（初期限定）</h3>
+
+                <ul style="list-style: none; padding-left: 0; font-size: 1.05rem; line-height: 2.2; color: #333;">
+                    <li style="margin-bottom: 1rem;">✓ 公式サイト・映像・MVに「Founding Partner」としてロゴ掲載</li>
+                    <li style="margin-bottom: 1rem;">✓ 国際展示・映画祭での共催クレジット</li>
+                    <li style="margin-bottom: 1rem;">✓ 海外プレスリリース・PR資料での共同露出</li>
+                    <li style="margin-bottom: 1rem;">✓ KUKUの公式アートワーク・映像内にブランド表示（初期限定）</li>
+                </ul>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 2rem; border-radius: 16px; border-left: 5px solid #FFD700; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.15rem; line-height: 2; margin: 0; color: #0B3D2E;">
+                    いま支援することは、KUKUが世界に羽ばたく前に「文化の根幹」に関わること。<br>
+                    それは、将来のどんな広告価値よりも、<strong>"文化の信用"</strong>として残ります。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション6: 支援金の使途 -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🪞 支援金の使途（透明性）</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 2rem;">
+                皆さまからのご支援は、すべて以下の分野に再投資されます。
+            </p>
+
+            <table class="usage-table" style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); color: white;">
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">分野</th>
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">活用内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🎬 制作</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">アニメ・音楽・MV・映像などの制作費</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🎨 教育</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">子ども向け創作教育・教材開発</td>
+                    </tr>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>🌍 国際展開</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">映画祭・展示会・文化イベント出展費</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>💡 開発</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">KUKUプラットフォーム構築・AIツール制作</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 2rem; border-radius: 16px; border-left: 5px solid #FFD700; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.15rem; line-height: 2; margin: 0; font-weight: 600; color: #0B3D2E;">
+                    <strong>KUKUは利益分配型ではなく、文化循環型のプロジェクトです。</strong><br>
+                    あなたの支援は、そのまま未来の創作環境へと還元されます。
+                </p>
+            </div>
+        </section>
+
+        <!-- セクション7: ロードマップ -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🔮 ロードマップ</h2>
+
+            <table class="usage-table" style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); color: white;">
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">年度</th>
+                        <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; border: 1px solid rgba(152, 216, 163, 0.3);">展開内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>2025</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">KUKUキャラクター公開・MV制作・スポンサー第1期募集</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>2026</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">Dubai Design Week・NEB Festival 出展・国際発信開始</td>
+                    </tr>
+                    <tr style="background: rgba(247, 250, 248, 0.8);">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>2027</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">短編アニメーション制作・教育・地域プロジェクト展開</td>
+                    </tr>
+                    <tr style="background: white;">
+                        <td style="padding: 1.2rem; font-size: 1.05rem; border: 1px solid rgba(152, 216, 163, 0.3);"><strong>2028〜</strong></td>
+                        <td style="padding: 1.2rem; font-size: 1rem; line-height: 1.8; border: 1px solid rgba(152, 216, 163, 0.3);">長編アニメーション・世界展開・文化機関・ブランド連携</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 信頼性と運営体制 -->
+        <section class="sponsors-section">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2rem; text-align: center;">🏛️ 信頼性と運営体制</h2>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-bottom: 1.5rem; text-align: center;">
+                KUKUは、<br>
+                日本法人「<strong>合同会社FOMUS</strong>」と、<br>
+                ドバイ法人「<strong>FOMUS Global FZ-LLC（in5 Design登録企業）</strong>」の共同運営により展開されています。
+            </p>
+
+            <p style="font-size: 1.1rem; line-height: 2; margin-top: 2rem; text-align: center; color: #555;">
+                FOMUSは日本の伝統工芸・AI・アート・教育などを融合させ、<br>
+                世界15ヵ国以上のクリエイターと共創する国際的クリエイティブカンパニーです。
+            </p>
+        </section>
+
+        <!-- あなたの支援が、未来の文化を育てます -->
+        <section class="sponsors-section" style="background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 4rem 2rem; border-radius: 16px; margin: 3rem 0;">
+            <h2 style="font-size: 2.2rem; color: #0B3D2E; margin-bottom: 2.5rem; text-align: center;">🌏 あなたの支援が、未来の文化を育てます。</h2>
+
+            <div style="background: white; padding: 2.5rem; border-radius: 12px; border-left: 5px solid #0B3D2E; max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; line-height: 2.2; margin: 0; color: #333; font-style: italic;">
+                    KUKUは、これから10年をかけて世界文化の一つの柱となることを目指します。<br>
+                    その最初の一歩に、あなたの名前を刻みませんか？
+                </p>
+            </div>
+
+            <p style="font-size: 1.15rem; line-height: 2; margin-top: 2.5rem; text-align: center; font-weight: 600; color: #0B3D2E;">
+                📩 スポンサー資料（非公開）を希望される方は下記よりご連絡ください。
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">世界80億人と創るオープンIP - Co-Create with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="index.html">ホーム</a>
+                        <a href="character.html">キャラクター</a>
+                        <a href="world.html">世界観</a>
+                        <a href="guidelines.html">ガイドライン</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="contest.html">コンテスト</a>
+                        <a href="salon.html">コミュニティ</a>
+                        <a href="sponsors.html" style="color: #FFD700;">スポンサー</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="public/assets/KUKU_Starter_Pack.zip" download>スターターパック</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">オンラインショップ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc"><strong>KUKU — 世界の80億人で育てる新しいキャラクタープロジェクト</strong><br>あなたの想像が、この世界を動かす。</p>
+                <p class="footer__social" style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    Instagram: <a href="https://instagram.com/kukutree" target="_blank" style="color: #7fb069; text-decoration: none;">@kukutree</a> |
+                    WhatsApp: <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="color: #7fb069; text-decoration: none;">コミュニティ</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "KUKU Official",
+  "short_name": "KUKU",
+  "description": "みんなで創る神話IP - Co-Create a Mythical IP",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2EDE4",
+  "theme_color": "#0B3D2E",
+  "icons": [
+    {
+      "src": "/assets/kuku_mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

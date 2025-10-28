@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>Le Monde de KUKU | KUKU</title>
+    <meta name="title" content="KUKU Univers du Monde">
+    <meta name="description" content="Le monde mystique où vivent les KUKU. Une histoire tissée entre le Village des Arbres en surface et la Cité des Racines souterraine.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <style>
+        /* World Page Styles */
+        .world-hero {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.95) 0%, rgba(95, 125, 92, 0.9) 100%), url('../public/assets/hero_sample.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 2rem 8rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .world-section-with-image {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .world-section-content {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .world-section-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15);
+        }
+
+        .world-section-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .world-section-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0B3D2E;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .world-section-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .world-section-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .world-section-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .world-section-image img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 50px rgba(11, 61, 46, 0.3);
+        }
+
+        .world-section-image-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.1) 0%, rgba(127, 176, 105, 0.1) 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(11, 61, 46, 0.3);
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.1);
+        }
+
+        .world-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(11, 61, 46, 0.3) 100%);
+        }
+
+        .world-hero::after {
+            content: '🌲';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .world-hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .world-hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.8s ease-out;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .world-hero .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .world-hero .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .world-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            margin-top: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(11, 61, 46, 0.1);
+            color: #0B3D2E;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: rgba(17, 17, 17, 0.7);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .world-intro {
+            background: linear-gradient(135deg, rgba(242, 237, 228, 0.5) 0%, rgba(242, 237, 228, 0.2) 100%);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            margin-bottom: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .world-intro::before {
+            content: '🌍';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 12rem;
+            opacity: 0.05;
+        }
+
+        .world-intro h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 2rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .world-intro p {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: rgba(17, 17, 17, 0.85);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .world-section {
+            background: white;
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .world-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15);
+        }
+
+        .world-section::before {
+            content: attr(data-icon);
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 10rem;
+            opacity: 0.05;
+        }
+
+        .world-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .world-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0B3D2E;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .world-section p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .world-section ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .world-section ul li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: rgba(17, 17, 17, 0.85);
+            line-height: 1.7;
+            background: rgba(242, 237, 228, 0.3);
+            border-radius: 10px;
+            border-left: 3px solid #0B3D2E;
+            transition: all 0.3s ease;
+        }
+
+        .world-section ul li:hover {
+            background: rgba(242, 237, 228, 0.5);
+            padding-left: 1.25rem;
+        }
+
+        .world-section ul li strong {
+            color: #0B3D2E;
+            font-weight: 700;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .world-section-content ul li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .connection-card {
+            background: linear-gradient(135deg, #0B3D2E 0%, rgba(95, 125, 92, 0.9) 100%);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            color: white;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connection-card::before {
+            content: '♾️';
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            font-size: 15rem;
+            opacity: 0.1;
+            transform: translateY(-50%);
+        }
+
+        .connection-card h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .connection-card p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .place-card {
+            background: rgba(242, 237, 228, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid rgba(11, 61, 46, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            border-color: rgba(11, 61, 46, 0.3);
+            background: rgba(242, 237, 228, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .place-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .place-card p {
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .mystery-section {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(95, 125, 92, 0.05) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid rgba(11, 61, 46, 0.2);
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .mystery-section::before {
+            content: '⚠️';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+
+        .mystery-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mystery-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0B3D2E 0%, rgba(11, 61, 46, 0.85) 100%);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            text-align: center;
+            color: white;
+            margin-top: 6rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .world-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .world-hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .world-intro {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .world-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .world-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .connection-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .world-section-with-image {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .world-section-image {
+                position: relative;
+                top: 0;
+            }
+
+            .world-section-content {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Accueil</a></li>
+                    <li><a href="character.html" class="nav__link">Personnages</a></li>
+                    <li><a href="world.html" class="nav__link">Univers</a></li>
+                    <li><a href="guidelines.html" class="nav__link">Directives</a></li>
+                    <li><a href="license.html" class="nav__link">Licence</a></li>
+                    <li><a href="contest.html" class="nav__link">Concours</a></li>
+                    <li><a href="salon.html" class="nav__link">Communauté</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 Sponsors</a></li>
+                    <li><a href="index.html#resources" class="nav__link">Télécharger</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 Langue</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="world.html">Français</a></li>
+                            <li><a href="../world.html">日本語</a></li>
+                            <li><a href="../en/world.html">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Accueil</a>
+            <a href="character.html" class="mobile-menu__link">Personnages</a>
+            <a href="world.html" class="mobile-menu__link">Univers</a>
+            <a href="guidelines.html" class="mobile-menu__link">Directives</a>
+            <a href="license.html" class="mobile-menu__link">Licence</a>
+            <a href="contest.html" class="mobile-menu__link">Concours</a>
+            <a href="salon.html" class="mobile-menu__link">Communauté</a>
+            <a href="index.html#resources" class="mobile-menu__link">Télécharger</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 Langue</span>
+                <a href="world.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+                <a href="../world.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="../en/world.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="world-hero">
+        <h1>🌳 KUKU WORLD</h1>
+    </section>
+
+    <!-- World Content -->
+    <div class="world-content">
+        <!-- Qu'est-ce que KUKU -->
+        <div class="world-section">
+            <h2 style="font-size: 2rem; color: #0B3D2E; margin-bottom: 2rem; border-left: 5px solid #7fb069; padding-left: 1rem;">Qu'est-ce que KUKU</h2>
+
+            <div style="display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;">
+                <!-- Texte -->
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        KUKU est<br>
+                        une nouvelle espèce née entre le dieu des arbres "Kukunochi" et les humains—<br>
+                        ce qu'on appelle les "Gens des Bois" (Woodfolk).
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Des parties de leur corps sont faites de bois,<br>
+                        et ils peuvent maintenir leur vie et guérir leurs blessures en absorbant la lumière.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Forts comme des arbres,<br>
+                        doux comme des humains,<br>
+                        des êtres destinés à vivre avec la forêt.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Certains KUKU abritent des esprits dans des boîtes en bois appelées "Masu" qu'ils portent sur leur poitrine,<br>
+                        empruntant leur pouvoir pour le combat et la guérison.<br>
+                        Cela s'appelle "l'Art des Esprits" et représente le pouvoir symbolique des KUKU.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Pourquoi Kukunochi s'est mêlé aux humains et a donné naissance aux KUKU<br>
+                        reste enveloppé de mystère.
+                    </p>
+                </div>
+
+                <!-- Vidéo (côté droit) -->
+                <div style="flex: 0 0 auto; position: sticky; top: 100px;">
+                    <video autoplay loop muted playsinline style="width: 400px; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                        <source src="../kukuvideMP4.MP4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Masu -->
+        <div class="world-section">
+            <h2 style="font-size: 2rem; color: #0B3D2E; margin-bottom: 2rem; border-left: 5px solid #7fb069; padding-left: 1rem;">Masu</h2>
+
+            <div style="display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;">
+                <!-- Texte -->
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        L'équipement symbolique que portent les KUKU.<br>
+                        À l'origine, on dit que c'est une "amulette" donnée par le dieu Kukunochi à ses enfants.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        À l'intérieur du Masu dort un esprit contracté par chaque KUKU,<br>
+                        s'éveillant par des actes de combat, de prière, de musique, de poésie et de danse.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Le Masu d'un KUKU est avec lui depuis sa naissance<br>
+                        et change ses veines de bois avec son cœur.<br>
+                        Lorsqu'un esprit l'habite, le Masu brille,<br>
+                        servant de protection au combat, de phare dans les rituels,<br>
+                        et même d'instrument qui résonne avec la musique dans l'art.
+                    </p>
+                </div>
+
+                <!-- Vidéo (côté droit) -->
+                <div style="flex: 0 0 auto; position: sticky; top: 100px;">
+                    <video autoplay loop muted playsinline style="width: 400px; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                        <source src="../masu mov.mov" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Esprits -->
+        <div class="world-section">
+            <h2 style="font-size: 2rem; color: #0B3D2E; margin-bottom: 2rem; border-left: 5px solid #7fb069; padding-left: 1rem;">Esprits</h2>
+
+            <div style="display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;">
+                <!-- Texte -->
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Dans le monde des KUKU, des esprits habitent tous les phénomènes naturels.<br>
+                        Ce sont des entités d'énergie aux attributs divers tels que "lumière", "vent", "eau", "feu", "terre", "fleur" et "ombre".
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        En contractant avec des esprits, les KUKU peuvent "emprunter" leur pouvoir,<br>
+                        mais ce n'est pas de la domination—c'est une relation de résonance.<br>
+                        Si le cœur se trouble, l'esprit se tait; si le cœur est pur, ils chantent ensemble.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        "Les esprits sont les mots de la nature. Seuls ceux qui écoutent connaissent leur voix."
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Les esprits habitent le "Masu" et grandissent aux côtés de leurs maîtres.<br>
+                        Au fil des longues années, le Masu respire comme s'il était vivant,<br>
+                        et lorsque l'esprit et le cœur du KUKU ne font qu'un, des pouvoirs inconnus se libèrent.
+                    </p>
+                </div>
+
+                <!-- Vidéo (côté droit) -->
+                <div style="flex: 0 0 auto; position: sticky; top: 100px;">
+                    <video autoplay loop muted playsinline style="width: 400px; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                        <source src="../精霊.mov" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Village des Arbres et Cité des Racines -->
+        <div class="world-section">
+            <h2 style="font-size: 2rem; color: #0B3D2E; margin-bottom: 2rem; border-left: 5px solid #7fb069; padding-left: 1rem;">Le Village des Arbres et la Cité des Racines</h2>
+
+            <div style="display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;">
+                <!-- Texte -->
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Un village au fond de la forêt où vivent de nombreux KUKU.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Il est formé par l'entrelacement des racines et des branches des arbres.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Au centre se dresse l'Arbre Monde, créé par le dieu des arbres Kukunochi, avec le village qui l'entoure.<br>
+                        D'une partie du tronc de l'Arbre Monde s'étend un quartier souterrain de racines. Il s'appelle la "Cité des Racines" et sert de centre de commerce et de culture.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        En traversant des ponts de bois qui s'étendent le long des troncs d'arbres,<br>
+                        vous trouverez des ateliers en bois, de petits salons de thé, des pharmacies utilisant des fruits de la forêt,<br>
+                        et des ateliers d'artisans où les Masu sont polis.
+                    </p>
+
+                    <p style="line-height: 2; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        L'existence du Village des Arbres en surface et de la Cité des Racines souterraine est la raison pour laquelle les KUKU ont prospéré dans le monde forestier pendant des milliers d'années.
+                    </p>
+                </div>
+
+                <!-- Vidéo (côté droit) -->
+                <div style="flex: 0 0 auto; position: sticky; top: 100px;">
+                    <video autoplay loop muted playsinline style="width: 400px; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                        <source src="../樹木の里と翠根街.MP4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Créez Votre Histoire Dans Ce Monde</h2>
+            <p>
+                Tissez votre propre récit unique dans le cadre du Village des Arbres et de la Cité des Racines.<br>
+                Une nouvelle aventure commence avec les KUKU.
+            </p>
+            <div class="cta-buttons">
+                <a href="../public/assets/KUKU_Starter_Pack.zip" class="btn btn--secondary" download style="background: white; color: #0B3D2E;">
+                    Télécharger le Kit de Démarrage
+                </a>
+                <a href="../character.html" class="btn btn--outline" style="border-color: white; color: white;">
+                    Voir les Personnages
+                </a>
+                <a href="guidelines.html" class="btn btn--outline" style="border-color: white; color: white;">
+                    Consulter les Directives
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">Une PI Ouverte Co-Créée avec 8 Milliards de Personnes - Co-Create with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="../index.html">Accueil</a>
+                        <a href="../character.html">Personnages</a>
+                        <a href="world.html">Univers</a>
+                        <a href="guidelines.html">Directives</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="../contest.html">Concours</a>
+                        <a href="../index.html#resources">Télécharger</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" download>Kit de Démarrage</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">Boutique en Ligne</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. Tous droits réservés.</p>
+                <p class="footer__desc">KUKU est un projet de PI ouverte que 8 milliards de personnes peuvent utiliser librement.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

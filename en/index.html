@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>KUKU - Open IP Created with 8 Billion People | Freely Create with AI</title>
+    <meta name="title" content="KUKU - Open IP Created with 8 Billion People">
+    <meta name="description" content="An open IP created with 8 billion people worldwide. KUKU is a freely usable character and world. Create your stories, music, and videos with AI. Free for non-commercial use.">
+    <meta name="keywords" content="KUKU,Open IP,AI Creation,Characters,Fan Art,FOMUS,Open Use,Creative Commons,Fantasy,Anime">
+    <meta name="author" content="FOMUS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kuku-official.vercel.app/en/">
+    <meta property="og:title" content="KUKU - Open IP Created with 8 Billion People">
+    <meta property="og:description" content="An open IP created with 8 billion people worldwide. Freely usable characters and world. Create your stories, music, and videos with AI.">
+    <meta property="og:image" content="https://kuku-official.vercel.app/assets/og_kuku.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="KUKU Official">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kuku-official.vercel.app/en/">
+    <meta property="twitter:title" content="KUKU - Open IP Created with 8 Billion People">
+    <meta property="twitter:description" content="An open IP created with 8 billion people worldwide. Freely usable characters and world. Create your stories, music, and videos with AI.">
+    <meta property="twitter:image" content="https://kuku-official.vercel.app/assets/og_kuku.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+    <link rel="apple-touch-icon" href="../public/assets/kuku_mark.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kuku-official.vercel.app/en/">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+    <meta name="msapplication-TileColor" content="#0B3D2E">
+
+    <!-- Google Fonts - Optimized -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "KUKU",
+      "description": "An open IP created with 8 billion people worldwide. Freely usable characters and world.",
+      "creator": {
+        "@type": "Organization",
+        "name": "FOMUS"
+      },
+      "license": "https://kuku-official.vercel.app/en/license.html",
+      "keywords": "Open IP, AI Creation, Characters, Fan Art",
+      "inLanguage": ["ja", "en"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Creators Worldwide"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#home">
+                    <img src="../public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="character.html" class="nav__link">Characters</a></li>
+                    <li><a href="world.html" class="nav__link">World</a></li>
+                    <li><a href="guidelines.html" class="nav__link">Guidelines</a></li>
+                    <li><a href="license.html" class="nav__link">License</a></li>
+                    <li><a href="contest.html" class="nav__link">Contest</a></li>
+                    <li><a href="salon.html" class="nav__link">Community</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 Sponsors</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 Language</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="../en/index.html">English</a></li>
+                            <li><a href="../index.html">日本語</a></li>
+                            <li><a href="../fr/index.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Home</a>
+            <a href="character.html" class="mobile-menu__link">Characters</a>
+            <a href="world.html" class="mobile-menu__link">World</a>
+            <a href="guidelines.html" class="mobile-menu__link">Guidelines</a>
+            <a href="license.html" class="mobile-menu__link">License</a>
+            <a href="contest.html" class="mobile-menu__link">Contest</a>
+            <a href="salon.html" class="mobile-menu__link">Community</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 Language</span>
+                <a href="../en/index.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="../index.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="../fr/index.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--centered" id="home" style="
+        background: linear-gradient(135deg, #f8faf9 0%, #ffffff 20%, #faf9f6 40%, #ffffff 60%, #f5f7f5 80%, #ffffff 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 8rem 2rem 6rem;
+    ">
+        <!-- Decorative Background Elements -->
+        <div style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: -15%; left: -8%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(127, 176, 105, 0.12) 0%, transparent 70%); border-radius: 50%; animation: float 25s ease-in-out infinite reverse;"></div>
+        <div style="position: absolute; top: 20%; left: 10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(11, 61, 46, 0.08) 0%, transparent 70%); border-radius: 50%; animation: float 15s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: 25%; right: 15%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%; animation: float 18s ease-in-out infinite;"></div>
+
+        <!-- Subtle Pattern Overlay -->
+        <div style="position: absolute; inset: 0; background-image:
+            radial-gradient(circle at 20% 30%, rgba(152, 216, 163, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(127, 176, 105, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(11, 61, 46, 0.02) 0%, transparent 50%);
+        "></div>
+
+        <div class="hero__content hero__content--full" style="position: relative; z-index: 1;">
+            <h1 class="hero__title" style="font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.4; padding: 1rem 0; margin-bottom: 3rem; animation: fadeInUp 1s ease-out; text-shadow: 0 2px 20px rgba(11, 61, 46, 0.08);">A New Character Project Grown by 8 Billion People Worldwide: "KUKU"</h1>
+
+            <!-- Video -->
+            <div style="max-width: 900px; margin: 0 auto; animation: fadeInUp 1.4s ease-out;">
+                <div class="video-wrapper video-wrapper--large" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(11, 61, 46, 0.15);">
+                    <video class="hero-video" controls playsinline style="width: 100%; height: auto; display: block;">
+                        <source src="../public/assets/kuku_hero.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.3rem; line-height: 1.8; color: #333;">
+                        <strong style="font-size: 1.5rem; color: #7fb069; display: block; margin-bottom: 0.5rem;">✓ These characters are free for everyone to use</strong>
+                        Fan works OK · Commercial use OK · Monetization OK<br>
+                        Welcome any method: hand-drawn, AI, or anything else
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes float {
+                0%, 100% { transform: translate(0, 0) scale(1); }
+                33% { transform: translate(30px, -30px) scale(1.1); }
+                66% { transform: translate(-20px, 20px) scale(0.9); }
+            }
+
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 768px) {
+                section.hero {
+                    padding: 6rem 1.5rem 4rem !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" style="padding: 60px 0; text-align: center; background-color: #fafaf8;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="font-size: 1.6em; color: #2e402d; margin-bottom: 0.8em;">
+                Our Mission
+            </h2>
+
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+                <strong style="font-size: 1.1em; color: #0B3D2E;">To create a world where everyone can experience the joy of "co-creating" in any form.</strong>
+            </p>
+
+            <div style="text-align: left; max-width: 750px; margin: 0 auto;">
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        Eliminating boundaries between watching/creating/supporting, cultivating a culture where <strong>value is created simply by participating</strong>.
+                    </p>
+                </div>
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        Starting from <strong>Japanese animation</strong>, connecting nature, crafts, music, and technology to expand globally.
+                    </p>
+                </div>
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        Through openly usable characters, welcoming <strong>monetization of fan works</strong> and creating a cycle of creativity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" style="padding: 60px 0;">
+        <div class="container">
+            <div class="about__grid" style="gap: 3rem;">
+                <div class="about__content">
+                    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">What is KUKU?</h2>
+                    <p class="about__text" style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        <strong>KUKU</strong> is a <strong>character and story world</strong> that anyone in the world can freely use.<br>
+                        The setting is a place where trees and light live together—<strong>"The Tree Village"</strong>.<br>
+                        There, people and nature connect through creation.
+                    </p>
+                    <p class="about__text" style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        Hand-drawn, photography, music, or AI<br>
+                        <strong>You can participate in this world in any way.</strong><br>
+                        KUKU is a <strong>"co-creation space" where everyone—viewers, creators, and supporters—becomes the protagonist.</strong>
+                    </p>
+
+                    <h3 style="font-size: 1.3rem; color: #0B3D2E; margin: 2.5rem 0 1.2rem 0; font-weight: 700;">🌿 Features of KUKU</h3>
+
+                    <div class="about__features-list" style="gap: 1rem; margin-top: 1rem;">
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">1</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">Characters and world settings provided openly</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">Anyone can freely use and create.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">2</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">All forms of expression welcome</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">AI, hand-drawn, photography, music, video—style doesn't matter.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">3</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">Fan works & monetization OK</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">Within the guidelines, you can publish and monetize as your own work.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 1rem; line-height: 1.8; margin-top: 2rem; padding: 1.5rem; background: rgba(127, 176, 105, 0.08); border-radius: 12px; border-left: 4px solid #7fb069;">
+                        <strong style="color: #0B3D2E;">Your creation nurtures KUKU's story.</strong><br>
+                        A new character IP that 8 billion people worldwide can participate in—that's KUKU.
+                    </p>
+                </div>
+                <div class="about__image">
+                    <div class="slideshow">
+                        <div class="slideshow__container">
+                            <img src="../public/assets/slideshow/ヒノキ.JPG" alt="Hinoki" class="slideshow__image active">
+                            <img src="../public/assets/slideshow/サクラ.JPG" alt="Sakura" class="slideshow__image">
+                            <img src="../public/assets/slideshow/ミズキ.jpg" alt="Mizuki" class="slideshow__image">
+                            <img src="../public/assets/slideshow/フジ.JPG" alt="Fuji" class="slideshow__image">
+                            <img src="../public/assets/slideshow/リノ.jpg" alt="Rino" class="slideshow__image">
+                            <img src="../public/assets/slideshow/サザンカ.JPG" alt="Sazanka" class="slideshow__image">
+                        </div>
+                        <button class="slideshow__btn slideshow__btn--prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="slideshow__btn slideshow__btn--next" onclick="changeSlide(1)">›</button>
+                        <div class="slideshow__dots">
+                            <span class="slideshow__dot active" onclick="currentSlide(0)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(1)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(2)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(3)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(4)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(5)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masu (Box) Symbolism Section -->
+    <section class="masu-section" style="padding: 50px 0; text-align: center; background: linear-gradient(135deg, #f8faf7 0%, #e8ebe7 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.03;">
+            <div style="position: absolute; top: 15%; left: 8%; font-size: 12rem;">📦</div>
+            <div style="position: absolute; bottom: 15%; right: 8%; font-size: 12rem;">✨</div>
+        </div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <h2 style="font-size: 1.75rem; font-weight: 900; color: #0B3D2E; margin-bottom: 1.2rem; text-align: center;">
+                About the Wooden Box (Masu) KUKU Carries
+            </h2>
+
+            <div class="masu-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+                <!-- Left: Text Content -->
+                <div style="padding: 1.75rem; background: rgba(255, 255, 255, 0.9); border-radius: 1.5rem; box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15); backdrop-filter: blur(10px);">
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #2e402d; text-align: left; margin: 0;">
+                        The "masu" that KUKU always carries is a traditional Japanese wooden vessel,
+                        symbolizing "giving form to thoughts."<br><br>
+
+                        The word "masu" contains the meaning of "increase" (to grow).
+                        A wish that gratitude, connections, and the power of creation will increase.<br><br>
+
+                        Through this masu, KUKU shares thoughts with friends around the world,
+                        symbolizing the "growing" of new culture together.<br><br>
+
+                        <strong style="font-size: 1rem; color: #0B3D2E; display: block; margin-top: 1rem;">
+                            One person's thoughts "increase" to the world.<br>
+                            This is the beginning of KUKU's story.
+                        </strong>
+                    </p>
+                </div>
+
+                <!-- Right: Image -->
+                <div style="border-radius: 1.5rem; overflow: hidden; box-shadow: 0 8px 30px rgba(11, 61, 46, 0.2); background: rgba(255, 255, 255, 0.9);">
+                    <img src="../public/assets/masu-image.jpg" alt="KUKU holding Masu" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 350px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Style -->
+        <style>
+            @media (max-width: 768px) {
+                .masu-content {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Characters Preview Section -->
+    <section class="characters-preview" id="characters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CHARACTERS</span>
+                <h2 class="section-title">6 Characters</h2>
+                <p class="section-desc" style="white-space: nowrap;">Each with unique personalities. Use them freely and create your story</p>
+            </div>
+            <div class="characters-grid">
+                <div class="character-mini-card" onclick="openCharacterModal('hinoki')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/ヒノキ.JPG" alt="Hinoki">
+                    </div>
+                    <h3 class="character-mini-card__name">Hinoki</h3>
+                    <p class="character-mini-card__role">Guardian Warrior</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('sakura')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/サクラ.JPG" alt="Sakura">
+                    </div>
+                    <h3 class="character-mini-card__name">Sakura</h3>
+                    <p class="character-mini-card__role">Healing Poet</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('mizuki')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/ミズキ.jpg" alt="Mizuki">
+                    </div>
+                    <h3 class="character-mini-card__name">Mizuki</h3>
+                    <p class="character-mini-card__role">Water Sage</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('fuji')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/フジ.JPG" alt="Fuji">
+                    </div>
+                    <h3 class="character-mini-card__name">Fuji</h3>
+                    <p class="character-mini-card__role">Dream Weaver</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('rino')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/リノ.jpg" alt="Rino">
+                    </div>
+                    <h3 class="character-mini-card__name">Rino</h3>
+                    <p class="character-mini-card__role">Wind Messenger</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('sazanka')">
+                    <div class="character-mini-card__image">
+                        <img src="../public/assets/characters/サザンカ.JPG" alt="Sazanka">
+                    </div>
+                    <h3 class="character-mini-card__name">Sazanka</h3>
+                    <p class="character-mini-card__role">Flame Guardian</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="character.html" class="btn btn--outline">View All Characters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Participate Section -->
+    <section style="padding: 60px 0; background: #ffffff;">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" style="text-align: center; font-size: 2rem; color: #0B3D2E; margin-bottom: 3rem;">
+                What You Can Do
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✏️</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">Create</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        Illustrations / Manga / Videos / Music / Poetry / Photos / Animations
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📣</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">Support</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        Share feedback / Spread the word / Comment / Attend exhibitions
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">Learn / Co-Create</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        Workshops / Premium salon for collaboration
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">Sponsor</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        Sponsorship / Partnership / Collaboration / Venue provision / Equipment support
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @media (max-width: 768px) {
+                div[style*="grid-template-columns: repeat(4"] {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                div[style*="grid-template-columns: repeat(4"] {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="howto" id="howto" style="padding: 3rem 0 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #1a5a47 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05;">
+            <div style="position: absolute; top: 10%; left: 5%; font-size: 15rem;">🌿</div>
+            <div style="position: absolute; bottom: 10%; right: 5%; font-size: 15rem;">✨</div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; font-weight: 900; color: #ffffff; margin-bottom: 0.5rem;">Get Started in 3 Steps</h2>
+                <p style="font-size: 1rem; color: rgba(255, 255, 255, 0.9);">Anyone can easily start creating right now</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <!-- Step 1 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">1</span>
+                    </div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📦</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">Download</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        Download the free Starter Pack (character settings, prompt examples, logos, sound materials)
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">2</span>
+                    </div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎨</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">Create</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        Freely create videos, illustrations, music, novels, games with AI or handwork
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">3</span>
+                    </div>
+                    <div style="margin-bottom: 0.75rem; display: flex; justify-content: center;">
+                        <img src="../public/assets/global-share-illustration.svg" alt="Share Worldwide" style="width: 120px; height: 120px;">
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">Publish</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        Post on SNS with #KUKUART tag or submit via form<br>
+                        <span style="font-size: 0.85rem; color: #7fb069;">→ Eligible for official features, awards, and sponsor prizes</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Community CTA After Steps -->
+            <div style="max-width: 800px; margin: 2rem auto 0; padding: 1.5rem 2rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 1.5rem; border: 2px solid rgba(127, 176, 105, 0.3); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌱</div>
+                    <p style="font-size: 1rem; color: #0B3D2E; margin-bottom: 1rem; line-height: 1.7; font-weight: 500;">
+                        After publishing your work, share it with the KUKU community.<br>
+                        Meet creators worldwide and new collaborations will be born.
+                    </p>
+                    <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(37, 211, 102, 0.3)';">
+                        <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Join WhatsApp Group
+                    </a>
+                </div>
+            </div>
+
+            <!-- Commercial Use Note -->
+            <div style="max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 1.5rem; border: 2px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+                <p style="font-size: 0.95rem; color: #ffffff; margin: 0; line-height: 1.7; text-align: center;">
+                    <span style="font-size: 1.3rem; margin-right: 0.5rem;">💡</span>
+                    <strong>For Commercial Use:</strong> Free up to annual revenue of $140,000. Beyond that, please apply from the <a href="license.html" style="color: #FFD700; text-decoration: underline; font-weight: 600;">license page</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Style -->
+        <style>
+            @media (max-width: 768px) {
+                .howto div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest News</h2>
+            </div>
+            <div class="news__list">
+                <a href="contest.html" class="news-item news-item--featured" style="text-decoration: none; display: block; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 16px; padding: 2rem; color: white; box-shadow: 0 8px 24px rgba(11, 61, 46, 0.3); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.1); border-radius: 50%;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-size: 1.5rem;">🎬</span>
+                            <span style="background: rgba(255, 215, 0, 0.9); color: #0B3D2E; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">NEW</span>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: white;">1st Short Animation Contest</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.95);">Submission Period: November 1, 2025 ~ January 11, 2026</p>
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🥇</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">Grand Prize $400</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🥈</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">Excellence Award $100</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🤖</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">AI Use Welcome</span>
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; color: #0B3D2E; border-radius: 50px; font-weight: 600; font-size: 1rem; margin-top: 0.5rem;">
+                            View Details
+                            <span style="font-size: 1.2rem;">→</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Data Section -->
+    <section class="character-data" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">RESOURCES</span>
+                <h2 class="section-title">Character Data & Resources</h2>
+                <p class="section-desc">Together with creators worldwide. Download all data needed for KUKU creation for free</p>
+            </div>
+
+            <!-- Main Download CTA -->
+            <div class="resource-main">
+                <div class="resource-main__content">
+                    <div class="resource-main__icon">📦</div>
+                    <div class="resource-main__text">
+                        <h3>Starter Pack (Free)</h3>
+                        <p>Download all materials needed for creation in one package</p>
+                        <ul class="resource-main__includes">
+                            <li>Character setting materials</li>
+                            <li>AI prompt examples</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resource-main__action">
+                    <a href="../public/assets/KUKU_Starter_Pack.zip" class="btn btn--primary btn--large" download>
+                        Download Now
+                    </a>
+                    <p class="resource-main__note">ZIP format | Completely free | Credit required</p>
+                </div>
+            </div>
+
+            <!-- Individual Resources -->
+            <div class="resources__list">
+            </div>
+
+            <!-- Additional Info -->
+            <div class="resources__info">
+                <div class="info-box">
+                    <h4>📌 Notes Before Use</h4>
+                    <ul>
+                        <li>All materials are <strong>free for non-commercial use</strong></li>
+                        <li>For annual revenue exceeding $140,000, application from the <a href="license.html">license page</a> is required</li>
+                        <li>Credit notation: <code>© FOMUS / KUKU – used under KUKU Open Use License</code></li>
+                        <li>Derivative works with AI generation are welcome (#KUKUART tag recommended)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KUKU Creator Salon Section -->
+    <section id="salon" style="background: linear-gradient(135deg, #f8faf9 0%, #ffffff 50%, #faf9f6 100%); padding: 5rem 0; position: relative; overflow: hidden;">
+        <!-- Background decoration -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(127, 176, 105, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-block; background: linear-gradient(135deg, #98D8A3 0%, #7fb069 100%); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: 0.05em;">
+                    JOIN US
+                </div>
+                <h2 style="font-size: 2.5rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.02em;">
+                    KUKU Creator Salon
+                </h2>
+                <p style="font-size: 1.1rem; color: rgba(11, 61, 46, 0.7); line-height: 1.8;">
+                    Connect with creators worldwide and grow together
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-bottom: 4rem;">
+                <!-- Free Community -->
+                <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid #f0f0f0; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, rgba(152, 216, 163, 0.1) 0%, transparent 100%); border-radius: 0 20px 0 100%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+                        <h3 style="font-size: 1.5rem; color: #0B3D2E; margin-bottom: 0.5rem; font-weight: 700;">Free Community</h3>
+                        <p style="font-size: 2rem; font-weight: 800; color: #7fb069; margin-bottom: 1.5rem; letter-spacing: -0.02em;">FREE</p>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.1) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                            <p style="font-size: 0.95rem; line-height: 1.8; color: #333; margin: 0;">
+                                Basic materials · WhatsApp community<br>
+                                Contest participation · Free publishing<br>
+                                Monetization OK
+                            </p>
+                        </div>
+
+                        <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: block; text-align: center; padding: 1rem 2rem; background: linear-gradient(135deg, #98D8A3 0%, #7fb069 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(127, 176, 105, 0.3);">
+                            Join Free
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Salon -->
+                <div style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); padding: 2.5rem; border-radius: 20px; box-shadow: 0 15px 50px rgba(11, 61, 46, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid rgba(152, 216, 163, 0.2);">
+                    <div style="position: absolute; top: -20px; right: 20px; background: #98D8A3; color: #0B3D2E; padding: 0.6rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+                        RECOMMENDED
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%);"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌳</div>
+                        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 0.5rem; font-weight: 700;">Creator Salon</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 2rem; font-weight: 800; color: white; margin: 0; letter-spacing: -0.02em;">
+                                $7<span style="font-size: 1rem; font-weight: 400; opacity: 0.8;">/month</span>
+                                <span style="font-size: 1rem; opacity: 0.6;"> or </span>
+                                $60<span style="font-size: 1rem; font-weight: 400; opacity: 0.8;">/year</span>
+                            </p>
+                            <p style="font-size: 0.9rem; color: #98D8A3; font-weight: 700; margin: 0.5rem 0 0 0;">💰 29% OFF</p>
+                        </div>
+
+                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; backdrop-filter: blur(10px);">
+                            <p style="font-size: 0.95rem; line-height: 1.8; color: rgba(255, 255, 255, 0.95); margin: 0;">
+                                Exclusive materials · Salon-only contests<br>
+                                Priority for business projects<br>
+                                Film festival support
+                            </p>
+                        </div>
+
+                        <a href="salon.html" style="display: block; text-align: center; padding: 1rem 2rem; background: white; color: #0B3D2E; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="salon.html" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.2rem 3rem; background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 8px 25px rgba(11, 61, 46, 0.3);">
+                    Learn More About Salon
+                    <span style="font-size: 1.2rem;">→</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            #salon div[style*="box-shadow"]:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+            }
+            #salon a[style*="background"]:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(11, 61, 46, 0.4) !important;
+            }
+        </style>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-desc">Answers to common questions about using KUKU</p>
+            </div>
+            <div class="faq__grid">
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>Can I use AI?</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>Absolutely! AI, hand-drawn, or <strong>any creative method</strong> is warmly welcome.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>Can I sell fan works?</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p><strong>Yes (welcome)</strong>. Small batches, doujinshi, online sales, etc. are all free. See the <a href="guidelines.html">Guidelines</a> for details.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>Can I participate from overseas?</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>Absolutely welcome. We support English and Japanese as a base, and will gradually add more languages.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>Is corporate collaboration possible?</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>Yes. Please contact us via <a href="https://instagram.com/kukutree" target="_blank">Instagram</a> or <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank">WhatsApp</a>. We'll proceed according to guidelines.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="guidelines.html" class="btn btn--outline">View Detailed Guidelines</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Modal -->
+    <div id="characterModal" class="character-modal">
+        <div class="character-modal__content">
+            <button class="character-modal__close" onclick="closeCharacterModal()">×</button>
+            <div class="character-modal__inner" id="characterModalInner">
+                <!-- Content will be inserted by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT US Section -->
+    <section style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 50%, #0B3D2E 100%); padding: 6rem 0; color: #F5E6D3; position: relative; overflow: hidden;">
+        <!-- Background decoration -->
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; background: radial-gradient(ellipse at center, rgba(152, 216, 163, 0.05) 0%, transparent 70%);"></div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-block; background: rgba(152, 216, 163, 0.2); color: #98D8A3; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.1em; border: 1px solid rgba(152, 216, 163, 0.3);">
+                    ABOUT US
+                </div>
+                <h2 style="font-size: 2rem; color: white; margin-bottom: 2rem; font-weight: 700; line-height: 1.6;">
+                    KUKU is jointly operated by<br>
+                    <span style="color: #98D8A3;">FOMUS LLC</span> in Japan and<br>
+                    <span style="color: #98D8A3;">FOMUS Global FZ-LLC</span> in Dubai<br>
+                    as an <span style="color: #98D8A3; font-weight: 800;">Open IP Project</span>.
+                </h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    Combining Japan's delicate creativity with Dubai's international network,<br>
+                    we aim to create "<strong style="color: #98D8A3;">a new form of entertainment where people worldwide co-create and enjoy together</strong>".
+                </p>
+            </div>
+
+            <!-- Two locations cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-bottom: 4rem;">
+                <!-- Japan Entity -->
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem 2.5rem; border-radius: 20px; border: 2px solid rgba(152, 216, 163, 0.2); backdrop-filter: blur(10px); transition: all 0.4s; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3.5rem; margin-bottom: 1rem; line-height: 1;">🇯🇵</div>
+                        <h3 style="font-size: 1.6rem; color: #98D8A3; margin-bottom: 1rem; font-weight: 800;">FOMUS LLC<span style="font-size: 1rem; font-weight: 400; opacity: 0.8; margin-left: 0.5rem;">(Japan)</span></h3>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem; color: #98D8A3; font-weight: 700; margin-bottom: 0.8rem;">Business Activities</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2; font-size: 0.95rem;">
+                                <li>• Japan domestic project management & planning</li>
+                                <li>• Creator support & community management</li>
+                                <li>• Content production, education & license management</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.15) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(152, 216, 163, 0.2);">
+                            <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                🪴 Centered on Japanese culture and craftsmanship, we support KUKU's worldview creation and community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai Entity -->
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem 2.5rem; border-radius: 20px; border: 2px solid rgba(152, 216, 163, 0.3); backdrop-filter: blur(10px); transition: all 0.4s; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3.5rem; margin-bottom: 1rem; line-height: 1;">🇦🇪</div>
+                        <h3 style="font-size: 1.6rem; color: #98D8A3; margin-bottom: 1rem; font-weight: 800;">FOMUS Global FZ-LLC<span style="font-size: 1rem; font-weight: 400; opacity: 0.8; margin-left: 0.5rem;">(Dubai)</span></h3>
+
+                        <div style="background: rgba(152, 216, 163, 0.15); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 3px solid #98D8A3;">
+                            <p style="font-size: 0.9rem; margin: 0; opacity: 0.8;">Location</p>
+                            <p style="font-size: 1.1rem; margin: 0.3rem 0 0 0; font-weight: 600;">Dubai, United Arab Emirates</p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem; color: #98D8A3; font-weight: 700; margin-bottom: 0.8rem;">Business Activities</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2; font-size: 0.95rem;">
+                                <li>• Global expansion & international partnerships</li>
+                                <li>• International creative project management</li>
+                                <li>• Creative business & marketing development</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.2) 0%, rgba(152, 216, 163, 0.08) 100%); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(152, 216, 163, 0.3);">
+                            <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                🌍 Based at <strong>in5 Design (Dubai Design District)</strong>, we connect brands, artists, and investors worldwide, leading KUKU's international expansion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer (Contact) -->
+            <div style="text-align: center; padding: 2.5rem 0; border-top: 1px solid rgba(152, 216, 163, 0.2);">
+                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem;">
+                    Contact Us
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://instagram.com/kukutree" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 0.9rem 2rem; border: 2px solid rgba(225, 48, 108, 0.5); border-radius: 50px; transition: all 0.3s; background: linear-gradient(135deg, #E1306C 0%, #C13584 100%); box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);">
+                        <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 0.9rem 2rem; border: 2px solid rgba(37, 211, 102, 0.5); border-radius: 50px; transition: all 0.3s; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                        <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            section div[style*="backdrop-filter"]:hover {
+                transform: translateY(-5px);
+                border-color: rgba(152, 216, 163, 0.5);
+            }
+        </style>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">Open IP Created with 8 Billion People - Co-Create with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="index.html">Home</a>
+                        <a href="character.html">Characters</a>
+                        <a href="world.html">World</a>
+                        <a href="guidelines.html">Guidelines</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="contest.html">Contest</a>
+                        <a href="#resources">Download Resources</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" download>Starter Pack</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">Online Shop</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc"><strong>KUKU — A New Character Project Grown by 8 Billion People Worldwide</strong><br>Your imagination moves this world.</p>
+                <p class="footer__social" style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    Instagram: <a href="https://instagram.com/kukutree" target="_blank" style="color: #7fb069; text-decoration: none;">@kukutree</a> |
+                    WhatsApp: <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="color: #7fb069; text-decoration: none;">Community</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

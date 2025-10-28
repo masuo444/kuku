@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>キャラクター設定資料 | KUKU</title>
+    <meta name="title" content="KUKU キャラクター設定資料">
+    <meta name="description" content="KUKUの詳細なキャラクター設定、バックストーリー、世界観設定。創作に活用できる公式設定資料。">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-optimized.css">
+
+    <style>
+        /* Character Page Styles */
+        .character-hero {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.95) 0%, rgba(11, 61, 46, 0.85) 100%), url('public/assets/hero_sample.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .character-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(11, 61, 46, 0.3) 100%);
+        }
+
+        .character-hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .character-hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease-out;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .character-hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .character-hero .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.85;
+        }
+
+        .character-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(11, 61, 46, 0.1);
+            color: #0B3D2E;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: rgba(17, 17, 17, 0.7);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .info-card:hover {
+            border-color: #0B3D2E;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15);
+        }
+
+        .info-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .info-card .label {
+            display: inline-block;
+            background: rgba(11, 61, 46, 0.1);
+            color: #0B3D2E;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .story-section {
+            background: linear-gradient(135deg, rgba(242, 237, 228, 0.5) 0%, rgba(242, 237, 228, 0.2) 100%);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '📖';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 10rem;
+            opacity: 0.05;
+        }
+
+        .story-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .story-section p {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: rgba(17, 17, 17, 0.85);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .label {
+            font-size: 0.95rem;
+            color: rgba(17, 17, 17, 0.7);
+            font-weight: 600;
+        }
+
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .personality-item {
+            background: white;
+            border-left: 4px solid #0B3D2E;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .personality-item:hover {
+            background: rgba(11, 61, 46, 0.02);
+            padding-left: 2rem;
+        }
+
+        .personality-item h4 {
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .personality-item p {
+            color: rgba(17, 17, 17, 0.75);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .world-section {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 4rem;
+        }
+
+        .world-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .world-section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0B3D2E;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .world-section p {
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1rem;
+        }
+
+        .world-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .world-section ul li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.7;
+        }
+
+        .world-section ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #0B3D2E;
+            font-weight: bold;
+        }
+
+        .abilities-section {
+            margin-bottom: 4rem;
+        }
+
+        .ability-card {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(242, 237, 228, 0.5) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(11, 61, 46, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .ability-card:hover {
+            border-color: rgba(11, 61, 46, 0.3);
+            transform: translateX(10px);
+        }
+
+        .ability-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ability-card p {
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.7;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, #0B3D2E 0%, rgba(11, 61, 46, 0.85) 100%);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            text-align: center;
+            color: white;
+            margin-top: 5rem;
+        }
+
+        .download-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .download-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Characters Section Styles */
+        .characters-section {
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .character-profile {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .character-profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15);
+        }
+
+        .character-profile.reverse {
+            grid-template-columns: 1fr 400px;
+        }
+
+        .character-profile.reverse .character-image {
+            order: 2;
+        }
+
+        .character-profile.reverse .character-info {
+            order: 1;
+        }
+
+        .character-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.1) 0%, rgba(242, 237, 228, 0.5) 100%);
+            position: relative;
+        }
+
+        .character-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .character-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(242, 237, 228, 0.8) 100%);
+        }
+
+        .character-info h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 0.5rem;
+        }
+
+        .character-title {
+            font-size: 1.1rem;
+            color: rgba(11, 61, 46, 0.7);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .character-desc {
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .character-traits {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+
+        .trait {
+            background: rgba(11, 61, 46, 0.1);
+            color: #0B3D2E;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .trait:hover {
+            background: #0B3D2E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .character-keywords {
+            padding: 1rem;
+            background: rgba(242, 237, 228, 0.5);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: rgba(17, 17, 17, 0.8);
+            border-left: 3px solid #0B3D2E;
+        }
+
+        .character-keywords strong {
+            color: #0B3D2E;
+        }
+
+        .character-gallery {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(11, 61, 46, 0.1);
+        }
+
+        .character-gallery h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(11, 61, 46, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #0B3D2E;
+            color: white;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: rgba(11, 61, 46, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(11, 61, 46, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .character-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .story-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .world-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .character-profile {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+
+            .character-profile.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .character-profile.reverse .character-image {
+                order: 1;
+            }
+
+            .character-profile.reverse .character-info {
+                order: 2;
+            }
+
+            .character-image {
+                height: 300px;
+            }
+
+            .character-info h3 {
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li><a href="character.html" class="nav__link">キャラクター</a></li>
+                    <li><a href="world.html" class="nav__link">世界観</a></li>
+                    <li><a href="guidelines.html" class="nav__link">ガイドライン</a></li>
+                    <li><a href="license.html" class="nav__link">ライセンス</a></li>
+                    <li><a href="contest.html" class="nav__link">コンテスト</a></li>
+                    <li><a href="salon.html" class="nav__link">コミュニティ</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 スポンサー</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 言語</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="character.html">日本語</a></li>
+                            <li><a href="en/character.html">English</a></li>
+                            <li><a href="fr/character.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">ホーム</a>
+            <a href="character.html" class="mobile-menu__link">キャラクター</a>
+            <a href="world.html" class="mobile-menu__link">世界観</a>
+            <a href="guidelines.html" class="mobile-menu__link">ガイドライン</a>
+            <a href="license.html" class="mobile-menu__link">ライセンス</a>
+            <a href="contest.html" class="mobile-menu__link">コンテスト</a>
+            <a href="salon.html" class="mobile-menu__link">コミュニティ</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 言語</span>
+                <a href="character.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="en/character.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="fr/character.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="character-hero">
+        <h1>KUKU</h1>
+        <p class="subtitle">森の守護者</p>
+        <p class="tagline">The Guardian of the Ancient Forest</p>
+    </section>
+
+    <!-- Character Content -->
+    <div class="character-content">
+        <!-- Other Characters Section -->
+        <div class="section-header">
+            <span class="section-label">COMPANIONS</span>
+            <h2 class="section-title">仲間たち</h2>
+            <p class="section-desc">
+                KUKUと共に森を守る、個性豊かな仲間たち。<br>
+                それぞれが独自の能力と役割を持ち、森の調和を支えている。
+            </p>
+        </div>
+
+        <!-- Characters Grid -->
+        <div class="characters-section">
+            <!-- Hinoki -->
+            <div class="character-profile">
+                <div class="character-image">
+                    <img src="public/assets/characters/ヒノキ.JPG" alt="ヒノキ">
+                </div>
+                <div class="character-info">
+                    <h3>ヒノキ</h3>
+                    <p class="character-title">守護の戦士 / The Sentinel</p>
+                    <p class="character-desc">
+                        森の境界を守る勇敢な戦士。檜の木の強さと香りを持ち、揺るぎない忠誠心でKUKUを支える。
+                        冷静沈着で戦略的思考に長け、危機の際には最前線に立つ。剣術と防御魔法を得意とし、
+                        仲間を守ることを何よりも誇りに思っている。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/HINOKI1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/HINOKI1.png" alt="ヒノキ 1">
+                            </a>
+                            <a href="public/assets/characters/HINOKI2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/HINOKI2.png" alt="ヒノキ 2">
+                            </a>
+                            <a href="public/assets/characters/HINOKI3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/HINOKI3.png" alt="ヒノキ 3">
+                            </a>
+                            <a href="public/assets/characters/HINOKI4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/HINOKI4.png" alt="ヒノキ 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sakura -->
+            <div class="character-profile reverse">
+                <div class="character-image">
+                    <img src="public/assets/characters/サクラ.JPG" alt="サクラ">
+                </div>
+                <div class="character-info">
+                    <h3>サクラ</h3>
+                    <p class="character-title">癒しの詩人 / The Healer</p>
+                    <p class="character-desc">
+                        桜の花のように優雅で美しい癒し手。春の訪れを告げ、生命に希望をもたらす存在。
+                        歌と詩を通じて心を癒し、傷ついた魂に平和をもたらす。繊細な感受性を持ち、
+                        他者の痛みを深く理解する共感力の持ち主。花弁を舞わせる魔法で、癒しと浄化を行う。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/SAKURA1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAKURA1.png" alt="サクラ 1">
+                            </a>
+                            <a href="public/assets/characters/SAKURA2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAKURA2.png" alt="サクラ 2">
+                            </a>
+                            <a href="public/assets/characters/SAKURA3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAKURA3.png" alt="サクラ 3">
+                            </a>
+                            <a href="public/assets/characters/SAKURA4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAKURA4.png" alt="サクラ 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mizuki -->
+            <div class="character-profile">
+                <div class="character-image">
+                    <img src="public/assets/characters/ミズキ.jpg" alt="ミズキ">
+                </div>
+                <div class="character-info">
+                    <h3>ミズキ</h3>
+                    <p class="character-title">水の賢者 / The Sage</p>
+                    <p class="character-desc">
+                        水辺を司る神秘的な賢者。水の流れのように柔軟で、深い知恵を持つ。
+                        古代の言語を読み解き、水晶占いで未来を見通す力を持つ。穏やかな性格だが、
+                        怒らせると嵐のように激しい。水を自在に操り、泉や川を清め、雨を呼ぶことができる。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/MIZUKI1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/MIZUKI1.png" alt="ミズキ 1">
+                            </a>
+                            <a href="public/assets/characters/MIZUKI2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/MIZUKI2.png" alt="ミズキ 2">
+                            </a>
+                            <a href="public/assets/characters/MIZUKI3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/MIZUKI3.png" alt="ミズキ 3">
+                            </a>
+                            <a href="public/assets/characters/MIZUKI4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/MIZUKI4.png" alt="ミズキ 4">
+                            </a>
+                            <a href="public/assets/characters/MIZUKI5.png" class="gallery-item" download>
+                                <img src="public/assets/characters/MIZUKI5.png" alt="ミズキ 5">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fuji -->
+            <div class="character-profile reverse">
+                <div class="character-image">
+                    <img src="public/assets/characters/フジ.JPG" alt="フジ">
+                </div>
+                <div class="character-info">
+                    <h3>フジ</h3>
+                    <p class="character-title">夢の織り手 / The Dreamer</p>
+                    <p class="character-desc">
+                        藤の花のように神秘的で幻想的な存在。夢と現実の境界を行き来し、
+                        希望と想像力を育む。芸術的センスに優れ、森に美しい景色を創り出す。
+                        蔦を操り空中庭園を作り、幻影魔法で幻想的な光景を見せることができる。
+                        おっとりとした性格だが、内に秘めた創造性は無限大。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/FUJI.png" class="gallery-item" download>
+                                <img src="public/assets/characters/FUJI.png" alt="フジ">
+                            </a>
+                            <a href="public/assets/characters/FUJI1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/FUJI1.png" alt="フジ 1">
+                            </a>
+                            <a href="public/assets/characters/FUJI2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/FUJI2.png" alt="フジ 2">
+                            </a>
+                            <a href="public/assets/characters/FUJI3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/FUJI3.png" alt="フジ 3">
+                            </a>
+                            <a href="public/assets/characters/FUJI4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/FUJI4.png" alt="フジ 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rino -->
+            <div class="character-profile">
+                <div class="character-image">
+                    <img src="public/assets/characters/リノ.jpg" alt="リノ">
+                </div>
+                <div class="character-info">
+                    <h3>リノ</h3>
+                    <p class="character-title">風の使者 / The Messenger</p>
+                    <p class="character-desc">
+                        風のように素早く自由な精神の持ち主。森中を駆け巡り、情報を集めて仲間に伝える。
+                        好奇心旺盛で冒険好き、新しいことに挑戦するのが大好き。明るく楽観的な性格で、
+                        グループのムードメーカー。風を操り、空を飛び、遠くの声を運ぶことができる。
+                        機敏さと洞察力で、危険をいち早く察知する。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/RINO1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/RINO1.png" alt="リノ 1">
+                            </a>
+                            <a href="public/assets/characters/RINO2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/RINO2.png" alt="リノ 2">
+                            </a>
+                            <a href="public/assets/characters/RINO3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/RINO3.png" alt="リノ 3">
+                            </a>
+                            <a href="public/assets/characters/RINO4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/RINO4.png" alt="リノ 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sazanka -->
+            <div class="character-profile reverse">
+                <div class="character-image">
+                    <img src="public/assets/characters/サザンカ.JPG" alt="サザンカ">
+                </div>
+                <div class="character-info">
+                    <h3>サザンカ</h3>
+                    <p class="character-title">炎の守り手 / The Keeper</p>
+                    <p class="character-desc">
+                        冬に咲く山茶花のように、逆境に強く情熱的な存在。温かな心と強い意志を持ち、
+                        仲間のために献身的に尽くす。料理と火の管理が得意で、森の仲間たちの食事を作る。
+                        一見控えめだが、内に秘めた情熱は誰よりも強い。火を操り、寒さから仲間を守り、
+                        暗闇に光をもたらす。忍耐力と持久力に優れている。
+                    </p>
+                    <div class="character-gallery">
+                        <h4>🖼️ キャラクター素材</h4>
+                        <div class="gallery-grid">
+                            <a href="public/assets/characters/SAZANKA1.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAZANKA1.png" alt="サザンカ 1">
+                            </a>
+                            <a href="public/assets/characters/SAZANKA2.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAZANKA2.png" alt="サザンカ 2">
+                            </a>
+                            <a href="public/assets/characters/SAZANKA3.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAZANKA3.png" alt="サザンカ 3">
+                            </a>
+                            <a href="public/assets/characters/SAZANKA4.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAZANKA4.png" alt="サザンカ 4">
+                            </a>
+                            <a href="public/assets/characters/SAZANKA5.png" class="gallery-item" download>
+                                <img src="public/assets/characters/SAZANKA5.png" alt="サザンカ 5">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h2>設定資料をダウンロード</h2>
+            <p>
+                より詳細なキャラクター設定、ビジュアルガイド、プロンプト例など、<br>
+                創作に必要な全ての資料が入ったスターターパックをご利用ください。
+            </p>
+            <div class="download-buttons">
+                <a href="public/assets/KUKU_Starter_Pack.zip" class="btn btn--secondary" download style="background: white; color: #0B3D2E;">
+                    スターターパックをダウンロード
+                </a>
+                <a href="guidelines.html" class="btn btn--outline" style="border-color: white; color: white;">
+                    ガイドラインを確認
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">世界80億人と創るオープンIP - Co-Create with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="index.html">ホーム</a>
+                        <a href="character.html">キャラクター</a>
+                        <a href="world.html">世界観</a>
+                        <a href="guidelines.html">ガイドライン</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="contest.html">コンテスト</a>
+                        <a href="index.html#resources">素材ダウンロード</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="public/assets/KUKU_Starter_Pack.zip" download>スターターパック</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">オンラインショップ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc">KUKUは、世界80億人が自由に使えるオープンIPプロジェクトです。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

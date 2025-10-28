@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>KUKU Creator Guidelines – English Version</title>
+    <meta name="title" content="KUKU Creator Guidelines – English Version">
+    <meta name="description" content="KUKU asset usage rules (free for non-commercial use / application required for commercial use / available to creators worldwide, AI usage welcome). Includes credit attribution, prohibited actions, application procedures, and FAQ.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KUKU Creator Guidelines">
+    <meta property="og:description" content="KUKU asset usage rules (free for non-commercial use / application required for commercial use / available to creators worldwide, AI usage welcome)">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use KUKU for school projects or personal social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes (non-commercial use / credit required)"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I post KUKU videos on my monetized YouTube channel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes (small-scale commercial). Series production or sponsored content requires consultation"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I distribute small quantities of doujin merchandise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes (small-scale commercial). Mass production or wholesale requires permission"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use KUKU in corporate campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Permission required. Prior application necessary"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change the logo colors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Unmodified use only"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* Guidelines Page Specific Styles */
+        .guidelines-page {
+            background: var(--color-white);
+        }
+
+        .guidelines-hero {
+            background: linear-gradient(135deg, rgba(11, 61, 46, 0.05) 0%, rgba(242, 237, 228, 1) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .guidelines-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .guidelines-hero .version {
+            font-size: 1rem;
+            color: rgba(17, 17, 17, 0.6);
+            margin-bottom: 0.5rem;
+        }
+
+        .guidelines-hero .last-updated {
+            font-size: 0.9rem;
+            color: rgba(17, 17, 17, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .guidelines-hero .lead {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+        }
+
+        .guidelines-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .toc {
+            background: rgba(242, 237, 228, 0.5);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc a {
+            color: #0B3D2E;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc a:hover {
+            color: #7fb069;
+            padding-left: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 80px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid rgba(11, 61, 46, 0.2);
+            position: relative;
+        }
+
+        .section h2:hover .anchor {
+            opacity: 1;
+        }
+
+        .anchor {
+            position: absolute;
+            left: -1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #7fb069;
+            text-decoration: none;
+        }
+
+        .section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0B3D2E;
+            margin: 2rem 0 1rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+
+        .section ul li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.8;
+            color: rgba(17, 17, 17, 0.8);
+        }
+
+        .section ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: #7fb069;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .usage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .usage-table thead {
+            background: #0B3D2E;
+            color: white;
+        }
+
+        .usage-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .usage-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+        }
+
+        .usage-table tbody tr:hover {
+            background: rgba(242, 237, 228, 0.3);
+        }
+
+        .credit-box {
+            background: rgba(11, 61, 46, 0.05);
+            border-left: 4px solid #0B3D2E;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+
+        .code-block {
+            background: #111;
+            color: #7fb069;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .info-box {
+            background: rgba(127, 176, 105, 0.1);
+            border-left: 4px solid #7fb069;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .warning-box {
+            background: rgba(220, 38, 38, 0.1);
+            border-left: 4px solid #DC2626;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: #0B3D2E;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: rgba(17, 17, 17, 0.8);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0B3D2E 0%, #5f7d5c 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #0B3D2E;
+            border: 2px solid white;
+        }
+
+        .btn-white:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        @media print {
+            .header, .footer, .mobile-menu, .cta-section {
+                display: none;
+            }
+
+            .guidelines-page {
+                background: white;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .guidelines-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .usage-table {
+                font-size: 0.85rem;
+            }
+
+            .usage-table th,
+            .usage-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .anchor {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="guidelines-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="character.html" class="nav__link">Characters</a></li>
+                    <li><a href="world.html" class="nav__link">World</a></li>
+                    <li><a href="guidelines.html" class="nav__link">Guidelines</a></li>
+                    <li><a href="license.html" class="nav__link">License</a></li>
+                    <li><a href="contest.html" class="nav__link">Contest</a></li>
+                    <li><a href="salon.html" class="nav__link">Community</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 Sponsors</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 Language</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="../guidelines.html">日本語</a></li>
+                            <li><a href="guidelines.html">English</a></li>
+                            <li><a href="../fr/guidelines.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Home</a>
+            <a href="character.html" class="mobile-menu__link">Characters</a>
+            <a href="world.html" class="mobile-menu__link">World</a>
+            <a href="guidelines.html" class="mobile-menu__link">Guidelines</a>
+            <a href="license.html" class="mobile-menu__link">License</a>
+            <a href="contest.html" class="mobile-menu__link">Contest</a>
+            <a href="salon.html" class="mobile-menu__link">Community</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 Language</span>
+                <a href="../guidelines.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="guidelines.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="../fr/guidelines.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="guidelines-hero">
+        <h1>KUKU Creator Guidelines ver1.0 (Draft)</h1>
+        <p class="version">Version 1.0 (Draft)</p>
+        <p class="last-updated">Last Updated: October 19, 2025</p>
+        <p class="lead">
+            KUKU is an open creative brand that can be freely used by creators worldwide. We welcome various forms of creation, including those utilizing AI. These guidelines define the rules for using KUKU characters, worldview, logos, etc. (hereinafter "KUKU Assets") in creation, distribution, and sales. Copyright belongs to FOMUS (※Not CC0).
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="guidelines-container">
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>📑 Table of Contents</h2>
+            <ul>
+                <li><a href="#stance">1. Basic Stance</a></li>
+                <li><a href="#usage">2. Usage Categories and Procedures</a></li>
+                <li><a href="#prohibited">3. Prohibited Actions</a></li>
+                <li><a href="#platforms">4. Platform-Specific Guidelines</a></li>
+                <li><a href="#assets">5. Credit Attribution & Design Assets</a></li>
+                <li><a href="#commercial">6. Commercial Use Application</a></li>
+                <li><a href="#faq">7. Frequently Asked Questions (FAQ)</a></li>
+                <li><a href="#law">8. Governing Law and Jurisdiction</a></li>
+                <li><a href="#changes">9. Changes to Guidelines</a></li>
+                <li><a href="#creditline">Appendix: One-Line Copy-Paste Credit</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 1: Basic Stance -->
+        <section id="stance" class="section">
+            <h2><a href="#stance" class="anchor">#</a>1. Basic Stance</h2>
+            <ul>
+                <li><strong>Warmly Welcome:</strong> Fan works including fan art, doujin, videos, music, novels, games, and merchandise.</li>
+                <li><strong>Non-commercial Use is Free:</strong> Free to use without permission with credit attribution.</li>
+                <li><strong>Commercial Use Requires Application:</strong> We provide flexible permissions and conditions according to project scale.</li>
+                <li><strong>Available to Creators Worldwide:</strong> We welcome AI-assisted creation. However, model training and redistribution require separate application.</li>
+            </ul>
+
+            <h3>Required Credit Attribution (Both Non-Commercial & Commercial)</h3>
+            <div class="credit-box">
+                © FOMUS / KUKU – used under KUKU Open Use License
+            </div>
+            <p><strong>Recommended Hashtags:</strong> #KUKU #FOMUS</p>
+        </section>
+
+        <!-- Section 2: Usage Categories -->
+        <section id="usage" class="section">
+            <h2><a href="#usage" class="anchor">#</a>2. Usage Categories and Procedures</h2>
+            <table class="usage-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Examples</th>
+                        <th>Revenue</th>
+                        <th>Procedure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Non-commercial</strong></td>
+                        <td>Portfolio, educational purposes, personal social media and videos without ad revenue</td>
+                        <td>$0</td>
+                        <td>No permission required (credit mandatory)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Small-scale Commercial</strong></td>
+                        <td>Doujin sales, small merchandise quantities, single videos on monetized channels, etc.</td>
+                        <td>Within $140,000 annual revenue</td>
+                        <td>Generally OK (credit mandatory, comply with terms). Consultation available for unclear cases</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium to Large-scale Commercial</strong></td>
+                        <td>Mass-produced merchandise, corporate projects, ongoing series, broadcast/streaming, in-game purchases, large-scale NFT issuance, etc.</td>
+                        <td>Over $140,000 annual revenue</td>
+                        <td>Permission required (prior application, contract, terms provided)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="info-box">
+                <p><strong>📌 Note:</strong> The guideline of "$140,000 annual revenue" refers to the annual sales of the specific business using KUKU. Feel free to consult us even during the planning stage.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Prohibited -->
+        <section id="prohibited" class="section">
+            <h2><a href="#prohibited" class="anchor">#</a>3. Prohibited Actions</h2>
+            <ul>
+                <li><strong>Brand Damage:</strong> Expressions that significantly harm KUKU's image</li>
+                <li><strong>Rights Infringement:</strong> Infringement (or risk thereof) of third-party copyrights, trademarks, portrait rights, etc.</li>
+                <li><strong>Official Misrepresentation:</strong> Displays that mislead as official or collaborative works (including modification or misuse of official logos)</li>
+                <li><strong>Unauthorized Secondary Use:</strong> Reusing, tracing, or reselling others' fan works</li>
+                <li><strong>Inappropriate Content:</strong> Excessive sexual or grotesque content, discrimination, defamation, illegal or antisocial content, etc.</li>
+                <li><strong>Logo Modification:</strong> Modifying KUKU logos or badges, creating confusing derivative logos</li>
+                <li><strong>False Applications:</strong> False reporting of sales scale, intended use, etc.</li>
+            </ul>
+        </section>
+
+        <!-- Section 4: Platform-Specific -->
+        <section id="platforms" class="section">
+            <h2><a href="#platforms" class="anchor">#</a>4. Platform-Specific Guidelines</h2>
+
+            <h3>UGC Game Items (e.g., Roblox, Fortnite, Decentraland, etc.)</h3>
+            <p>Permission generally required due to similar item policies and review processes. Please consult before sales or distribution.</p>
+
+            <h3>NFT</h3>
+            <p>Small-scale, limited issuance is generally acceptable (credit required). Large-scale issuance or secondary market-focused requires permission.</p>
+            <div class="warning-box">
+                <p><strong>⚠️ Warning:</strong> Trademark use as purchaser benefits is not permitted. Logo modification and official misrepresentation are prohibited.</p>
+            </div>
+
+            <h3>Generative AI Model Training</h3>
+            <p>Using KUKU Assets as training data or distributing models requires prior permission.</p>
+            <p>Publishing generated outputs is allowed (credit required / prohibited actions strictly enforced).</p>
+        </section>
+
+        <!-- Section 5: Assets -->
+        <section id="assets" class="section">
+            <h2><a href="#assets" class="anchor">#</a>5. Credit Attribution and Design Assets</h2>
+
+            <h3>Credit</h3>
+            <div class="credit-box">
+                © FOMUS / KUKU – used under KUKU Open Use License
+            </div>
+            <p>Please clearly display in work pages, descriptions, video descriptions, etc.</p>
+
+            <h3>Logo and Badges</h3>
+            <p>Use officially distributed <code>kuku_mark.svg</code> / <code>kuku_badge.svg</code> without modification.</p>
+            <p><strong>Recommended Placement:</strong> Credit sections, package back, video end cards, etc.</p>
+        </section>
+
+        <!-- Section 6: Commercial Application -->
+        <section id="commercial" class="section">
+            <h2><a href="#commercial" class="anchor">#</a>6. Commercial Use Application (Over $140,000 annual revenue / Special purposes)</h2>
+            <p>Please contact us with the following information. After review, we will provide contract terms.</p>
+            <ul>
+                <li>Business content and purpose (medium / region / duration)</li>
+                <li>Scale (sales price, quantity, estimated annual revenue, KPIs)</li>
+                <li>Creative overview (samples acceptable)</li>
+                <li>Attribution plan (credit / logo placement)</li>
+                <li>Scheduled start date</li>
+            </ul>
+            <p><strong>Contact:</strong> For commercial use applications, please contact us via the application button below.</p>
+        </section>
+
+        <!-- Section 7: FAQ -->
+        <section id="faq" class="section">
+            <h2><a href="#faq" class="anchor">#</a>7. Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">Q. Can I use KUKU for school projects or personal social media?</p>
+                <p class="faq-answer">→ Yes (non-commercial / credit required)</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q. Can I post KUKU videos on my monetized YouTube channel?</p>
+                <p class="faq-answer">→ Generally yes (small-scale commercial). For series or sponsored content, please consult us.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q. I want to distribute fan merchandise in small quantities.</p>
+                <p class="faq-answer">→ Yes (small-scale commercial). Mass production or wholesale requires permission.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q. I want to use it for a corporate campaign.</p>
+                <p class="faq-answer">→ Permission required. Apply in advance.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q. Can I change the logo colors?</p>
+                <p class="faq-answer">→ No. Unmodified use only.</p>
+            </div>
+        </section>
+
+        <!-- Section 8: Law -->
+        <section id="law" class="section">
+            <h2><a href="#law" class="anchor">#</a>8. Governing Law and Jurisdiction</h2>
+            <p>In principle, <strong>UAE (Dubai) law</strong> serves as the governing law, with concurrent application of Japanese law available by mutual agreement when necessary.</p>
+        </section>
+
+        <!-- Section 9: Changes -->
+        <section id="changes" class="section">
+            <h2><a href="#changes" class="anchor">#</a>9. Changes to Guidelines</h2>
+            <p>These guidelines may be revised according to operational circumstances or legal amendments. Please check the official website for the latest content.</p>
+        </section>
+
+        <!-- Appendix: Credit Line -->
+        <section id="creditline" class="section">
+            <h2><a href="#creditline" class="anchor">#</a>Appendix: One-Line Copy-Paste Credit</h2>
+            <div class="code-block">
+© FOMUS / KUKU – used under KUKU Open Use License
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Commercial Use Application and Inquiries</h2>
+            <p>For large-scale commercial use or special purposes, please consult us in advance.</p>
+            <div class="cta-buttons">
+                <a href="../index.html#resources" class="btn btn-white">
+                    Apply for Commercial Use
+                </a>
+                <a href="../public/assets/KUKU_Starter_Pack.zip" class="btn btn-outline-white" download>
+                    Starter Pack (English Version)
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">Open IP Co-Created with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="../index.html">Home</a>
+                        <a href="../character.html">Character</a>
+                        <a href="../world.html">World</a>
+                        <a href="guidelines.html">Guidelines</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="../contest.html">Contest</a>
+                        <a href="../index.html#resources">Download Assets</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="../public/assets/KUKU_Starter_Pack.zip" download>Starter Pack</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">Online Shop</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc">KUKU is an open IP project freely available to all 8 billion people worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

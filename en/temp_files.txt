@@ -1,0 +1,4 @@
+Creating guidelines.html
+Creating license.html
+Creating contest.html
+Creating salon.html

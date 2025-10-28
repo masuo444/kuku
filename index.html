@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>KUKU - 世界80億人と創るオープンIP | AIで自由に創作できるキャラクター</title>
+    <meta name="title" content="KUKU - 世界80億人と創るオープンIP">
+    <meta name="description" content="誰でも自由に使えるキャラクター。二次創作OK・商用利用OK・収益化OK。手描きでもAIでも歓迎。世界80億人で育てる新しいオープンIPプロジェクト。">
+    <meta name="keywords" content="KUKU,オープンIP,AI創作,キャラクター,二次創作,FOMUS,Open Use,クリエイティブ・コモンズ,ファンタジー,アニメ">
+    <meta name="author" content="FOMUS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kuku-official.vercel.app/">
+    <meta property="og:title" content="KUKU - 世界80億人と創るオープンIP">
+    <meta property="og:description" content="誰でも自由に使えるキャラクター。二次創作OK・商用利用OK・収益化OK。手描きでもAIでも歓迎。世界80億人で育てる新しいオープンIPプロジェクト。">
+    <meta property="og:image" content="https://kuku-official.vercel.app/assets/og_kuku.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="KUKU Official">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kuku-official.vercel.app/">
+    <meta property="twitter:title" content="KUKU - 世界80億人と創るオープンIP">
+    <meta property="twitter:description" content="誰でも自由に使えるキャラクター。二次創作OK・商用利用OK・収益化OK。手描きでもAIでも歓迎。世界80億人で育てる新しいオープンIPプロジェクト。">
+    <meta property="twitter:image" content="https://kuku-official.vercel.app/assets/og_kuku.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" href="public/assets/kuku_mark.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kuku-official.vercel.app/">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0B3D2E">
+    <meta name="msapplication-TileColor" content="#0B3D2E">
+
+    <!-- Google Fonts - Optimized -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-optimized.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "KUKU",
+      "description": "世界80億人と創るオープンIP。誰もが自由に使えるキャラクターと世界観。",
+      "creator": {
+        "@type": "Organization",
+        "name": "FOMUS"
+      },
+      "license": "https://kuku-official.vercel.app/ja/license",
+      "keywords": "オープンIP, AI創作, キャラクター, 二次創作",
+      "inLanguage": ["ja", "en"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "世界中のクリエイター"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#home">
+                    <img src="public/assets/KUKU_logo.png" alt="KUKU" style="height: 90px; width: auto; display: block; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li><a href="character.html" class="nav__link">キャラクター</a></li>
+                    <li><a href="world.html" class="nav__link">世界観</a></li>
+                    <li><a href="guidelines.html" class="nav__link">ガイドライン</a></li>
+                    <li><a href="license.html" class="nav__link">ライセンス</a></li>
+                    <li><a href="contest.html" class="nav__link">コンテスト</a></li>
+                    <li><a href="salon.html" class="nav__link">コミュニティ</a></li>
+                    <li><a href="sponsors.html" class="nav__link" style="color: #000000; font-weight: 700;">💼 スポンサー</a></li>
+                    <li class="nav__item--lang">
+                        <a href="#" class="nav__link nav__link--lang">🌐 言語</a>
+                        <ul class="lang-dropdown">
+                            <li><a href="index.html">日本語</a></li>
+                            <li><a href="en/index.html">English</a></li>
+                            <li><a href="fr/index.html">Français</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="menu-close">×</button>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">ホーム</a>
+            <a href="character.html" class="mobile-menu__link">キャラクター</a>
+            <a href="world.html" class="mobile-menu__link">世界観</a>
+            <a href="guidelines.html" class="mobile-menu__link">ガイドライン</a>
+            <a href="license.html" class="mobile-menu__link">ライセンス</a>
+            <a href="contest.html" class="mobile-menu__link">コンテスト</a>
+            <a href="salon.html" class="mobile-menu__link">コミュニティ</a>
+            <div class="mobile-menu__lang">
+                <span class="mobile-menu__lang-label">🌐 言語</span>
+                <a href="index.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
+                <a href="en/index.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
+                <a href="fr/index.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--centered" id="home" style="
+        background: linear-gradient(135deg, #f8faf9 0%, #ffffff 20%, #faf9f6 40%, #ffffff 60%, #f5f7f5 80%, #ffffff 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 8rem 2rem 6rem;
+    ">
+        <!-- Decorative Background Elements -->
+        <div style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: -15%; left: -8%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(127, 176, 105, 0.12) 0%, transparent 70%); border-radius: 50%; animation: float 25s ease-in-out infinite reverse;"></div>
+        <div style="position: absolute; top: 20%; left: 10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(11, 61, 46, 0.08) 0%, transparent 70%); border-radius: 50%; animation: float 15s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: 25%; right: 15%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%; animation: float 18s ease-in-out infinite;"></div>
+
+        <!-- Subtle Pattern Overlay -->
+        <div style="position: absolute; inset: 0; background-image:
+            radial-gradient(circle at 20% 30%, rgba(152, 216, 163, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(127, 176, 105, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(11, 61, 46, 0.02) 0%, transparent 50%);
+        "></div>
+
+        <div class="hero__content hero__content--full" style="position: relative; z-index: 1;">
+            <h1 class="hero__title" style="font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.4; padding: 1rem 0; margin-bottom: 3rem; animation: fadeInUp 1s ease-out; text-shadow: 0 2px 20px rgba(11, 61, 46, 0.08);">世界の80億人で育てる新しいキャラクタープロジェクト「KUKU」</h1>
+
+            <!-- Video -->
+            <div style="max-width: 900px; margin: 0 auto; animation: fadeInUp 1.4s ease-out;">
+                <div class="video-wrapper video-wrapper--large" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(11, 61, 46, 0.15);">
+                    <video class="hero-video" controls playsinline style="width: 100%; height: auto; display: block;">
+                        <source src="public/assets/kuku_hero.mp4" type="video/mp4">
+                        お使いのブラウザは動画タグをサポートしていません。
+                    </video>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.3rem; line-height: 1.8; color: #333;">
+                        <strong style="font-size: 1.5rem; color: #7fb069; display: block; margin-bottom: 0.5rem;">✓ このキャラクター、誰でも自由に使えます</strong>
+                        二次創作OK・商用利用OK・収益化OK<br>
+                        手描きでも、AIでも、どんな方法でも歓迎します
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes float {
+                0%, 100% { transform: translate(0, 0) scale(1); }
+                33% { transform: translate(30px, -30px) scale(1.1); }
+                66% { transform: translate(-20px, 20px) scale(0.9); }
+            }
+
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 768px) {
+                section.hero {
+                    padding: 6rem 1.5rem 4rem !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" style="padding: 60px 0; text-align: center; background-color: #fafaf8;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="font-size: 1.6em; color: #2e402d; margin-bottom: 0.8em;">
+                ミッション
+            </h2>
+
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+                <strong style="font-size: 1.1em; color: #0B3D2E;">誰もが、どんな形でも"共に創る"喜びを感じられる世界をつくる。</strong>
+            </p>
+
+            <div style="text-align: left; max-width: 750px; margin: 0 auto;">
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        観る／創る／支えるの境界をなくし、<strong>参加するだけで価値が生まれる</strong>文化を育てる。
+                    </p>
+                </div>
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        <strong>日本のアニメーション</strong>を起点に、自然・工芸・音楽・テクノロジーを結び、世界へ広げる。
+                    </p>
+                </div>
+                <div style="padding: 1.2rem; margin-bottom: 1rem; background: rgba(11, 61, 46, 0.03); border-left: 4px solid #7fb069; border-radius: 8px;">
+                    <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                        オープンに使えるキャラクターを通じて、<strong>二次創作の収益化</strong>を歓迎し、創造の循環を生む。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" style="padding: 60px 0;">
+        <div class="container">
+            <div class="about__grid" style="gap: 3rem;">
+                <div class="about__content">
+                    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">KUKUとは？</h2>
+                    <p class="about__text" style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        <strong>KUKU（クク）</strong>は、世界中の誰でも自由に使える<strong>キャラクターと物語の世界</strong>です。<br>
+                        舞台は、木々と光が共に生きる場所——<strong>「樹木の里（The Tree Village）」</strong>。<br>
+                        そこでは、人も自然も、創ることを通じてつながっています。
+                    </p>
+                    <p class="about__text" style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        手描きでも、写真でも、音楽でも、AIでも<br>
+                        <strong>どんな方法でも、この世界に参加できます。</strong><br>
+                        KUKUは、観る人・創る人・支える人、<strong>すべてが主役になる"共創の場"</strong>です。
+                    </p>
+
+                    <h3 style="font-size: 1.3rem; color: #0B3D2E; margin: 2.5rem 0 1.2rem 0; font-weight: 700;">🌿 KUKUの特徴</h3>
+
+                    <div class="about__features-list" style="gap: 1rem; margin-top: 1rem;">
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">1</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">キャラクターと世界観をオープン提供</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">誰でも自由に利用・創作できます。</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">2</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">あらゆる表現方法を歓迎</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">AI・手描き・写真・音楽・映像など、スタイルは問いません。</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" style="padding: 1.2rem;">
+                            <div class="feature-item__number" style="min-width: 2.5rem; height: 2.5rem; font-size: 1.3rem;">3</div>
+                            <div>
+                                <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem;">二次創作・マネタイズOK</p>
+                                <p style="font-size: 0.85rem; color: #666; margin: 0;">ガイドラインの範囲内で、あなたの作品として公開・収益化できます。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 1rem; line-height: 1.8; margin-top: 2rem; padding: 1.5rem; background: rgba(127, 176, 105, 0.08); border-radius: 12px; border-left: 4px solid #7fb069;">
+                        <strong style="color: #0B3D2E;">あなたの創造が、KUKUの物語を育てる。</strong><br>
+                        世界の80億人が参加できる新しいキャラクターIP、それがKUKUです。
+                    </p>
+                </div>
+                <div class="about__image">
+                    <div class="slideshow">
+                        <div class="slideshow__container">
+                            <img src="public/assets/slideshow/ヒノキ.JPG" alt="ヒノキ" class="slideshow__image active">
+                            <img src="public/assets/slideshow/サクラ.JPG" alt="サクラ" class="slideshow__image">
+                            <img src="public/assets/slideshow/ミズキ.jpg" alt="ミズキ" class="slideshow__image">
+                            <img src="public/assets/slideshow/フジ.JPG" alt="フジ" class="slideshow__image">
+                            <img src="public/assets/slideshow/リノ.jpg" alt="リノ" class="slideshow__image">
+                            <img src="public/assets/slideshow/サザンカ.JPG" alt="サザンカ" class="slideshow__image">
+                        </div>
+                        <button class="slideshow__btn slideshow__btn--prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="slideshow__btn slideshow__btn--next" onclick="changeSlide(1)">›</button>
+                        <div class="slideshow__dots">
+                            <span class="slideshow__dot active" onclick="currentSlide(0)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(1)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(2)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(3)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(4)"></span>
+                            <span class="slideshow__dot" onclick="currentSlide(5)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masu (Box) Symbolism Section -->
+    <section class="masu-section" style="padding: 50px 0; text-align: center; background: linear-gradient(135deg, #f8faf7 0%, #e8ebe7 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.03;">
+            <div style="position: absolute; top: 15%; left: 8%; font-size: 12rem;">📦</div>
+            <div style="position: absolute; bottom: 15%; right: 8%; font-size: 12rem;">✨</div>
+        </div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <h2 style="font-size: 1.75rem; font-weight: 900; color: #0B3D2E; margin-bottom: 1.2rem; text-align: center;">
+                KUKUたちが身につけている木の箱（枡）について
+            </h2>
+
+            <div class="masu-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+                <!-- Left: Text Content -->
+                <div style="padding: 1.75rem; background: rgba(255, 255, 255, 0.9); border-radius: 1.5rem; box-shadow: 0 8px 30px rgba(11, 61, 46, 0.15); backdrop-filter: blur(10px);">
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #2e402d; text-align: left; margin: 0;">
+                        KUKUがいつも手にしている「枡（ます）」は、
+                        日本の伝統的な木の器であり、"想いを形にする"象徴です。<br><br>
+
+                        枡の「ます」という言葉には、「増す（ふえる）」という意味が込められています。
+                        感謝、つながり、そして創造の力が増えていくという願い。<br><br>
+
+                        KUKUはこの枡を通して、世界中の仲間たちと想いを分かち合い、
+                        新しい文化を共に"育てていく"ことを象徴しています。<br><br>
+
+                        <strong style="font-size: 1rem; color: #0B3D2E; display: block; margin-top: 1rem;">
+                            ひとりの想いが、世界へ"増す"。<br>
+                            それが、KUKUの物語のはじまりです。
+                        </strong>
+                    </p>
+                </div>
+
+                <!-- Right: Image -->
+                <div style="border-radius: 1.5rem; overflow: hidden; box-shadow: 0 8px 30px rgba(11, 61, 46, 0.2); background: rgba(255, 255, 255, 0.9);">
+                    <img src="public/assets/masu-image.jpg" alt="枡を持つKUKU" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 350px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Style -->
+        <style>
+            @media (max-width: 768px) {
+                .masu-content {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+            }
+        </style>
+
+        <!-- Floating Animation Keyframes -->
+        <style>
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Characters Preview Section -->
+    <section class="characters-preview" id="characters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CHARACTERS</span>
+                <h2 class="section-title">6人のキャラクター</h2>
+                <p class="section-desc" style="white-space: nowrap;">それぞれ個性豊かなキャラクターたち。自由に使って、あなたの物語を創造しよう</p>
+            </div>
+            <div class="characters-grid">
+                <div class="character-mini-card" onclick="openCharacterModal('hinoki')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/ヒノキ.JPG" alt="ヒノキ">
+                    </div>
+                    <h3 class="character-mini-card__name">ヒノキ</h3>
+                    <p class="character-mini-card__role">守護の戦士</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('sakura')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/サクラ.JPG" alt="サクラ">
+                    </div>
+                    <h3 class="character-mini-card__name">サクラ</h3>
+                    <p class="character-mini-card__role">癒しの詩人</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('mizuki')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/ミズキ.jpg" alt="ミズキ">
+                    </div>
+                    <h3 class="character-mini-card__name">ミズキ</h3>
+                    <p class="character-mini-card__role">水の賢者</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('fuji')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/フジ.JPG" alt="フジ">
+                    </div>
+                    <h3 class="character-mini-card__name">フジ</h3>
+                    <p class="character-mini-card__role">夢の織り手</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('rino')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/リノ.jpg" alt="リノ">
+                    </div>
+                    <h3 class="character-mini-card__name">リノ</h3>
+                    <p class="character-mini-card__role">風の使者</p>
+                </div>
+                <div class="character-mini-card" onclick="openCharacterModal('sazanka')">
+                    <div class="character-mini-card__image">
+                        <img src="public/assets/characters/サザンカ.JPG" alt="サザンカ">
+                    </div>
+                    <h3 class="character-mini-card__name">サザンカ</h3>
+                    <p class="character-mini-card__role">炎の守り手</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="character.html" class="btn btn--outline">全キャラクターを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Participate Section -->
+    <section style="padding: 60px 0; background: #ffffff;">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 2rem;">
+            <h2 class="section-title" style="text-align: center; font-size: 2rem; color: #0B3D2E; margin-bottom: 3rem;">
+                あなたにできること
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✏️</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">つくる</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        イラスト／漫画／動画／音楽／詩／写真／アニメーション
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📣</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">応援する</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        感想・拡散・コメント・展示に来る
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">学ぶ/一緒に作る</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        ワークショップ／有料サロンで共同制作
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: linear-gradient(135deg, rgba(127, 176, 105, 0.05) 0%, rgba(127, 176, 105, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(127, 176, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+                    <h3 style="font-size: 1.2rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 700;">支える</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        スポンサー・協賛・コラボ・会場提供・機材協力
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @media (max-width: 768px) {
+                div[style*="grid-template-columns: repeat(4"] {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                div[style*="grid-template-columns: repeat(4"] {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="howto" id="howto" style="padding: 3rem 0 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #1a5a47 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05;">
+            <div style="position: absolute; top: 10%; left: 5%; font-size: 15rem;">🌿</div>
+            <div style="position: absolute; bottom: 10%; right: 5%; font-size: 15rem;">✨</div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; font-weight: 900; color: #ffffff; margin-bottom: 0.5rem;">はじめかた（最短3ステップ）</h2>
+                <p style="font-size: 1rem; color: rgba(255, 255, 255, 0.9);">誰でも簡単に、今すぐ創作を始められます</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <!-- Step 1 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">1</span>
+                    </div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📦</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">スターターパックを受け取る</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        ロゴ、世界観ガイド、BGM、クレジット例を無料ダウンロード
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">2</span>
+                    </div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎨</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">つくる</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        手／実写／AI、方法は自由。短くてOK
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 1.5rem; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 50px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.2)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #7fb069 0%, #5f7d5c 100%);"></div>
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);">
+                        <span style="font-size: 2rem; font-weight: 900; color: #ffffff;">3</span>
+                    </div>
+                    <div style="margin-bottom: 0.75rem; display: flex; justify-content: center;">
+                        <img src="public/assets/global-share-illustration.svg" alt="世界中に配信" style="width: 120px; height: 120px;">
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #0B3D2E; margin-bottom: 0.75rem;">投稿する</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #333; opacity: 0.9;">
+                        #KUKUART を付けてSNS投稿 or 提出フォーム<br>
+                        <span style="font-size: 0.85rem; color: #7fb069;">→ 公式特集・受賞候補・スポンサー賞の対象に</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Community CTA After Steps -->
+            <div style="max-width: 800px; margin: 2rem auto 0; padding: 1.5rem 2rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 1.5rem; border: 2px solid rgba(127, 176, 105, 0.3); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌱</div>
+                    <p style="font-size: 1rem; color: #0B3D2E; margin-bottom: 1rem; line-height: 1.7; font-weight: 500;">
+                        作品を公開したら、KUKUコミュニティで仲間にシェアしよう。<br>
+                        世界中のクリエイターと出会い、次のコラボが生まれます。
+                    </p>
+                    <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(37, 211, 102, 0.3)';">
+                        <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsAppグループに参加する
+                    </a>
+                </div>
+            </div>
+
+            <!-- Commercial Use Note -->
+            <div style="max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 1.5rem; border: 2px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+                <p style="font-size: 0.95rem; color: #ffffff; margin: 0; line-height: 1.7; text-align: center;">
+                    <span style="font-size: 1.3rem; margin-right: 0.5rem;">💡</span>
+                    <strong>商用利用の場合:</strong> 年商$140,000まで無料。それ以上は<a href="license.html" style="color: #FFD700; text-decoration: underline; font-weight: 600;">ライセンスページ</a>から申請してください。
+                </p>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Style -->
+        <style>
+            @media (max-width: 768px) {
+                .howto div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新情報</h2>
+            </div>
+            <div class="news__list">
+                <a href="contest.html" class="news-item news-item--featured" style="text-decoration: none; display: block; background: linear-gradient(135deg, #0B3D2E 0%, #7fb069 100%); border-radius: 16px; padding: 2rem; color: white; box-shadow: 0 8px 24px rgba(11, 61, 46, 0.3); transition: all 0.3s ease; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.1); border-radius: 50%;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-size: 1.5rem;">🎬</span>
+                            <span style="background: rgba(255, 215, 0, 0.9); color: #0B3D2E; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">NEW</span>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: white;">第1回 ショートアニメ・コンテスト開催</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.95);">応募期間: 2025年11月1日〜2026年1月11日</p>
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🥇</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">最優秀賞 $400</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🥈</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">優秀賞 $100</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 1.2rem;">🤖</span>
+                                <span style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">AI活用歓迎</span>
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; color: #0B3D2E; border-radius: 50px; font-weight: 600; font-size: 1rem; margin-top: 0.5rem;">
+                            詳細を見る
+                            <span style="font-size: 1.2rem;">→</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Data Section -->
+    <section class="character-data" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">RESOURCES</span>
+                <h2 class="section-title">キャラクターデータ・素材</h2>
+                <p class="section-desc">世界中のクリエイターと共に。KUKUの創作に必要な全てのデータを無料でダウンロードできます</p>
+            </div>
+
+            <!-- Main Download CTA -->
+            <div class="resource-main">
+                <div class="resource-main__content">
+                    <div class="resource-main__icon">📦</div>
+                    <div class="resource-main__text">
+                        <h3>スターターパック（無料）</h3>
+                        <p>創作に必要な全ての素材を一括ダウンロード</p>
+                        <ul class="resource-main__includes">
+                            <li>キャラクター設定資料</li>
+                            <li>AIプロンプト例集</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resource-main__action">
+                    <a href="public/assets/KUKU_Starter_Pack.zip" class="btn btn--primary btn--large" download>
+                        今すぐダウンロード
+                    </a>
+                    <p class="resource-main__note">ZIP形式 | 完全無料 | クレジット表記必須</p>
+                </div>
+            </div>
+
+            <!-- Individual Resources -->
+            <div class="resources__list">
+            </div>
+
+            <!-- Additional Info -->
+            <div class="resources__info">
+                <div class="info-box">
+                    <h4>📌 使用前の注意事項</h4>
+                    <ul>
+                        <li>全ての素材は<strong>非商用利用が無料</strong>です</li>
+                        <li>年商$140,000を超える場合は<a href="license.html">ライセンスページ</a>から申請が必要です</li>
+                        <li>クレジット表記: <code>© FOMUS / KUKU – used under KUKU Open Use License</code></li>
+                        <li>AI生成での二次創作を歓迎します（#KUKUART タグ推奨）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KUKU Creator Salon Section -->
+    <section id="salon" style="background: linear-gradient(135deg, #f8faf9 0%, #ffffff 50%, #faf9f6 100%); padding: 5rem 0; position: relative; overflow: hidden;">
+        <!-- 背景装飾 -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(127, 176, 105, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-block; background: linear-gradient(135deg, #98D8A3 0%, #7fb069 100%); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: 0.05em;">
+                    JOIN US
+                </div>
+                <h2 style="font-size: 2.5rem; color: #0B3D2E; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.02em;">
+                    KUKU Creator Salon
+                </h2>
+                <p style="font-size: 1.1rem; color: rgba(11, 61, 46, 0.7); line-height: 1.8;">
+                    世界中のクリエイターと繋がり、共に育てる
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-bottom: 4rem;">
+                <!-- 無料コミュニティ -->
+                <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid #f0f0f0; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, rgba(152, 216, 163, 0.1) 0%, transparent 100%); border-radius: 0 20px 0 100%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+                        <h3 style="font-size: 1.5rem; color: #0B3D2E; margin-bottom: 0.5rem; font-weight: 700;">無料コミュニティ</h3>
+                        <p style="font-size: 2rem; font-weight: 800; color: #7fb069; margin-bottom: 1.5rem; letter-spacing: -0.02em;">FREE</p>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.1) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                            <p style="font-size: 0.95rem; line-height: 1.8; color: #333; margin: 0;">
+                                基本素材・WhatsApp交流<br>
+                                コンテスト参加・作品の自由な発表<br>
+                                収益化もOK
+                            </p>
+                        </div>
+
+                        <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: block; text-align: center; padding: 1rem 2rem; background: linear-gradient(135deg, #98D8A3 0%, #7fb069 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(127, 176, 105, 0.3);">
+                            無料で参加する
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 有料サロン -->
+                <div style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); padding: 2.5rem; border-radius: 20px; box-shadow: 0 15px 50px rgba(11, 61, 46, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid rgba(152, 216, 163, 0.2);">
+                    <div style="position: absolute; top: -20px; right: 20px; background: #98D8A3; color: #0B3D2E; padding: 0.6rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+                        RECOMMENDED
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%);"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌳</div>
+                        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 0.5rem; font-weight: 700;">Creator Salon</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 2rem; font-weight: 800; color: white; margin: 0; letter-spacing: -0.02em;">
+                                $7<span style="font-size: 1rem; font-weight: 400; opacity: 0.8;">/月</span>
+                                <span style="font-size: 1rem; opacity: 0.6;"> or </span>
+                                $60<span style="font-size: 1rem; font-weight: 400; opacity: 0.8;">/年</span>
+                            </p>
+                            <p style="font-size: 0.9rem; color: #98D8A3; font-weight: 700; margin: 0.5rem 0 0 0;">💰 29% OFF</p>
+                        </div>
+
+                        <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; backdrop-filter: blur(10px);">
+                            <p style="font-size: 0.95rem; line-height: 1.8; color: rgba(255, 255, 255, 0.95); margin: 0;">
+                                限定素材・サロン限定コンテスト<br>
+                                企業案件の優先紹介<br>
+                                映画祭出展サポート
+                            </p>
+                        </div>
+
+                        <a href="salon.html" style="display: block; text-align: center; padding: 1rem 2rem; background: white; color: #0B3D2E; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="salon.html" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.2rem 3rem; background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; box-shadow: 0 8px 25px rgba(11, 61, 46, 0.3);">
+                    サロンの詳細を見る
+                    <span style="font-size: 1.2rem;">→</span>
+                </a>
+            </div>
+        </div>
+
+        <style>
+            #salon div[style*="box-shadow"]:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+            }
+            #salon a[style*="background"]:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(11, 61, 46, 0.4) !important;
+            }
+        </style>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">よくある質問</h2>
+                <p class="section-desc">KUKUの利用に関する疑問にお答えします</p>
+            </div>
+            <div class="faq__grid">
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>AIを使ってもいいですか？</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>もちろんOKです。AIでも手描きでも、<strong>どんな表現方法でも</strong>大歓迎です。</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>二次創作を販売してもいい？</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p><strong>OK（歓迎）</strong>です。小ロット、同人誌、オンライン販売など自由です。詳しくは<a href="guidelines.html">ガイドライン</a>をご覧ください。</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>海外からでも参加できますか？</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>大歓迎。英語と日本語を基本に、順次対応言語を増やします。</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-card__question">
+                        <span class="faq-card__icon">Q</span>
+                        <h3>企業コラボは可能？</h3>
+                    </div>
+                    <div class="faq-card__answer">
+                        <span class="faq-card__icon">A</span>
+                        <p>可能です。<a href="https://instagram.com/kukutree" target="_blank">Instagram</a>または<a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank">WhatsApp</a>からお問い合わせください。ガイドラインに沿って進めます。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="guidelines.html" class="btn btn--outline">詳しいガイドラインを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Modal -->
+    <div id="characterModal" class="character-modal">
+        <div class="character-modal__content">
+            <button class="character-modal__close" onclick="closeCharacterModal()">×</button>
+            <div class="character-modal__inner" id="characterModalInner">
+                <!-- Content will be inserted by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT US Section -->
+    <section style="background: linear-gradient(135deg, #0B3D2E 0%, #1a5c47 50%, #0B3D2E 100%); padding: 6rem 0; color: #F5E6D3; position: relative; overflow: hidden;">
+        <!-- 背景装飾 -->
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; background: radial-gradient(ellipse at center, rgba(152, 216, 163, 0.05) 0%, transparent 70%);"></div>
+
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <!-- ヘッダー -->
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-block; background: rgba(152, 216, 163, 0.2); color: #98D8A3; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.1em; border: 1px solid rgba(152, 216, 163, 0.3);">
+                    ABOUT US
+                </div>
+                <h2 style="font-size: 2rem; color: white; margin-bottom: 2rem; font-weight: 700; line-height: 1.6;">
+                    KUKUは、日本の <span style="color: #98D8A3;">合同会社FOMUS</span> と、<br>
+                    ドバイの <span style="color: #98D8A3;">FOMUS Global FZ-LLC</span> が共同で運営する<br>
+                    <span style="color: #98D8A3; font-weight: 800;">オープンIPプロジェクト</span>です。
+                </h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    日本の繊細な創造性と、ドバイの国際的なネットワークを融合し、<br>
+                    「<strong style="color: #98D8A3;">世界中の人々が共に創り、共に楽しむ新しいエンターテインメントのかたち</strong>」を目指しています。
+                </p>
+            </div>
+
+            <!-- 2拠点カード -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-bottom: 4rem;">
+                <!-- 日本法人 -->
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem 2.5rem; border-radius: 20px; border: 2px solid rgba(152, 216, 163, 0.2); backdrop-filter: blur(10px); transition: all 0.4s; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(152, 216, 163, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3.5rem; margin-bottom: 1rem; line-height: 1;">🇯🇵</div>
+                        <h3 style="font-size: 1.6rem; color: #98D8A3; margin-bottom: 1rem; font-weight: 800;">合同会社FOMUS<span style="font-size: 1rem; font-weight: 400; opacity: 0.8; margin-left: 0.5rem;">（日本）</span></h3>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem; color: #98D8A3; font-weight: 700; margin-bottom: 0.8rem;">事業内容</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2; font-size: 0.95rem;">
+                                <li>• 日本国内プロジェクトの運営・企画</li>
+                                <li>• クリエイター支援・コミュニティ管理</li>
+                                <li>• コンテンツ制作・教育・ライセンス管理</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.15) 0%, rgba(152, 216, 163, 0.05) 100%); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(152, 216, 163, 0.2);">
+                            <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                🪴 日本の文化と職人精神を軸に、KUKUの世界観づくりとコミュニティを支えています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ドバイ法人 -->
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem 2.5rem; border-radius: 20px; border: 2px solid rgba(152, 216, 163, 0.3); backdrop-filter: blur(10px); transition: all 0.4s; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(152, 216, 163, 0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 3.5rem; margin-bottom: 1rem; line-height: 1;">🇦🇪</div>
+                        <h3 style="font-size: 1.6rem; color: #98D8A3; margin-bottom: 1rem; font-weight: 800;">FOMUS Global FZ-LLC<span style="font-size: 1rem; font-weight: 400; opacity: 0.8; margin-left: 0.5rem;">（ドバイ）</span></h3>
+
+                        <div style="background: rgba(152, 216, 163, 0.15); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 3px solid #98D8A3;">
+                            <p style="font-size: 0.9rem; margin: 0; opacity: 0.8;">所在地</p>
+                            <p style="font-size: 1.1rem; margin: 0.3rem 0 0 0; font-weight: 600;">Dubai, United Arab Emirates</p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem; color: #98D8A3; font-weight: 700; margin-bottom: 0.8rem;">事業内容</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2; font-size: 0.95rem;">
+                                <li>• グローバル展開・海外パートナーシップ</li>
+                                <li>• 国際的なクリエイティブプロジェクト運営</li>
+                                <li>• クリエイティブビジネス・マーケティング展開</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, rgba(152, 216, 163, 0.2) 0%, rgba(152, 216, 163, 0.08) 100%); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(152, 216, 163, 0.3);">
+                            <p style="font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                🌍 ドバイの<strong>in5 Design（Dubai Design District）</strong>を拠点に、世界中のブランド、アーティスト、投資家をつなぎ、KUKUの国際展開をリードしています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- フッター（お問い合わせ） -->
+            <div style="text-align: center; padding: 2.5rem 0; border-top: 1px solid rgba(152, 216, 163, 0.2);">
+                <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem;">
+                    お問い合わせ
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://instagram.com/kukutree" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 0.9rem 2rem; border: 2px solid rgba(225, 48, 108, 0.5); border-radius: 50px; transition: all 0.3s; background: linear-gradient(135deg, #E1306C 0%, #C13584 100%); box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);">
+                        <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 0.9rem 2rem; border: 2px solid rgba(37, 211, 102, 0.5); border-radius: 50px; transition: all 0.3s; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                        <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            section div[style*="backdrop-filter"]:hover {
+                transform: translateY(-5px);
+                border-color: rgba(152, 216, 163, 0.5);
+            }
+        </style>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">KUKU</h3>
+                    <p class="footer__tagline">世界80億人と創るオープンIP - Co-Create with 8 Billion People</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>MENU</h4>
+                        <a href="index.html">ホーム</a>
+                        <a href="character.html">キャラクター</a>
+                        <a href="world.html">世界観</a>
+                        <a href="guidelines.html">ガイドライン</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>PAGES</h4>
+                        <a href="contest.html">コンテスト</a>
+                        <a href="#resources">素材ダウンロード</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>INFO</h4>
+                        <a href="public/assets/KUKU_Starter_Pack.zip" download>スターターパック</a>
+                        <a href="https://kukuofficial.theshop.jp/" target="_blank">オンラインショップ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 FOMUS. All rights reserved.</p>
+                <p class="footer__desc"><strong>KUKU — 世界の80億人で育てる新しいキャラクタープロジェクト</strong><br>あなたの想像が、この世界を動かす。</p>
+                <p class="footer__social" style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    Instagram: <a href="https://instagram.com/kukutree" target="_blank" style="color: #7fb069; text-decoration: none;">@kukutree</a> |
+                    WhatsApp: <a href="https://chat.whatsapp.com/CDNPp9KoK3A38Gw7kXPmKD?mode=wwt" target="_blank" style="color: #7fb069; text-decoration: none;">コミュニティ</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
