@@ -79,6 +79,14 @@
     .header__container {
         padding: 0;
         min-height: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        flex-shrink: 0;
     }
 
     .header__logo img {
@@ -88,11 +96,9 @@
 
     /* Navigation - Show only language selector on mobile */
     .header__nav {
-        display: block !important;
-        position: absolute;
-        right: 70px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: flex !important;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .header__nav .nav__list {
@@ -100,6 +106,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        align-items: center;
     }
 
     .header__nav .nav__list > li:not(.nav__item--lang) {
@@ -113,12 +120,13 @@
     }
 
     .header__nav .nav__item--lang .nav__link--lang {
-        font-size: 20px;
-        padding: 8px;
+        font-size: 24px;
+        padding: 8px 12px;
         color: #000000;
         font-weight: 600;
         text-decoration: none;
         display: block;
+        cursor: pointer;
     }
 
     .nav__item--lang .lang-dropdown {
@@ -130,12 +138,18 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         border-radius: 8px;
         padding: 0.5rem 0;
+        margin-top: 0.5rem;
+    }
+
+    .nav__item--lang .lang-dropdown li {
+        list-style: none;
     }
 
     .nav__item--lang .lang-dropdown li a {
         color: #000000;
         padding: 10px 16px;
         font-size: 15px;
+        display: block;
     }
 
     .nav__item--lang .lang-dropdown li a:hover {
@@ -144,26 +158,29 @@
 
     /* Mobile Menu Toggle - Easy to tap */
     .header__toggle {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 12px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 1001;
+        width: 48px !important;
+        height: 48px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 12px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 1001 !important;
+        position: relative !important;
+        flex-shrink: 0 !important;
     }
 
     .header__toggle span {
-        width: 24px;
-        height: 3px;
-        background: #000000;
-        margin: 3px 0;
-        transition: all 0.3s ease;
-        border-radius: 2px;
+        width: 24px !important;
+        height: 3px !important;
+        background: #000000 !important;
+        margin: 3px 0 !important;
+        transition: all 0.3s ease !important;
+        border-radius: 2px !important;
+        display: block !important;
     }
 
     /* Mobile Menu - Full screen for easy navigation */
