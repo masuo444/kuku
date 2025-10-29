@@ -1113,13 +1113,9 @@
         padding-right: 0 !important;
     }
 
-    /* Language dropdown - better mobile UX */
+    /* Language dropdown - hide on mobile, use full-screen modal instead */
     .lang-dropdown {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        background: transparent;
+        display: none !important;
     }
 
     /* Contest hero period */
