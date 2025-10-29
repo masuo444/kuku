@@ -136,14 +136,71 @@
         width: auto !important;
     }
 
-    /* Hide desktop navigation completely on mobile */
+    /* Show navigation with language selector on mobile */
     .header__nav {
+        display: flex !important;
+        order: 2 !important;
+        flex: 1 !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header__nav .nav__list {
+        display: flex !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide all nav items except language selector */
+    .header__nav .nav__list > li:not(.nav__item--lang) {
         display: none !important;
     }
 
-    /* Language selector in header - simple icon */
+    /* Language selector in header - visible on mobile */
     .header__nav .nav__item--lang {
-        display: none !important;
+        display: block !important;
+        position: relative !important;
+    }
+
+    .header__nav .nav__item--lang .nav__link--lang {
+        font-size: 24px !important;
+        padding: 8px 12px !important;
+        color: #000000 !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        display: block !important;
+        cursor: pointer !important;
+        line-height: 1 !important;
+    }
+
+    .nav__item--lang .lang-dropdown {
+        right: 0 !important;
+        left: auto !important;
+        top: 100% !important;
+        min-width: 140px !important;
+        background: #f8faf9 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        border-radius: 8px !important;
+        padding: 0.5rem 0 !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .nav__item--lang .lang-dropdown li {
+        list-style: none !important;
+    }
+
+    .nav__item--lang .lang-dropdown li a {
+        color: #000000 !important;
+        padding: 10px 16px !important;
+        font-size: 15px !important;
+        display: block !important;
+        text-decoration: none !important;
+    }
+
+    .nav__item--lang .lang-dropdown li a:hover {
+        background: rgba(0,0,0,0.05) !important;
     }
 
     /* Mobile Menu Toggle - Guaranteed visible */
@@ -167,7 +224,7 @@
         z-index: 1001 !important;
         position: relative !important;
         flex-shrink: 0 !important;
-        order: 2 !important;
+        order: 3 !important;
     }
 
     .header__toggle span {
@@ -242,18 +299,11 @@
     }
 
     .mobile-menu__lang {
-        display: block !important;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid #e0e0e0;
+        display: none !important;
     }
 
     .mobile-menu__lang-label {
-        display: block !important;
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 0.5rem;
-        padding-left: 1.5rem;
+        display: none !important;
     }
 
     /* Buttons - Touch-friendly */
