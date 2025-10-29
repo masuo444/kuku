@@ -264,7 +264,7 @@
         background: rgba(0,0,0,0.05) !important;
     }
 
-    /* Mobile Menu Toggle - Clean black lines */
+    /* Mobile Menu Toggle - ALWAYS VISIBLE */
     .header__toggle {
         width: 48px !important;
         height: 48px !important;
@@ -278,8 +278,8 @@
         align-items: center !important;
         padding: 12px !important;
         margin: 0 !important;
-        background: transparent !important;
-        border: none !important;
+        background: rgba(0,0,0,0.08) !important;
+        border: 1px solid rgba(0,0,0,0.1) !important;
         outline: none !important;
         cursor: pointer !important;
         z-index: 1001 !important;
@@ -287,32 +287,33 @@
         flex: 0 0 auto !important;
         order: 3 !important;
         border-radius: 8px !important;
-        transition: background 0.2s ease !important;
+        transition: all 0.2s ease !important;
     }
 
     .header__toggle:active {
-        background: rgba(0,0,0,0.05) !important;
+        background: rgba(0,0,0,0.15) !important;
     }
 
     .header__toggle span {
-        width: 24px !important;
-        height: 2px !important;
+        width: 22px !important;
+        height: 3px !important;
         background: #000000 !important;
-        margin: 3px 0 !important;
+        margin: 2.5px 0 !important;
         transition: all 0.3s ease !important;
-        border-radius: 1px !important;
+        border-radius: 2px !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
     }
 
-    /* Override any conflicting styles */
+    /* Override any conflicting styles - FORCE VISIBILITY */
     button.header__toggle,
-    .header button.header__toggle {
+    .header button.header__toggle,
+    .header__container .header__toggle {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
-        background: transparent !important;
+        background: rgba(0,0,0,0.08) !important;
     }
 
     .header__toggle span:nth-child(1),
@@ -322,10 +323,26 @@
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
+        width: 22px !important;
+        height: 3px !important;
     }
 
     button.header__toggle {
         display: flex !important;
+    }
+
+    /* Extra specificity to ensure visibility */
+    .header .header__container button.header__toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .header .header__container button.header__toggle span {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: #000000 !important;
     }
 
     /* Mobile Menu - Full screen for easy navigation */
