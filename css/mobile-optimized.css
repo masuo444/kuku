@@ -743,6 +743,260 @@
     .footer * {
         max-width: 100% !important;
     }
+
+    /* ========================================
+       MOBILE OPTIMIZATION - Compact Layout
+       ======================================== */
+
+    /* Reduce section padding dramatically */
+    section,
+    .section,
+    section[style*="padding"] {
+        padding: 2rem 1rem !important;
+    }
+
+    .hero,
+    .hero--centered,
+    section.hero {
+        padding: 3rem 1rem 2rem !important;
+        min-height: auto !important;
+    }
+
+    /* Hero title - more compact */
+    .hero__title,
+    .hero h1,
+    h1.hero__title {
+        font-size: clamp(1.4rem, 4vw, 1.8rem) !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1.5rem !important;
+        padding: 0 !important;
+    }
+
+    /* Section titles - smaller */
+    h2.section-title,
+    .section-title,
+    section h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Philosophy section - compact */
+    .philosophy,
+    section.philosophy {
+        padding: 2rem 1rem !important;
+    }
+
+    .philosophy .container {
+        padding: 0 1rem !important;
+    }
+
+    .philosophy h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .philosophy p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .philosophy div[style*="padding: 1.2rem"] {
+        padding: 0.8rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    /* About section - compact */
+    .about,
+    section.about {
+        padding: 2rem 1rem !important;
+    }
+
+    .about__grid {
+        gap: 1.5rem !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .about__text {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .about__features-list {
+        gap: 0.8rem !important;
+    }
+
+    .feature-item {
+        padding: 0.8rem !important;
+    }
+
+    .feature-item p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Masu section - 1 column, compact */
+    .masu-section,
+    section.masu-section {
+        padding: 2rem 1rem !important;
+    }
+
+    .masu-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .masu-content > div {
+        padding: 1rem !important;
+    }
+
+    .masu-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Characters grid - 2 columns compact */
+    .characters-grid,
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .character-mini-card {
+        padding: 0.8rem !important;
+    }
+
+    .character-mini-card__name {
+        font-size: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .character-mini-card__role {
+        font-size: 0.8rem !important;
+    }
+
+    /* "How to Participate" section - 2 columns */
+    section div[style*="grid-template-columns: repeat(4, 1fr)"],
+    div[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    section div[style*="padding: 2rem"] {
+        padding: 1rem !important;
+    }
+
+    section div[style*="font-size: 2.5rem"] {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    section h3[style*="font-size: 1.2rem"] {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    section p[style*="font-size: 0.9rem"] {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Video wrapper - compact */
+    .video-wrapper,
+    .video-wrapper--large {
+        margin: 1rem 0 !important;
+    }
+
+    .video-wrapper--large {
+        border-radius: 12px !important;
+    }
+
+    /* Container max-width adjustments */
+    .container,
+    div.container {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    /* Section descriptions - compact */
+    .section-desc,
+    p.section-desc {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Buttons - better sizing */
+    .btn,
+    a.btn {
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* CTA sections - compact */
+    .section-cta {
+        margin-top: 1.5rem !important;
+    }
+
+    /* Reduce decorative element sizes */
+    div[style*="position: absolute"][style*="width: 500px"],
+    div[style*="position: absolute"][style*="width: 600px"] {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    /* Gallery/slideshow - better mobile size */
+    .slideshow,
+    .slideshow__container {
+        max-height: 300px !important;
+    }
+
+    .slideshow__image {
+        object-fit: cover !important;
+    }
+
+    /* Section labels - smaller */
+    .section-label {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Reduce margins between sections */
+    section + section {
+        margin-top: 0 !important;
+    }
+
+    /* Text in boxes - compact */
+    div[style*="padding: 1.5rem"] {
+        padding: 1rem !important;
+    }
+
+    div[style*="padding: 1.75rem"] {
+        padding: 1rem !important;
+    }
+
+    /* Image containers - appropriate height */
+    img[style*="min-height: 350px"] {
+        min-height: 200px !important;
+    }
+
+    /* Paragraph spacing - tighter */
+    p + p {
+        margin-top: 0.8rem !important;
+    }
+
+    /* Better line height for readability */
+    p {
+        line-height: 1.6 !important;
+    }
+
+    /* Strong text - appropriate size */
+    strong {
+        font-size: inherit !important;
+    }
 }
 
 /* iPhone 16 Pro Max Optimization (430px) */
