@@ -679,6 +679,169 @@
         grid-template-columns: repeat(2, 1fr) !important;
     }
 
+    /* Character profile page - single column on mobile */
+    .character-profile,
+    .character-profile.reverse {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .character-profile.reverse .character-image,
+    .character-profile.reverse .character-info {
+        order: unset !important;
+    }
+
+    .character-image {
+        width: 100% !important;
+        height: 300px !important;
+        max-width: 100% !important;
+    }
+
+    .character-info {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .character-info h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .character-title {
+        font-size: 0.95rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .character-desc {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* Character gallery - 2 columns on mobile */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.8rem !important;
+    }
+
+    .character-gallery h4 {
+        font-size: 1rem !important;
+        margin: 1.5rem 0 1rem 0 !important;
+    }
+
+    /* Character hero section - compact */
+    .character-hero {
+        padding: 4rem 1rem 2rem !important;
+    }
+
+    .character-hero h1 {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .character-hero .subtitle {
+        font-size: 1rem !important;
+    }
+
+    .character-hero .tagline {
+        font-size: 0.9rem !important;
+    }
+
+    /* Character content - compact padding */
+    .character-content {
+        padding: 2rem 1rem !important;
+    }
+
+    /* Stats grid - 2 columns on mobile */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .stat-card {
+        padding: 1.2rem !important;
+    }
+
+    .stat-card .number {
+        font-size: 1.8rem !important;
+    }
+
+    /* Personality grid - 1 column on mobile */
+    .personality-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .personality-item {
+        padding: 1rem !important;
+    }
+
+    .personality-item h4 {
+        font-size: 1rem !important;
+    }
+
+    .personality-item p {
+        font-size: 0.85rem !important;
+    }
+
+    /* World section - compact */
+    .world-section {
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .world-section h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    .world-section h3 {
+        font-size: 1.1rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .world-section p,
+    .world-section ul li {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Ability cards - compact */
+    .ability-card {
+        padding: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .ability-card h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .ability-card p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Download section - compact */
+    .download-section {
+        padding: 2rem 1.5rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .download-section h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .download-section p {
+        font-size: 0.95rem !important;
+    }
+
+    .download-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
     /* Salon page - WhatsApp button */
     .btn--whatsapp {
         width: 100%;
