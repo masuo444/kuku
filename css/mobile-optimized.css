@@ -933,6 +933,45 @@
         line-height: 1.6 !important;
     }
 
+    /* World page - text and video layout */
+    .world-section div[style*="display: flex"] {
+        gap: 1.5rem !important;
+        flex-direction: column !important;
+    }
+
+    .world-section div[style*="position: sticky"] {
+        position: relative !important;
+        top: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .world-section video {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+    }
+
+    .world-section div[style*="flex: 1"] {
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .world-section div[style*="flex: 0 0 auto"] {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+
+    /* World page - reduce spacing between sections */
+    .world-section p[style*="line-height: 2"] {
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
     /* Ability cards - compact */
     .ability-card {
         padding: 1.2rem !important;
