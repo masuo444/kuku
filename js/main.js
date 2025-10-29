@@ -391,14 +391,6 @@ function openCharacterModal(characterId) {
                 <p class="character-modal__description">${char.description}</p>
             </div>
         </div>
-        <div class="character-modal__details">
-            <h3>性格</h3>
-            <p>${char.details.personality}</p>
-            <h3>能力</h3>
-            <p>${char.details.abilities}</p>
-            <h3>背景</h3>
-            <p>${char.details.background}</p>
-        </div>
         <div class="character-modal__cta">
             <a href="character.html" class="btn btn--primary">全キャラクター詳細を見る</a>
         </div>
