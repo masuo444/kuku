@@ -125,13 +125,14 @@
         width: 100% !important;
         max-width: 100% !important;
         position: relative !important;
-        gap: 0.5rem !important;
+        gap: 0 !important;
     }
 
     .header__logo {
         flex-shrink: 0 !important;
         order: 1 !important;
         margin: 0 !important;
+        flex: 0 0 auto !important;
     }
 
     .header__logo img {
@@ -144,7 +145,7 @@
     .header__nav {
         display: flex !important;
         order: 2 !important;
-        flex-shrink: 0 !important;
+        flex: 1 !important;
         justify-content: center !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -169,10 +170,10 @@
     }
 
     .header__nav .nav__item--lang .nav__link--lang {
-        font-size: 13px !important;
+        font-size: 0 !important;
         padding: 4px 8px !important;
         color: #000000 !important;
-        font-weight: 600 !important;
+        font-weight: 700 !important;
         text-decoration: none !important;
         display: block !important;
         cursor: pointer !important;
@@ -180,19 +181,12 @@
         letter-spacing: 0.5px !important;
     }
 
-    /* Hide globe icon and change text to JP|EN|FR */
+    /* Show only JP text */
     .header__nav .nav__item--lang .nav__link--lang::before {
-        content: 'JP | EN | FR' !important;
-        font-size: 13px !important;
-        font-weight: 600 !important;
-    }
-
-    .header__nav .nav__item--lang .nav__link--lang {
-        font-size: 0 !important;
-    }
-
-    .header__nav .nav__item--lang .nav__link--lang::before {
-        font-size: 13px !important;
+        content: 'JP' !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
     }
 
     .nav__item--lang .lang-dropdown {
@@ -237,14 +231,13 @@
         align-items: center !important;
         padding: 8px !important;
         margin: 0 !important;
-        margin-left: auto !important;
         background: #000000 !important;
         border: none !important;
         outline: none !important;
         cursor: pointer !important;
         z-index: 1001 !important;
         position: relative !important;
-        flex-shrink: 0 !important;
+        flex: 0 0 auto !important;
         order: 3 !important;
         border-radius: 4px !important;
     }
