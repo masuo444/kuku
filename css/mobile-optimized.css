@@ -1242,9 +1242,31 @@
         background-position: center !important;
     }
 
-    /* Better visual separation */
+    /* Better visual separation - IMPROVED CONTRAST */
     section:nth-child(even) {
-        background: linear-gradient(180deg, rgba(248, 250, 249, 0.3) 0%, rgba(248, 250, 249, 0.6) 100%) !important;
+        background: #fafafa !important;
+    }
+
+    /* Ensure text is always readable */
+    section,
+    .section,
+    div[style*="background"] {
+        color: #111111 !important;
+    }
+
+    section h1,
+    section h2,
+    section h3,
+    section h4,
+    section h5,
+    section h6 {
+        color: #0B3D2E !important;
+    }
+
+    section p,
+    section li,
+    section span:not(.section-label) {
+        color: rgba(17, 17, 17, 0.85) !important;
     }
 
     /* Mobile-first container system */
@@ -1255,14 +1277,8 @@
         margin: 0 auto !important;
     }
 
-    /* Card-based design for mobile */
-    section > div > div {
-        background: white !important;
-        border-radius: 20px !important;
-        padding: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.06) !important;
-    }
+    /* Card-based design for mobile - DISABLED */
+    /* Removed automatic card styling to prevent green background issues */
 
     /* Remove card styling from certain elements */
     .hero > div > div,
@@ -1329,11 +1345,11 @@
         color: rgba(17, 17, 17, 0.85) !important;
     }
 
-    /* Philosophy section - mobile-first card design */
+    /* Philosophy section - HIGH CONTRAST */
     .philosophy,
     section.philosophy {
         padding: 2rem 1.25rem !important;
-        background: linear-gradient(135deg, rgba(11, 61, 46, 0.02) 0%, rgba(127, 176, 105, 0.05) 100%) !important;
+        background: #ffffff !important;
     }
 
     .philosophy .container {
@@ -1345,22 +1361,30 @@
         margin-bottom: 1rem !important;
         text-align: center !important;
         font-weight: 700 !important;
+        color: #0B3D2E !important;
     }
 
     .philosophy p {
         font-size: 15px !important;
         line-height: 1.7 !important;
         margin-bottom: 1rem !important;
+        color: #111111 !important;
     }
 
     .philosophy div[style*="padding: 1.2rem"],
     .philosophy div[style*="padding"] {
-        padding: 1rem !important;
+        padding: 1.25rem !important;
         margin-bottom: 1rem !important;
-        background: white !important;
-        border-radius: 16px !important;
-        box-shadow: 0 2px 12px rgba(11, 61, 46, 0.08) !important;
+        background: #f8faf9 !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        border: 2px solid #e0e0e0 !important;
         border-left: 4px solid #7fb069 !important;
+    }
+
+    .philosophy strong {
+        color: #0B3D2E !important;
+        font-weight: 700 !important;
     }
 
     /* About section - mobile-optimized cards */
@@ -1399,9 +1423,10 @@
 
     .feature-item {
         padding: 1.25rem !important;
-        background: white !important;
-        border-radius: 16px !important;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        border: 2px solid #e0e0e0 !important;
         display: flex !important;
         gap: 1rem !important;
         align-items: flex-start !important;
@@ -1409,8 +1434,12 @@
     }
 
     .feature-item:active {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+        border-color: #7fb069 !important;
+        background: #f8faf9 !important;
+    }
+
+    .feature-item p {
+        color: #111111 !important;
     }
 
     .feature-item__number {
@@ -1430,11 +1459,11 @@
         margin-bottom: 0.25rem !important;
     }
 
-    /* Masu section - mobile-first storytelling */
+    /* Masu section - HIGH CONTRAST */
     .masu-section,
     section.masu-section {
         padding: 2rem 1.25rem !important;
-        background: linear-gradient(135deg, rgba(242, 237, 228, 0.3) 0%, rgba(248, 250, 249, 0.5) 100%) !important;
+        background: #ffffff !important;
     }
 
     .masu-content {
@@ -1446,23 +1475,31 @@
 
     .masu-content > div {
         padding: 1.5rem !important;
-        background: white !important;
-        border-radius: 20px !important;
-        box-shadow: 0 4px 20px rgba(11, 61, 46, 0.1) !important;
+        background: #f8faf9 !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        border: 2px solid #e0e0e0 !important;
     }
 
     .masu-content p {
         font-size: 15px !important;
         line-height: 1.7 !important;
         margin-bottom: 1rem !important;
+        color: #111111 !important;
+    }
+
+    .masu-content h2,
+    .masu-content h3 {
+        color: #0B3D2E !important;
     }
 
     .masu-content img,
     .masu-content > div > img {
-        border-radius: 16px !important;
+        border-radius: 12px !important;
         width: 100% !important;
         height: auto !important;
         margin-top: 1rem !important;
+        border: 1px solid #e0e0e0 !important;
     }
 
     /* Characters grid - 2 columns compact */
@@ -1474,16 +1511,25 @@
 
     .character-mini-card {
         padding: 1rem !important;
-        border-radius: 16px !important;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        border: 2px solid #e0e0e0 !important;
         transition: all 0.2s ease !important;
-        background: white !important;
+        background: #ffffff !important;
         -webkit-tap-highlight-color: transparent !important;
     }
 
     .character-mini-card:active {
-        transform: scale(0.97) !important;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+        border-color: #7fb069 !important;
+        background: #f8faf9 !important;
+    }
+
+    .character-mini-card__name {
+        color: #0B3D2E !important;
+    }
+
+    .character-mini-card__role {
+        color: rgba(17, 17, 17, 0.7) !important;
     }
 
     .character-mini-card__image {
@@ -1579,10 +1625,10 @@
         margin-bottom: 1rem !important;
     }
 
-    /* Buttons - optimized for touch */
+    /* Buttons - HIGH CONTRAST, optimized for touch */
     .btn,
     a.btn,
-    button {
+    button[class*="btn"] {
         min-height: 48px !important;
         padding: 0.75rem 1.5rem !important;
         font-size: 1rem !important;
@@ -1590,12 +1636,30 @@
         font-weight: 600 !important;
         transition: all 0.2s ease !important;
         -webkit-tap-highlight-color: transparent !important;
+        background: #ffffff !important;
+        color: #0B3D2E !important;
+        border: 2px solid #0B3D2E !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
     }
 
     .btn:active,
     a.btn:active,
     button:active {
         transform: scale(0.98) !important;
+        background: #0B3D2E !important;
+        color: #ffffff !important;
+    }
+
+    /* Primary button style */
+    .btn--primary,
+    button[style*="background: linear-gradient"] {
+        background: #0B3D2E !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+
+    .btn--primary:active {
+        background: #7fb069 !important;
     }
 
     /* CTA sections - compact */
