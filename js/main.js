@@ -36,6 +36,42 @@ mobileMenu.addEventListener('click', (e) => {
     }
 });
 
+// ===== LANGUAGE MODAL =====
+const langModal = document.getElementById('lang-modal');
+const langClose = document.getElementById('lang-close');
+const langButtons = document.querySelectorAll('.nav__link--lang, .header__nav .nav__item--lang .nav__link');
+
+// Open language modal when clicking language button
+if (langButtons) {
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (langModal) {
+                langModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+}
+
+// Close language modal
+if (langClose) {
+    langClose.addEventListener('click', () => {
+        langModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+}
+
+// Close modal when clicking outside
+if (langModal) {
+    langModal.addEventListener('click', (e) => {
+        if (e.target === langModal) {
+            langModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

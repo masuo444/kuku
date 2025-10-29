@@ -121,13 +121,38 @@
             <a href="license.html" class="mobile-menu__link">Licence</a>
             <a href="contest.html" class="mobile-menu__link">Concours</a>
             <a href="salon.html" class="mobile-menu__link">Communauté</a>
-            <div class="mobile-menu__lang">
-                <span class="mobile-menu__lang-label">🌐 Langue</span>
-                <a href="../fr/index.html" class="mobile-menu__link mobile-menu__link--lang">Français</a>
-                <a href="../index.html" class="mobile-menu__link mobile-menu__link--lang">日本語</a>
-                <a href="../en/index.html" class="mobile-menu__link mobile-menu__link--lang">English</a>
-            </div>
         </nav>
+    </div>
+
+    <!-- Language Selection Modal -->
+    <div class="lang-modal" id="lang-modal">
+        <button class="lang-modal__close" id="lang-close">×</button>
+        <div class="lang-modal__content">
+            <h2 class="lang-modal__title">🌐 Choisir la langue / Select Language</h2>
+            <div class="lang-modal__options">
+                <a href="index.html" class="lang-modal__option lang-modal__option--active">
+                    <span class="lang-modal__flag">🇫🇷</span>
+                    <div class="lang-modal__info">
+                        <span class="lang-modal__name">Français</span>
+                        <span class="lang-modal__sub">フランス語</span>
+                    </div>
+                </a>
+                <a href="../index.html" class="lang-modal__option">
+                    <span class="lang-modal__flag">🇯🇵</span>
+                    <div class="lang-modal__info">
+                        <span class="lang-modal__name">日本語</span>
+                        <span class="lang-modal__sub">Japanese</span>
+                    </div>
+                </a>
+                <a href="../en/index.html" class="lang-modal__option">
+                    <span class="lang-modal__flag">🇬🇧</span>
+                    <div class="lang-modal__info">
+                        <span class="lang-modal__name">English</span>
+                        <span class="lang-modal__sub">英語</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Hero Section -->
