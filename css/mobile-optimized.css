@@ -15,11 +15,11 @@
 @media (max-width: 430px) {
     /* Reset full width for mobile */
     html, body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     /* Typography - Readable on iPhone 16 */
@@ -29,20 +29,55 @@
         -webkit-text-size-adjust: 100%;
     }
 
-    /* Force full width containers */
-    * {
-        max-width: 100vw;
+    /* Force full width containers - COMPREHENSIVE FIX */
+    *:not(.header__toggle span) {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
     }
 
+    /* Main container fixes */
     .container,
     .hero__container,
-    section > div {
+    .section-container,
+    section > div,
+    section,
+    main,
+    article {
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 100vw !important;
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Override ALL inline styles for width */
+    div[style*="width"],
+    section[style*="width"],
+    div[style*="max-width"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix flex containers */
+    div[style*="display: flex"],
+    div[style*="display:flex"] {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    /* Fix grid containers */
+    div[style*="display: grid"],
+    div[style*="display:grid"] {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+
+    /* Ensure no element causes horizontal scroll */
+    img, video, iframe, table, pre, code {
+        max-width: 100% !important;
+        height: auto !important;
     }
 
     h1 {
@@ -306,13 +341,16 @@
     .guidelines-section,
     .sponsors-section,
     .license-section,
+    .salon-section,
     section {
         padding: 2rem 1rem !important;
         margin-bottom: 1.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         border-radius: 16px;
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
 
     /* Override all inline width styles */
@@ -320,6 +358,18 @@
     div[style] {
         width: 100% !important;
         max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Fix any wide content */
+    .content-wrapper,
+    .page-content,
+    .main-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
     }
 
     /* Grid Layouts - Single column on mobile */
@@ -519,9 +569,29 @@
 
     /* Force all inline-styled divs to be full width */
     .world-section > div,
-    .world-section > div > div {
+    .world-section > div > div,
+    .contest-section > div,
+    .contest-section > div > div,
+    .guidelines-section > div,
+    .license-section > div,
+    .salon-section > div,
+    .sponsors-section > div {
         width: 100% !important;
         max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Fix any deeply nested divs */
+    section div div div {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix padding on nested elements */
+    section > div > * {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     /* Language dropdown - better mobile UX */
@@ -561,6 +631,74 @@
     .btn--whatsapp {
         width: 100%;
         max-width: 320px;
+    }
+
+    /* Additional comprehensive fixes for all pages */
+
+    /* Prevent negative margins that cause overflow */
+    section,
+    .section,
+    .container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Allow centering for specific elements */
+    .btn,
+    .character-mini-card,
+    .cta-buttons,
+    .section-cta {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Fix text that might overflow */
+    h1, h2, h3, h4, h5, h6, p, span, a, li {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix lists */
+    ul, ol {
+        padding-left: 1.5rem !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix any absolute/fixed positioned elements */
+    [style*="position: absolute"],
+    [style*="position: fixed"] {
+        max-width: 100vw !important;
+    }
+
+    /* Ensure proper spacing */
+    .hero,
+    .world-hero,
+    .contest-hero,
+    .guidelines-hero,
+    .sponsors-hero,
+    .license-hero,
+    .salon-hero,
+    .character-hero {
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix footer */
+    .footer {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 2rem 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .footer * {
+        max-width: 100% !important;
     }
 }
 
