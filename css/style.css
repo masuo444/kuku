@@ -388,7 +388,8 @@ button {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2001;
     overflow-y: auto;
@@ -408,9 +409,9 @@ button {
     width: 48px;
     height: 48px;
     font-size: 2.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     color: #ffffff;
     font-weight: 300;
@@ -422,12 +423,14 @@ button {
 }
 
 .lang-modal__close:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.35);
     transform: scale(1.05);
 }
 
 .lang-modal__close:active {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
     transform: scale(0.95);
 }
 
@@ -463,9 +466,9 @@ button {
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -474,20 +477,21 @@ button {
 
 .lang-modal__option:hover {
     transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
 }
 
 .lang-modal__option:active {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .lang-modal__option--active {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(127, 176, 105, 0.25);
+    border-color: rgba(127, 176, 105, 0.5);
+    box-shadow: 0 0 20px rgba(127, 176, 105, 0.3);
 }
 
 .lang-modal__flag {

@@ -593,7 +593,8 @@
         right: -100%;
         width: 100%;
         height: 100vh;
-        background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1001;
         overflow-y: auto;
@@ -616,9 +617,9 @@
         height: 48px;
         min-height: 48px;
         font-size: 2.5rem;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
-        border: none;
+        border: 2px solid rgba(255, 255, 255, 0.2);
         cursor: pointer;
         color: #ffffff;
         font-weight: 300;
@@ -631,7 +632,8 @@
     }
 
     .lang-modal__close:active {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.4);
         transform: scale(0.95);
     }
 
@@ -667,9 +669,9 @@
         align-items: center;
         gap: 1.25rem;
         padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 20px;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -679,13 +681,14 @@
 
     .lang-modal__option:active {
         transform: scale(0.98);
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
     }
 
     .lang-modal__option--active {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(127, 176, 105, 0.25);
+        border-color: rgba(127, 176, 105, 0.5);
+        box-shadow: 0 0 20px rgba(127, 176, 105, 0.3);
     }
 
     .lang-modal__flag {
