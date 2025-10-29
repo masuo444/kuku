@@ -2008,18 +2008,20 @@
         line-height: 1.4 !important;
     }
 
-    /* Mobile-First Feature Cards - Original Design */
+    /* Mobile-First Feature Cards - Compact Horizontal Design */
     .feature-item {
-        padding: 0 !important;
-        background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%) !important;
-        border-radius: 20px !important;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
-        border: 2px solid #e8f0ea !important;
+        padding: 20px !important;
+        background: #ffffff !important;
+        border-radius: 16px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+        border: 1px solid #e8e8e8 !important;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
         margin-bottom: var(--spacing-md) !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
     }
 
     .feature-item:active {
@@ -2028,48 +2030,35 @@
         border-color: #7fb069 !important;
     }
 
-    /* Feature Number Badge - Top Centered Design */
+    /* Feature Number Badge - Compact & Stylish Design */
     .feature-item__number {
-        width: 100% !important;
-        height: auto !important;
-        min-width: auto !important;
-        min-height: auto !important;
-        max-width: 100% !important;
-        border-radius: 0 !important;
-        background: linear-gradient(135deg, #0B3D2E 0%, #1a5a42 100%) !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+        max-width: 36px !important;
+        border-radius: 50% !important;
+        background: #111111 !important;
         color: #ffffff !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        font-size: 2.5rem !important;
-        font-weight: 900 !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
         flex-shrink: 0 !important;
-        box-shadow: none !important;
-        padding: 24px !important;
-        letter-spacing: -1px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+        padding: 0 !important;
+        letter-spacing: 0 !important;
         position: relative !important;
     }
 
-    /* Add decorative element */
-    .feature-item__number::after {
-        content: '' !important;
-        position: absolute !important;
-        bottom: 0 !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 40px !important;
-        height: 3px !important;
-        background: rgba(255, 255, 255, 0.3) !important;
-        border-radius: 2px !important;
-    }
-
-    /* Feature Content - Below Number */
+    /* Feature Content - Next to Number */
     .feature-item > div {
         flex: 1 !important;
-        padding: 24px !important;
+        padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 12px !important;
+        gap: 8px !important;
     }
 
     .feature-item p:first-of-type {
