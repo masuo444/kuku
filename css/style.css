@@ -183,7 +183,7 @@ button {
 .header__container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0.25rem 30px;
+    padding: 0.5rem 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,7 +198,7 @@ button {
 }
 
 .header__logo img {
-    height: 60px;
+    height: 45px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -206,12 +206,12 @@ button {
 
 .nav__list {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
 .nav__link {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
