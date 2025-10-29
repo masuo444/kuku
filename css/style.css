@@ -197,6 +197,12 @@ button {
     position: relative;
 }
 
+.header__logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
 
 .nav__list {
     display: flex;
