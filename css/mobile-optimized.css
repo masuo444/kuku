@@ -202,8 +202,8 @@
     .header__container {
         padding: 0 !important;
         margin: 0 !important;
-        min-height: 48px !important;
-        height: 48px !important;
+        min-height: 64px !important;
+        height: 64px !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
@@ -221,7 +221,7 @@
         flex: 0 0 auto !important;
         display: flex !important;
         align-items: center !important;
-        height: 48px !important;
+        height: 64px !important;
     }
 
     .header__logo a {
@@ -231,7 +231,7 @@
     }
 
     .header__logo img {
-        height: 40px !important;
+        height: 55px !important;
         width: auto !important;
         display: block !important;
         object-fit: contain !important;
@@ -246,7 +246,7 @@
         margin: 0 !important;
         padding: 0 !important;
         align-items: center !important;
-        height: 48px !important;
+        height: 64px !important;
     }
 
     .header__nav .nav__list {
@@ -273,8 +273,8 @@
 
     .header__nav .nav__item--lang .nav__link--lang {
         font-size: 0 !important;
-        padding: 10px 14px !important;
-        color: #000000 !important;
+        padding: 12px 20px !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
         text-decoration: none !important;
         display: flex !important;
@@ -282,79 +282,89 @@
         justify-content: center !important;
         cursor: pointer !important;
         line-height: 1 !important;
-        letter-spacing: 0.3px !important;
+        letter-spacing: 0.5px !important;
         height: 48px !important;
         min-height: 48px !important;
-        min-width: 70px !important;
-        border-radius: 24px !important;
-        transition: all 0.2s ease !important;
-        background: #f0f0f0 !important;
-        border: 2px solid #e0e0e0 !important;
-        gap: 6px !important;
+        min-width: 90px !important;
+        border-radius: 12px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        background: #111111 !important;
+        border: none !important;
+        gap: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
     }
 
     .header__nav .nav__item--lang .nav__link--lang:active {
-        background: #e8e8e8 !important;
-        border-color: #d0d0d0 !important;
-        transform: scale(0.97) !important;
+        background: #000000 !important;
+        transform: translateY(1px) !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
     }
 
-    /* Show globe icon + JP text */
+    /* Show flag + language code */
     .header__nav .nav__item--lang .nav__link--lang::before {
-        content: '🌐 JP' !important;
-        font-size: 15px !important;
+        content: '🇯🇵 日本語' !important;
+        font-size: 14px !important;
         font-weight: 700 !important;
-        color: #000000 !important;
+        color: #ffffff !important;
         display: flex !important;
         align-items: center !important;
-        gap: 4px !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
     }
 
     .nav__item--lang .lang-dropdown {
         right: 0 !important;
         left: auto !important;
-        top: calc(100% + 8px) !important;
-        min-width: 160px !important;
+        top: calc(100% + 12px) !important;
+        min-width: 180px !important;
         background: #ffffff !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
-        border-radius: 12px !important;
-        padding: 8px !important;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.2) !important;
+        border-radius: 16px !important;
+        padding: 12px !important;
         margin-top: 0 !important;
-        border: 2px solid #e0e0e0 !important;
+        border: 1px solid #e0e0e0 !important;
+        overflow: hidden !important;
     }
 
     .nav__item--lang .lang-dropdown li {
         list-style: none !important;
-        margin: 4px 0 !important;
+        margin: 0 !important;
     }
 
     .nav__item--lang .lang-dropdown li a {
-        color: #000000 !important;
-        padding: 12px 16px !important;
+        color: #111111 !important;
+        padding: 14px 16px !important;
         font-size: 15px !important;
         font-weight: 600 !important;
-        display: block !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
         text-decoration: none !important;
-        border-radius: 8px !important;
+        border-radius: 10px !important;
         transition: all 0.2s ease !important;
+        margin: 4px 0 !important;
     }
 
     .nav__item--lang .lang-dropdown li a:active {
-        background: #f0f0f0 !important;
+        background: #111111 !important;
+        color: #ffffff !important;
         transform: scale(0.98) !important;
     }
 
-    /* Add flags/icons for language options */
+    /* Add flags/icons for language options with better formatting */
     .nav__item--lang .lang-dropdown li a[href*="index.html"]::before {
-        content: '🇯🇵 ' !important;
+        content: '🇯🇵' !important;
+        font-size: 20px !important;
     }
 
     .nav__item--lang .lang-dropdown li a[href*="en/"]::before {
-        content: '🇺🇸 ' !important;
+        content: '🇺🇸' !important;
+        font-size: 20px !important;
     }
 
     .nav__item--lang .lang-dropdown li a[href*="fr/"]::before {
-        content: '🇫🇷 ' !important;
+        content: '🇫🇷' !important;
+        font-size: 20px !important;
     }
 
     /* Mobile Menu Toggle - ALWAYS VISIBLE WITH 3 BLACK LINES */
