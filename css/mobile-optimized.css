@@ -633,56 +633,71 @@
         width: 100%;
     }
 
-    /* Footer - Compact */
+    /* Footer - Mobile-optimized */
     .footer {
-        padding: 1.5rem 1rem !important;
+        padding: 2rem 1.25rem 1.5rem !important;
+        background: linear-gradient(180deg, #f8faf9 0%, #ffffff 100%) !important;
     }
 
     .footer__content {
         flex-direction: column !important;
         text-align: center !important;
-        gap: 1rem !important;
+        gap: 1.5rem !important;
     }
 
     .footer__links {
         flex-direction: column !important;
-        gap: 0.8rem !important;
+        gap: 0.75rem !important;
     }
 
     .footer__links a {
-        font-size: 0.85rem !important;
-        padding: 0.3rem 0 !important;
+        font-size: 15px !important;
+        padding: 0.5rem 0 !important;
+        color: #0B3D2E !important;
+        font-weight: 500 !important;
+        transition: color 0.2s ease !important;
+    }
+
+    .footer__links a:active {
+        color: #7fb069 !important;
     }
 
     .footer__bottom {
-        padding: 0.8rem 0 !important;
-        margin-top: 1rem !important;
+        padding: 1rem 0 0 !important;
+        margin-top: 1.5rem !important;
+        border-top: 1px solid rgba(11, 61, 46, 0.1) !important;
     }
 
     .footer__bottom p {
-        font-size: 0.8rem !important;
-        margin: 0.3rem 0 !important;
-        line-height: 1.5 !important;
+        font-size: 13px !important;
+        margin: 0.5rem 0 !important;
+        line-height: 1.6 !important;
+        color: rgba(17, 17, 17, 0.7) !important;
     }
 
     .footer__desc {
-        font-size: 0.75rem !important;
-        margin: 0.5rem 0 !important;
+        font-size: 14px !important;
+        margin: 0.75rem 0 !important;
+        line-height: 1.6 !important;
     }
 
     .footer__social {
-        font-size: 0.8rem !important;
-        margin-top: 0.5rem !important;
+        font-size: 14px !important;
+        margin-top: 1rem !important;
     }
 
     .footer__social a {
-        font-size: 0.8rem !important;
+        font-size: 14px !important;
+        color: #7fb069 !important;
+        font-weight: 600 !important;
     }
 
     .footer h3,
     .footer h4 {
-        font-size: 1rem !important;
-        margin-bottom: 0.5rem !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 0.75rem !important;
+        color: #0B3D2E !important;
+        font-weight: 700 !important;
     }
 
     /* Contest Prize Badges - Stack vertically */
@@ -1206,123 +1221,248 @@
     }
 
     /* ========================================
-       MOBILE OPTIMIZATION - Compact Layout
+       MOBILE-FIRST DESIGN SYSTEM
        ======================================== */
 
-    /* Reduce section padding dramatically */
+    /* Mobile-optimized section spacing */
     section,
     .section,
     section[style*="padding"] {
-        padding: 2.5rem 1.25rem !important;
+        padding: 2rem 1.25rem !important;
+        margin-bottom: 0 !important;
     }
 
+    /* Hero sections - mobile-first approach */
     .hero,
     .hero--centered,
     section.hero {
-        padding: 4rem 1.25rem 2.5rem !important;
+        padding: 3rem 1.25rem 2rem !important;
         min-height: auto !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
-    /* Better section backgrounds */
+    /* Better visual separation */
     section:nth-child(even) {
-        background: rgba(248, 250, 249, 0.5) !important;
+        background: linear-gradient(180deg, rgba(248, 250, 249, 0.3) 0%, rgba(248, 250, 249, 0.6) 100%) !important;
     }
 
-    /* Hero title - more compact */
-    .hero__title,
-    .hero h1,
-    h1.hero__title {
-        font-size: clamp(1.4rem, 4vw, 1.8rem) !important;
-        line-height: 1.3 !important;
+    /* Mobile-first container system */
+    .container,
+    div.container {
+        max-width: 100% !important;
+        padding: 0 1.25rem !important;
+        margin: 0 auto !important;
+    }
+
+    /* Card-based design for mobile */
+    section > div > div {
+        background: white !important;
+        border-radius: 20px !important;
+        padding: 1.5rem !important;
         margin-bottom: 1.5rem !important;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06) !important;
+    }
+
+    /* Remove card styling from certain elements */
+    .hero > div > div,
+    .header > div > div,
+    .footer > div > div {
+        background: transparent !important;
+        box-shadow: none !important;
         padding: 0 !important;
     }
 
-    /* Section titles - smaller */
+    /* Mobile-optimized typography hierarchy */
+    .hero__title,
+    .hero h1,
+    h1.hero__title {
+        font-size: clamp(1.75rem, 5vw, 2.25rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 1rem !important;
+        padding: 0 !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em !important;
+        color: #0B3D2E !important;
+    }
+
+    /* Section titles - clear hierarchy */
     h2.section-title,
     .section-title,
     section h2 {
-        font-size: 1.4rem !important;
-        margin-bottom: 1.2rem !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        color: #0B3D2E !important;
+        line-height: 1.3 !important;
     }
 
     h3 {
-        font-size: 1.1rem !important;
+        font-size: 1.15rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.75rem !important;
+        color: #0B3D2E !important;
     }
 
-    /* Philosophy section - compact */
+    /* Optimized paragraph styling */
+    section p,
+    .section p {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1rem !important;
+        color: rgba(17, 17, 17, 0.85) !important;
+        max-width: 100% !important;
+    }
+
+    /* Better list styling */
+    section ul,
+    section ol {
+        padding-left: 1.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    section li {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 0.5rem !important;
+        color: rgba(17, 17, 17, 0.85) !important;
+    }
+
+    /* Philosophy section - mobile-first card design */
     .philosophy,
     section.philosophy {
-        padding: 2rem 1rem !important;
+        padding: 2rem 1.25rem !important;
+        background: linear-gradient(135deg, rgba(11, 61, 46, 0.02) 0%, rgba(127, 176, 105, 0.05) 100%) !important;
     }
 
     .philosophy .container {
-        padding: 0 1rem !important;
+        padding: 0 !important;
     }
 
     .philosophy h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.5rem !important;
         margin-bottom: 1rem !important;
+        text-align: center !important;
+        font-weight: 700 !important;
     }
 
     .philosophy p {
-        font-size: 0.9rem !important;
-        line-height: 1.6 !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
         margin-bottom: 1rem !important;
     }
 
-    .philosophy div[style*="padding: 1.2rem"] {
-        padding: 0.8rem !important;
-        margin-bottom: 0.8rem !important;
+    .philosophy div[style*="padding: 1.2rem"],
+    .philosophy div[style*="padding"] {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+        background: white !important;
+        border-radius: 16px !important;
+        box-shadow: 0 2px 12px rgba(11, 61, 46, 0.08) !important;
+        border-left: 4px solid #7fb069 !important;
     }
 
-    /* About section - compact */
+    /* About section - mobile-optimized cards */
     .about,
     section.about {
-        padding: 2rem 1rem !important;
+        padding: 2rem 1.25rem !important;
     }
 
     .about__grid {
-        gap: 1.5rem !important;
+        gap: 2rem !important;
         grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .about__content {
+        order: 2 !important;
+    }
+
+    .about__image {
+        order: 1 !important;
+        margin-bottom: 1.5rem !important;
     }
 
     .about__text {
-        font-size: 0.9rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 1rem !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1.25rem !important;
     }
 
     .about__features-list {
-        gap: 0.8rem !important;
+        gap: 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .feature-item {
-        padding: 0.8rem !important;
+        padding: 1.25rem !important;
+        background: white !important;
+        border-radius: 16px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+        display: flex !important;
+        gap: 1rem !important;
+        align-items: flex-start !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .feature-item:active {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+    }
+
+    .feature-item__number {
+        flex-shrink: 0 !important;
+        font-weight: 700 !important;
+        color: #7fb069 !important;
     }
 
     .feature-item p {
-        font-size: 0.85rem !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
     }
 
-    /* Masu section - 1 column, compact */
+    .feature-item p:first-of-type {
+        font-weight: 600 !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Masu section - mobile-first storytelling */
     .masu-section,
     section.masu-section {
-        padding: 2rem 1rem !important;
+        padding: 2rem 1.25rem !important;
+        background: linear-gradient(135deg, rgba(242, 237, 228, 0.3) 0%, rgba(248, 250, 249, 0.5) 100%) !important;
     }
 
     .masu-content {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .masu-content > div {
-        padding: 1rem !important;
+        padding: 1.5rem !important;
+        background: white !important;
+        border-radius: 20px !important;
+        box-shadow: 0 4px 20px rgba(11, 61, 46, 0.1) !important;
     }
 
     .masu-content p {
-        font-size: 0.85rem !important;
-        line-height: 1.5 !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .masu-content img,
+    .masu-content > div > img {
+        border-radius: 16px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 1rem !important;
     }
 
     /* Characters grid - 2 columns compact */
@@ -1398,14 +1538,31 @@
         line-height: 1.5 !important;
     }
 
-    /* Video wrapper - compact */
+    /* Video wrapper - mobile-optimized media */
     .video-wrapper,
     .video-wrapper--large {
-        margin: 1rem 0 !important;
+        margin: 1.5rem 0 !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
     }
 
     .video-wrapper--large {
-        border-radius: 12px !important;
+        border-radius: 20px !important;
+    }
+
+    .video-wrapper video,
+    video {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* Better video presentation */
+    section video,
+    .section video {
+        border-radius: 16px !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
     }
 
     /* Container max-width adjustments */
@@ -1453,14 +1610,46 @@
         height: 250px !important;
     }
 
-    /* Gallery/slideshow - better mobile size */
+    /* Gallery/slideshow - mobile-optimized */
     .slideshow,
     .slideshow__container {
-        max-height: 300px !important;
+        max-height: 350px !important;
+        border-radius: 20px !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
     }
 
     .slideshow__image {
         object-fit: cover !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slideshow__btn {
+        width: 48px !important;
+        height: 48px !important;
+        background: rgba(255,255,255,0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 50% !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.15) !important;
+    }
+
+    .slideshow__dots {
+        padding: 1rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .slideshow__dot {
+        width: 8px !important;
+        height: 8px !important;
+        background: rgba(255,255,255,0.7) !important;
+        border-radius: 50% !important;
+    }
+
+    .slideshow__dot.active {
+        background: #ffffff !important;
+        width: 24px !important;
+        border-radius: 4px !important;
     }
 
     /* Section labels - smaller */
@@ -1501,6 +1690,68 @@
     /* Strong text - appropriate size */
     strong {
         font-size: inherit !important;
+        font-weight: 600 !important;
+        color: #0B3D2E !important;
+    }
+
+    /* FAQ Cards - Mobile-optimized */
+    .faq-card {
+        padding: 1.25rem !important;
+        margin-bottom: 1rem !important;
+        background: white !important;
+        border-radius: 16px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+        border: 1px solid rgba(11, 61, 46, 0.08) !important;
+    }
+
+    .faq-card__question {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        color: #0B3D2E !important;
+        line-height: 1.4 !important;
+    }
+
+    .faq-card__answer {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-top: 0.75rem !important;
+        color: rgba(17, 17, 17, 0.85) !important;
+    }
+
+    .faq-card__icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        background: linear-gradient(135deg, #7fb069 0%, #98d8a3 100%) !important;
+        color: white !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Call to Action sections - Mobile-optimized */
+    .cta-section,
+    .section-cta {
+        padding: 2rem 1.25rem !important;
+        text-align: center !important;
+    }
+
+    .cta-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Better info boxes */
+    div[style*="background: rgba(127, 176, 105"],
+    div[style*="background: linear-gradient"] {
+        padding: 1.25rem !important;
+        border-radius: 16px !important;
+        margin: 1rem 0 !important;
     }
 }
 
