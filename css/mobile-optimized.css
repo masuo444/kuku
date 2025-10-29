@@ -86,9 +86,60 @@
         width: auto;
     }
 
-    /* Navigation - Hidden on mobile, use hamburger */
+    /* Navigation - Show only language selector on mobile */
     .header__nav {
+        display: block !important;
+        position: absolute;
+        right: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header__nav .nav__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__nav .nav__list > li:not(.nav__item--lang) {
         display: none;
+    }
+
+    /* Show only language selector in header on mobile */
+    .header__nav .nav__item--lang {
+        display: block;
+        position: relative;
+    }
+
+    .header__nav .nav__item--lang .nav__link--lang {
+        font-size: 20px;
+        padding: 8px;
+        color: #000000;
+        font-weight: 600;
+        text-decoration: none;
+        display: block;
+    }
+
+    .nav__item--lang .lang-dropdown {
+        right: 0;
+        left: auto;
+        top: 100%;
+        min-width: 140px;
+        background: #f8faf9;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        padding: 0.5rem 0;
+    }
+
+    .nav__item--lang .lang-dropdown li a {
+        color: #000000;
+        padding: 10px 16px;
+        font-size: 15px;
+    }
+
+    .nav__item--lang .lang-dropdown li a:hover {
+        background: rgba(0,0,0,0.05);
     }
 
     /* Mobile Menu Toggle - Easy to tap */
@@ -122,7 +173,7 @@
         right: -100%;
         width: 100%;
         height: 100vh;
-        background: white;
+        background: #f8faf9;
         transition: right 0.3s ease;
         z-index: 1000;
         overflow-y: auto;
@@ -171,17 +222,11 @@
     }
 
     .mobile-menu__lang {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid #e0e0e0;
+        display: none !important;
     }
 
     .mobile-menu__lang-label {
-        display: block;
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 0.5rem;
-        padding-left: 1.5rem;
+        display: none !important;
     }
 
     /* Buttons - Touch-friendly */
