@@ -178,9 +178,6 @@ button {
     border-bottom: 1px solid var(--color-sage);
     z-index: 1000;
     transition: var(--transition);
-    height: auto;
-    min-height: 60px;
-    max-height: 80px;
 }
 
 .header__container {
@@ -191,7 +188,6 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
 .header__logo a {
@@ -2911,8 +2907,6 @@ button {
 @media (min-width: 768px) {
     .header {
         height: auto;
-        min-height: 60px;
-        max-height: 80px;
     }
 
     .header__container {
