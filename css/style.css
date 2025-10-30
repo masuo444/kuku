@@ -2912,57 +2912,13 @@ button {
 /* ========================================
    DESKTOP VERSION (768px and above)
    ======================================== */
-@media (min-width: 431px) {
-    .header {
-        height: auto !important;
-    }
-
-    .header__container {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 0.5rem 30px !important;
-    }
-
-    .header__logo {
-        flex: 0 0 auto !important;
-    }
-
-    .header__logo img {
-        height: 45px !important;
-    }
-
-    .header__nav {
-        display: flex !important;
-        flex: 1 !important;
-        justify-content: flex-end !important;
-        align-items: center !important;
-    }
-
-    .nav__list {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        gap: 1.5rem !important;
-        align-items: center !important;
-        list-style: none !important;
-    }
-
-    .nav__list > li {
-        display: inline-block !important;
-    }
-
-    .nav__list > li:not(.nav__item--lang) {
-        display: inline-block !important;
-    }
-
+@media (min-width: 768px) {
     .header__toggle {
-        display: none !important;
+        display: none;
     }
 
     .mobile-menu {
-        display: none !important;
+        display: none;
     }
 
     .lang-modal {
