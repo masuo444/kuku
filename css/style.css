@@ -2910,20 +2910,24 @@ button {
 
     .header__nav {
         display: flex !important;
-        flex: 1;
-        justify-content: flex-end;
+        flex: 1 !important;
+        justify-content: flex-end !important;
         align-items: center !important;
     }
 
-    .nav__list {
+    .header__nav .nav__list {
         display: flex !important;
         flex-direction: row !important;
-        gap: 2rem;
-        align-items: center;
-        list-style: none;
+        gap: 2rem !important;
+        align-items: center !important;
+        list-style: none !important;
     }
 
-    .nav__list > li {
+    .header__nav .nav__list > li {
+        display: inline-block !important;
+    }
+
+    .header__nav .nav__list > li:not(.nav__item--lang) {
         display: inline-block !important;
     }
 
@@ -2933,6 +2937,10 @@ button {
 
     .mobile-menu {
         display: none !important;
+    }
+
+    .lang-dropdown {
+        display: block !important;
     }
 
     .lang-modal {
