@@ -3060,6 +3060,12 @@ p {
     backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 0 2px 24px rgba(11, 61, 46, 0.06);
     border-bottom: 1px solid rgba(11, 61, 46, 0.08);
+    height: auto !important;
+}
+
+.header__container {
+    min-height: 70px !important;
+    max-height: 90px !important;
 }
 
 .header__logo img {
