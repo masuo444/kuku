@@ -3007,24 +3007,24 @@ button {
     /* Character grid - 6 columns on PC */
     .character__grid,
     .characters-grid {
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 1.2rem !important;
     }
 
     .character-card {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 0.8rem !important;
     }
 
     .character-card__title {
-        font-size: 1rem;
+        font-size: 0.9rem !important;
     }
 
     .character-card__description {
-        font-size: 0.85rem;
+        font-size: 0.75rem !important;
     }
 
     .character-card__image {
-        height: 180px;
+        height: 160px !important;
     }
 }
 
