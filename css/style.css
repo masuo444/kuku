@@ -2957,9 +2957,9 @@ button {
     .lang-modal {
         max-width: 600px;
         margin: 0 auto;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        right: -100%;
+        left: auto;
+        transform: none;
     }
 
     .lang-modal.active {
