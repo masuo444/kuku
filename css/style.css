@@ -206,8 +206,12 @@ button {
 
 .nav__list {
     display: flex;
+    flex-direction: row;
     gap: 2rem;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav__link {
@@ -2893,12 +2897,42 @@ button {
    DESKTOP VERSION (768px and above)
    ======================================== */
 @media (min-width: 768px) {
+    .header__container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .header__logo {
+        flex: 0 0 auto !important;
+    }
+
+    .header__nav {
+        display: flex !important;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center !important;
+    }
+
+    .nav__list {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2rem;
+        align-items: center;
+        list-style: none;
+    }
+
+    .nav__list > li {
+        display: inline-block !important;
+    }
+
     .header__toggle {
-        display: none;
+        display: none !important;
     }
 
     .mobile-menu {
-        display: none;
+        display: none !important;
     }
 
     .lang-modal {
