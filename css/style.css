@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    padding-top: 100px;
+    padding-top: 55px;
 }
 
 a {
@@ -230,7 +230,7 @@ button {
 .header__container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0.25rem 30px;
+    padding: 0.5rem 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -245,7 +245,7 @@ button {
 }
 
 .header__logo img {
-    height: 45px;
+    height: 30px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -254,7 +254,7 @@ button {
 .nav__list {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
     list-style: none;
     margin: 0;
@@ -262,9 +262,9 @@ button {
 }
 
 .nav__link {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-forest-dark);
     position: relative;
@@ -2965,7 +2965,7 @@ button {
     .header__nav .nav__list {
         display: flex !important;
         flex-direction: row !important;
-        gap: 2rem !important;
+        gap: 1rem !important;
         align-items: center !important;
         list-style: none !important;
     }
@@ -3069,8 +3069,8 @@ p {
 }
 
 .header__container {
-    min-height: 70px !important;
-    max-height: 90px !important;
+    min-height: 50px !important;
+    max-height: 55px !important;
 }
 
 .header__logo img {
