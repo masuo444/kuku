@@ -2956,4 +2956,27 @@ button {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* Character grid - 6 columns on PC */
+    .character__grid,
+    .characters-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+    }
+
+    .character-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .character-card__title {
+        font-size: 1rem;
+    }
+
+    .character-card__description {
+        font-size: 0.85rem;
+    }
+
+    .character-card__image {
+        height: 180px;
+    }
 }
