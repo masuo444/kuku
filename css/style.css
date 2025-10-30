@@ -215,11 +215,17 @@ button {
 .nav__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     gap: 1.5rem;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+}
+
+.nav__list > li {
+    display: inline-block;
 }
 
 .nav__link {
@@ -229,6 +235,8 @@ button {
     text-transform: uppercase;
     color: var(--color-forest-dark);
     position: relative;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .nav__link::after {
@@ -2904,40 +2912,49 @@ button {
 /* ========================================
    DESKTOP VERSION (768px and above)
    ======================================== */
-@media (min-width: 768px) {
+@media (min-width: 431px) {
     .header {
-        height: auto;
+        height: auto !important;
     }
 
     .header__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 30px;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.5rem 30px !important;
     }
 
     .header__logo {
-        flex: 0 0 auto;
+        flex: 0 0 auto !important;
     }
 
     .header__logo img {
-        height: 45px;
+        height: 45px !important;
     }
 
     .header__nav {
         display: flex !important;
-        flex: 1;
-        justify-content: flex-end;
-        align-items: center;
+        flex: 1 !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
     }
 
     .nav__list {
         display: flex !important;
         flex-direction: row !important;
-        gap: 1.5rem;
-        align-items: center;
-        list-style: none;
+        flex-wrap: nowrap !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+        list-style: none !important;
+    }
+
+    .nav__list > li {
+        display: inline-block !important;
+    }
+
+    .nav__list > li:not(.nav__item--lang) {
+        display: inline-block !important;
     }
 
     .header__toggle {
