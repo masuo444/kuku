@@ -1,3 +1,4 @@
+import { use } from "react";
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Button from '@/components/Button';
@@ -6,7 +7,13 @@ import Section from '@/components/Section';
 import Badge from '@/components/Badge';
 import NewsList from '@/components/NewsList';
 
-export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
+export default function HomePage(props: { params: Promise<{ locale: string }> }) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   setRequestLocale(locale);
   const t = useTranslations('hero');
   const tVision = useTranslations('vision');

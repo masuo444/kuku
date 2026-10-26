@@ -1,10 +1,17 @@
+import { use } from "react";
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 
-export default function LicensePage({ params: { locale } }: { params: { locale: string } }) {
+export default function LicensePage(props: { params: Promise<{ locale: string }> }) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   setRequestLocale(locale);
   const t = useTranslations('license');
 

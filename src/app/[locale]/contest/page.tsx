@@ -1,3 +1,4 @@
+import { use } from "react";
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Section from '@/components/Section';
@@ -5,7 +6,13 @@ import Card from '@/components/Card';
 import Button from '@/components/Button';
 import Badge from '@/components/Badge';
 
-export default function ContestPage({ params: { locale } }: { params: { locale: string } }) {
+export default function ContestPage(props: { params: Promise<{ locale: string }> }) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   setRequestLocale(locale);
   const t = useTranslations('contest');
 

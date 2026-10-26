@@ -1,10 +1,17 @@
+import { use } from "react";
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
 
-export default function GuidelinesPage({ params: { locale } }: { params: { locale: string } }) {
+export default function GuidelinesPage(props: { params: Promise<{ locale: string }> }) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   setRequestLocale(locale);
   const t = useTranslations('guidelines');
 
